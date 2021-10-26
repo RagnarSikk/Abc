@@ -1,10 +1,6 @@
 ﻿using Abc.Infra;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Abc.Data;
 
 namespace Abc.Soft.Data {
     public class ApplicationDbContext : IdentityDbContext {
@@ -21,5 +17,17 @@ namespace Abc.Soft.Data {
         }
 
         public DbSet<Abc.Data.AdminstratorData> AdminstratorData { get; set; }
+
+        public DbSet<Abc.Data.AthleteData> AthleteData { get; set; }
+
+        public DbSet<Abc.Data.CoachData> CoachData { get; set; }
+
+        public DbSet<Abc.Data.EquipmentData> EquipmentData { get; set; }
+
+        public DbSet<Abc.Data.NutritionistData> NutritionistData { get; set; }
+
+        public DbSet<Abc.Data.PhysiotherapistData> PhysiotherapistData { get; set; }
+
+        public DbSet<Abc.Data.TherapistData> TherapistData { get; set; }
     }
 }

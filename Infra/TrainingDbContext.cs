@@ -1,6 +1,5 @@
 ﻿using Abc.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace Abc.Infra {
     public class TrainingDbContext : DbContext {
