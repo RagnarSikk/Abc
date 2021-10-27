@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace Abc.Core.Rounding {
 
-    public sealed class RoundingPolicy :IRoundingPolicy {
+    public sealed class RoundingPolicy : IRoundingPolicy {
 
         private decimal floor(decimal d) => Math.Floor(d);
 

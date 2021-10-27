@@ -86,7 +86,8 @@ namespace Abc.Aids.Reflection {
                 var i = 0;
 
                 while (true) {
-                    try { l.Add(p.GetValue(o, new object[] { i++ })); } catch {
+                    try { l.Add(p.GetValue(o, new object[] { i++ })); }
+                    catch {
                         l.Add(i);
 
                         return;

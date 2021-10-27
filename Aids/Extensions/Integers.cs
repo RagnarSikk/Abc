@@ -22,7 +22,8 @@ namespace Abc.Aids.Extensions {
                 i = Convert.ToInt32(x);
 
                 return true;
-            } catch { return false; }
+            }
+            catch { return false; }
         }
 
         public static bool ToInteger(object o, out int i) {
