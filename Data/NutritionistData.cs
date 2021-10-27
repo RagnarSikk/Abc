@@ -2,6 +2,6 @@
 using Abc.Data.Common;
 
 namespace Abc.Data {
-    public class NutritionistData : UniqueEntityData {
+    public class NutritionistData : PersonData {
     }
 }

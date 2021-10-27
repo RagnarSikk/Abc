@@ -1,6 +1,7 @@
 ﻿using Abc.Data.Common;
 
 namespace Abc.Data {
-    public class PhysiotherapistData : UniqueEntityData {
+    public class PhysiotherapistData : PersonData
+    {
     }
 }
