@@ -1,6 +1,6 @@
-﻿using Abc.Data.Abstract;
+﻿using Abc.Data.Common;
 
 namespace Abc.Data {
-    public class PhysiotherapistData : UniqueItemData {
+    public class PhysiotherapistData : UniqueEntityData {
     }
 }

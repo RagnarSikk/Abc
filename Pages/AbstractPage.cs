@@ -1,4 +1,4 @@
-﻿using Abc.Data.Abstract;
+﻿using Abc.Data.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Abc.Pages {
     public abstract class AbstractPage<TPage, TData> : PageModel, IIndexTable<TPage, TData>
         where TPage : PageModel
-        where TData : UniqueItemData {
+        where TData : UniqueEntityData {
 
         private readonly DbContext context;
         private readonly DbSet<TData> set;

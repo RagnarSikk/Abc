@@ -1,7 +1,8 @@
-﻿using Abc.Data.Abstract;
+﻿
+using Abc.Data.Common;
 
 namespace Abc.Data {
-    public class EquipmentData : NamedItemData {
+    public class EquipmentData : NamedEntityData {
         //public string Name { get; set; }
         public string Description { get; set; }
         public int AmountAvailable { get; set; }

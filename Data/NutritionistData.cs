@@ -1,6 +1,7 @@
-﻿using Abc.Data.Abstract;
+﻿
+using Abc.Data.Common;
 
 namespace Abc.Data {
-    public class NutritionistData : UniqueItemData {
+    public class NutritionistData : UniqueEntityData {
     }
 }

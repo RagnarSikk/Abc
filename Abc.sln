@@ -3,15 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D28E6DFA-B167-42ED-B438-F9F93F7333D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{D28E6DFA-B167-42ED-B438-F9F93F7333D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Facade\Facade.csproj", "{72A16366-6E93-436A-9DC7-B5AAB16E6E82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{72A16366-6E93-436A-9DC7-B5AAB16E6E82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{3A7E5831-CD59-4E47-B4E4-6557FBB34B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{3A7E5831-CD59-4E47-B4E4-6557FBB34B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pages", "Pages\Pages.csproj", "{2703266E-7BB5-4CC1-A85C-5331A815050A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pages", "Pages\Pages.csproj", "{2703266E-7BB5-4CC1-A85C-5331A815050A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft", "Soft\Soft.csproj", "{313C283F-47D4-4576-BB89-4FC9B9820434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soft", "Soft\Soft.csproj", "{313C283F-47D4-4576-BB89-4FC9B9820434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aids", "Aids\Aids.csproj", "{B18F2007-2636-4E78-A6E6-C3071B4CEF11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A337E31C-1B0F-4726-929D-8DA85E8B6164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{8DE889D4-4CD6-4A52-AC53-975E0930FB59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +47,22 @@ Global
 		{313C283F-47D4-4576-BB89-4FC9B9820434}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{313C283F-47D4-4576-BB89-4FC9B9820434}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{313C283F-47D4-4576-BB89-4FC9B9820434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18F2007-2636-4E78-A6E6-C3071B4CEF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18F2007-2636-4E78-A6E6-C3071B4CEF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18F2007-2636-4E78-A6E6-C3071B4CEF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18F2007-2636-4E78-A6E6-C3071B4CEF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A337E31C-1B0F-4726-929D-8DA85E8B6164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A337E31C-1B0F-4726-929D-8DA85E8B6164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A337E31C-1B0F-4726-929D-8DA85E8B6164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A337E31C-1B0F-4726-929D-8DA85E8B6164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE889D4-4CD6-4A52-AC53-975E0930FB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE889D4-4CD6-4A52-AC53-975E0930FB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE889D4-4CD6-4A52-AC53-975E0930FB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE889D4-4CD6-4A52-AC53-975E0930FB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,6 +27,12 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("AdministartorId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Administrators");
@@ -40,8 +46,14 @@ namespace Abc.Soft.Migrations
                     b.Property<int>("AmountOfVisits")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
                     b.Property<double>("Height")
                         .HasColumnType("float");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("Weight")
                         .HasColumnType("float");
@@ -55,6 +67,12 @@ namespace Abc.Soft.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -72,11 +90,20 @@ namespace Abc.Soft.Migrations
                     b.Property<int>("AmountInUsing")
                         .HasColumnType("int");
 
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -88,6 +115,12 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Nutritionists");
@@ -98,6 +131,12 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Physiotherapists");
@@ -107,6 +146,12 @@ namespace Abc.Soft.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

@@ -1,7 +1,7 @@
-﻿using Abc.Data.Abstract;
+﻿using Abc.Data.Common;
 
 namespace Abc.Data {
-    public class AthleteData : UniqueItemData {
+    public class AthleteData : UniqueEntityData {
         public double Weight { get; set; }
         public double Height { get; set; }
         public int AmountOfVisits { get; set; }

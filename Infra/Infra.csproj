@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Facade\Facade.csproj" />
   </ItemGroup>
 
 </Project>
