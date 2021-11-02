@@ -16,7 +16,7 @@ namespace Abc.Soft.Areas.Administrators.Pages {
         }
 
         [BindProperty]
-        public AdminstratorData AdminstratorData { get; set; }
+        public AdministratorData AdminstratorData { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync() {

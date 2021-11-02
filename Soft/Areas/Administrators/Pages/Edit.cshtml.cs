@@ -14,7 +14,7 @@ namespace Abc.Soft.Areas.Administrators.Pages {
         }
 
         [BindProperty]
-        public AdminstratorData AdminstratorData { get; set; }
+        public AdministratorData AdminstratorData { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id) {
             if (id == null) {

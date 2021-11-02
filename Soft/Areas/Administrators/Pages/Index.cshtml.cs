@@ -12,7 +12,7 @@ namespace Abc.Soft.Areas.Administrators.Pages {
             _context = context;
         }
 
-        public IList<AdminstratorData> AdminstratorData { get; set; }
+        public IList<AdministratorData> AdminstratorData { get; set; }
 
         public async Task OnGetAsync() {
             AdminstratorData = await _context.AdminstratorData.ToListAsync();

@@ -12,7 +12,7 @@ namespace Abc.Soft.Areas.Administrators.Pages {
             _context = context;
         }
 
-        public AdminstratorData AdminstratorData { get; set; }
+        public AdministratorData AdminstratorData { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id) {
             if (id == null) {

@@ -7,7 +7,7 @@ namespace Abc.Infra {
     public class TrainingDbContext : DbContext {
         public TrainingDbContext(DbContextOptions<TrainingDbContext> options)
             : base(options) { }
-        public DbSet<AdminstratorData> Administrators { get; set; }
+        public DbSet<AdministratorData> Administrators { get; set; }
         public DbSet<AthleteData> Athletes { get; set; }
         public DbSet<CoachData> Coaches { get; set; }
         public DbSet<NutritionistData> Nutritionists { get; set; }
@@ -26,7 +26,7 @@ namespace Abc.Infra {
             b.Entity<NutritionistData>().ToTable(nameof(Nutritionists));
             b.Entity<CoachData>().ToTable(nameof(Coaches));
             b.Entity<AthleteData>().ToTable(nameof(Athletes));
-            b.Entity<AdminstratorData>().ToTable(nameof(Administrators));
+            b.Entity<AdministratorData>().ToTable(nameof(Administrators));
         }
     }
 }

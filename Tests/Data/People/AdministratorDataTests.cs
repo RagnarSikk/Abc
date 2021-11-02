@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Tests.Data.People {
     [TestClass]
-    public class AdminstratorDataTests : SealedTests<AdminstratorData, PersonData> {
+    public class AdminstratorDataTests : SealedTests<AdministratorData, PersonData> {
         [TestMethod]
         public void AdministartorIdTest() {
             Assert.Inconclusive();

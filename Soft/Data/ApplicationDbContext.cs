@@ -19,7 +19,7 @@ namespace Abc.Soft.Data {
             TrainingDbContext.InitializeTables(b);
         }
 
-        public DbSet<AdminstratorData> AdminstratorData { get; set; }
+        public DbSet<AdministratorData> AdminstratorData { get; set; }
 
         public DbSet<AthleteData> AthleteData { get; set; }
 
