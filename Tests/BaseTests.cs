@@ -7,10 +7,9 @@ using System.Linq;
 
 namespace Abc.Tests
 {
-    public class BaseTests : TestAssertions
+    public class BaseTests : TestAids
     {
         protected Type type;
-        protected object objUnderTests;
 
         [TestCleanup]
         public virtual void TestCleanup()
