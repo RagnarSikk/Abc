@@ -14,28 +14,4 @@ namespace Abc.Domain.People
         public string AdministartorId => Data?.AdministartorId ?? Unspecified;
 
     }
-    public sealed class Coach : UniqueEntity<CoachData>
-    {
-        public Coach(CoachData d) : base(d) { }
-        
-
-    }
-    public sealed class Nutritionist : UniqueEntity<NutritionistData>
-    {
-        public Nutritionist(NutritionistData d) : base(d) { }
-
-
-    }
-    public sealed class Physiotherapist : UniqueEntity<PhysiotherapistData>
-    {
-        public Physiotherapist(PhysiotherapistData d) : base(d) { }
-
-
-    }
-    public sealed class Therapist : UniqueEntity<TherapistData>
-    {
-        public Therapist(TherapistData d) : base(d) { }
-
-
-    }
 }
