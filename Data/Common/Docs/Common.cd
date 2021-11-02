@@ -28,5 +28,12 @@
       <FileName>Common\PeriodData.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Abc.Data.Common.PersonData">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAICAAAAAQAAAAAAQAAAAAAAAAAAgAAg=</HashCode>
+      <FileName>Common\PersonData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

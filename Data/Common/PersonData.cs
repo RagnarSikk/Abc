@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Abc.Data.Common {
-    public class PersonData : UniqueEntityData {
+    public abstract class PersonData : UniqueEntityData {
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
         public string FullName => LastName + " " + FirstMidName;

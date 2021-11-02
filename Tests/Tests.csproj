@@ -24,10 +24,6 @@
   <ItemGroup>
     <Folder Include="Aids\" />
     <Folder Include="Core\" />
-    <Folder Include="Data\Common\" />
-    <Folder Include="Data\Customers\" />
-    <Folder Include="Data\People\" />
-    <Folder Include="Data\Others\" />
     <Folder Include="Domain\Common\" />
     <Folder Include="Domain\Customers\" />
     <Folder Include="Domain\Others\" />
