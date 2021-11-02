@@ -24,12 +24,27 @@
   <ItemGroup>
     <Folder Include="Aids\" />
     <Folder Include="Core\" />
-    <Folder Include="Data\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Facade\" />
-    <Folder Include="Infra\" />
+    <Folder Include="Data\Common\" />
+    <Folder Include="Data\Customers\" />
+    <Folder Include="Data\People\" />
+    <Folder Include="Data\Others\" />
+    <Folder Include="Domain\Common\" />
+    <Folder Include="Domain\Customers\" />
+    <Folder Include="Domain\Others\" />
+    <Folder Include="Domain\People\" />
+    <Folder Include="Facade\Common\" />
+    <Folder Include="Facade\Customers\" />
+    <Folder Include="Facade\Others\" />
+    <Folder Include="Facade\People\" />
+    <Folder Include="Infra\Common\" />
+    <Folder Include="Infra\Customers\" />
+    <Folder Include="Infra\Others\" />
+    <Folder Include="Infra\People\" />
+    <Folder Include="Pages\Common\" />
+    <Folder Include="Pages\Customers\" />
+    <Folder Include="Pages\Others\" />
+    <Folder Include="Pages\People\" />
     <Folder Include="Soft\" />
-    <Folder Include="Pages\" />
   </ItemGroup>
 
 </Project>

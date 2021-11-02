@@ -9,7 +9,6 @@ namespace Abc.Pages {
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
-            createColumn(x => Item.Description);
             createColumn(x => Item.AmountAvailable);
             createColumn(x => Item.AmountInUsing);
         }
