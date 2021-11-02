@@ -3,20 +3,19 @@ using System;
 
 namespace Abc.Tests
 {
-    public abstract class BaseClassTests<TClass, TBaseClass> : BaseTests where TClass : class
-    {
-        protected TClass obj
+    public abstract class BaseClassTests<TBaseClass> : BaseTests { 
+        protected object obj
         {
-            get => objUnderTests as TClass;
+            get => objUnderTests;
             set => objUnderTests = value;
         }
-        protected abstract TClass createObject();
+        protected abstract object createObject();
         protected virtual Type getBaseClass() => typeof(TBaseClass);
 
         [TestInitialize]
         public virtual void TestInitialize()
         {
-            type = typeof(TClass);
+            type = getTestableClassType();
             obj = createObject();
         }
         [TestMethod] public void CanCreateTest() => Assert.IsNotNull(createObject());

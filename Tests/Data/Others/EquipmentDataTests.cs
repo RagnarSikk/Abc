@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Tests.Data.Others {
     [TestClass]
-    public class EquipmentDataTests : SealedTests<EquipmentData, DefinedEntityData> {
+    public class EquipmentDataTests : SealedTests<DefinedEntityData> {
         
         [TestMethod]
         public void AmountAvailableTest() {
@@ -21,7 +21,7 @@ namespace Abc.Tests.Data.Others {
         }
     }
     [TestClass]
-    public class TrainingDataTests : SealedTests<TrainingData, DefinedEntityData> {
+    public class TrainingDataTests : SealedTests<DefinedEntityData> {
         [TestMethod]
         public void LocationOfTrainingTest() {
             Assert.Inconclusive();

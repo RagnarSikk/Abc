@@ -9,22 +9,22 @@ using System.Threading.Tasks;
 
 namespace Abc.Tests.Data.People {
     [TestClass]
-    public class AdminstratorDataTests : SealedTests<AdministratorData, PersonData> {
+    public class AdministratorDataTests : SealedTests<PersonData> {
         [TestMethod]
         public void AdministartorIdTest() {
             Assert.Inconclusive();
         }
     }
     [TestClass]
-    public class CoachDataTests : SealedTests<CoachData, PersonData> {
+    public class CoachDataTests : SealedTests<PersonData> {
     }
     [TestClass]
-    public class NutritionistDataTests : SealedTests<NutritionistData, PersonData> {
+    public class NutritionistDataTests : SealedTests<PersonData> {
     }
     [TestClass]
-    public class PhysiotherapistDataTests : SealedTests<PhysiotherapistData, PersonData> {
+    public class PhysiotherapistDataTests : SealedTests<PersonData> {
     }
     [TestClass]
-    public class TherapistDataTests : SealedTests<TherapistData, PersonData> {
+    public class TherapistDataTests : SealedTests<PersonData> {
     }
 }

@@ -9,21 +9,12 @@ using System.Threading.Tasks;
 
 namespace Abc.Tests.Data.Customers {
     [TestClass]
-    public class AthleteDataTests : SealedTests<AthleteData, PersonData>{
+    public class AthleteDataTests : SealedTests<PersonData>{
         [TestMethod]
-        public void WeightTest() {
-            Assert.Inconclusive();
-            //ToDo: Test the Athelete weightdata property
-        }
+        public void WeightTest() => isProperty<double>(false);
         [TestMethod]
-        public void HeightTest() {
-            Assert.Inconclusive();
-            //ToDo: Test the Athelete property
-        }
+        public void HeightTest() => isProperty<double>(false);
         [TestMethod]
-        public void AmountOfVisitsTest() {
-            Assert.Inconclusive();
-            //ToDo: Test the Athelete property
-        }
+        public void AmountOfVisitsTest() => isProperty<int>();
     }
 }

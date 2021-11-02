@@ -2,10 +2,9 @@
 
 namespace Abc.Tests
 {
-    public abstract class ClassTests<TClass, TBaseClass> :
-        BaseClassTests<TClass, TBaseClass> where TClass : class
+    public abstract class ClassTests<TBaseClass> :BaseClassTests<TBaseClass> 
     {
-        protected override TClass createObject() => GetRandom.Object<TClass>();
+        protected override object createObject() => GetRandom.Object(type);
     }
 
 }

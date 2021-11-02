@@ -4,31 +4,31 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Data.Common {
     [TestClass]
-    public class DefinedEntityDataTests : AbstractTests<DefinedEntityData, NamedEntityData> {
+    public class DefinedEntityDataTests : AbstractTests<NamedEntityData> {
         protected override DefinedEntityData createObject() {
             throw new System.NotImplementedException();
         }
     }
     [TestClass]
-    public class NamedEntityDataTests : AbstractTests<NamedEntityData, UniqueEntityData> {
+    public class NamedEntityDataTests : AbstractTests<UniqueEntityData> {
         protected override NamedEntityData createObject() {
             throw new System.NotImplementedException();
         }
     }
     [TestClass]
-    public class PeriodDataTests : AbstractTests<PeriodData, object> {
+    public class PeriodDataTests : AbstractTests<object> {
         protected override PeriodData createObject() {
             throw new System.NotImplementedException();
         }
     }
     [TestClass]
-    public class PersonDataTests : AbstractTests<PersonData, UniqueEntityData> {
+    public class PersonDataTests : AbstractTests<UniqueEntityData> {
         protected override PersonData createObject() {
             throw new System.NotImplementedException();
         }
     }
     [TestClass]
-    public class UniqueEntityDataTests : AbstractTests<UniqueEntityData, PeriodData> {
+    public class UniqueEntityDataTests : AbstractTests<PeriodData> {
         protected override UniqueEntityData createObject() {
             throw new System.NotImplementedException();
         }
