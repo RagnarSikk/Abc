@@ -1,4 +1,4 @@
-﻿using Abc.Data;
+﻿using Abc.Data.People;
 using Abc.Infra;
 
 namespace Abc.Pages {

@@ -1,4 +1,7 @@
-﻿using Abc.Infra;
+﻿using Abc.Data.Customers;
+using Abc.Data.Others;
+using Abc.Data.People;
+using Abc.Infra;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,18 +19,18 @@ namespace Abc.Soft.Data {
             TrainingDbContext.InitializeTables(b);
         }
 
-        public DbSet<Abc.Data.AdminstratorData> AdminstratorData { get; set; }
+        public DbSet<AdminstratorData> AdminstratorData { get; set; }
 
-        public DbSet<Abc.Data.AthleteData> AthleteData { get; set; }
+        public DbSet<AthleteData> AthleteData { get; set; }
 
-        public DbSet<Abc.Data.CoachData> CoachData { get; set; }
+        public DbSet<CoachData> CoachData { get; set; }
 
-        public DbSet<Abc.Data.EquipmentData> EquipmentData { get; set; }
+        public DbSet<EquipmentData> EquipmentData { get; set; }
 
-        public DbSet<Abc.Data.NutritionistData> NutritionistData { get; set; }
+        public DbSet<NutritionistData> NutritionistData { get; set; }
 
-        public DbSet<Abc.Data.PhysiotherapistData> PhysiotherapistData { get; set; }
+        public DbSet<PhysiotherapistData> PhysiotherapistData { get; set; }
 
-        public DbSet<Abc.Data.TherapistData> TherapistData { get; set; }
+        public DbSet<TherapistData> TherapistData { get; set; }
     }
 }

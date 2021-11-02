@@ -1,4 +1,4 @@
-﻿using Abc.Data;
+﻿using Abc.Data.People;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

@@ -1,4 +1,6 @@
-﻿using Abc.Data;
+﻿using Abc.Data.Customers;
+using Abc.Data.Others;
+using Abc.Data.People;
 using Microsoft.EntityFrameworkCore;
 
 namespace Abc.Infra {

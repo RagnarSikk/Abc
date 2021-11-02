@@ -21,4 +21,15 @@
     <ProjectReference Include="..\Soft\Soft.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Aids\" />
+    <Folder Include="Core\" />
+    <Folder Include="Data\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Facade\" />
+    <Folder Include="Infra\" />
+    <Folder Include="Soft\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
 </Project>

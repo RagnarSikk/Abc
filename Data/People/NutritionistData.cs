@@ -1,7 +1,6 @@
-﻿
-using Abc.Data.Common;
+﻿using Abc.Data.Common;
 
-namespace Abc.Data {
+namespace Abc.Data.People {
     public class NutritionistData : PersonData {
     }
 }

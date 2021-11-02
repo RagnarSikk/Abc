@@ -1,4 +1,4 @@
-﻿using Abc.Data;
+﻿using Abc.Data.Others;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
