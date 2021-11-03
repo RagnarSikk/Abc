@@ -10,41 +10,24 @@ using System.Threading.Tasks;
 namespace Abc.Tests.Data.Others {
     [TestClass]
     public class EquipmentDataTests : SealedTests<DefinedEntityData> {
-        
         [TestMethod]
-        public void AmountAvailableTest() {
-            Assert.Inconclusive();
-        }
+        public void AmountAvailableTest() => isProperty<int>(false);
         [TestMethod]
-        public void AmountInUsingTest() {
-            Assert.Inconclusive();
-        }
+        public void AmountInUsingTest() => isProperty<int>(false);
     }
     [TestClass]
     public class TrainingDataTests : SealedTests<DefinedEntityData> {
         [TestMethod]
-        public void LocationOfTrainingTest() {
-            Assert.Inconclusive();
-        }
+        public void LocationOfTrainingTest() => isProperty<string>();
         [TestMethod]
-        public void AvailableEquipmentTest() {
-            Assert.Inconclusive();
-        }
+        public void AvailableEquipmentTest() => isProperty<string>();
         [TestMethod]
-        public void MaxNumberOfAthletesTest() {
-            Assert.Inconclusive();
-        }
+        public void MaxNumberOfAthletesTest() => isProperty<int>(false);
         [TestMethod]
-        public void MinNumberOfAthletesTest() {
-            Assert.Inconclusive();
-        }
+        public void MinNumberOfAthletesTest() => isProperty<int>(false);
         [TestMethod]
-        public void NumberOfAthletesTest() {
-            Assert.Inconclusive();
-        }
+        public void NumberOfAthletesTest() => isProperty<int>(false);
         [TestMethod]
-        public void NumberOfCoachesRequiredTest() {
-            Assert.Inconclusive();
-        }
+        public void NumberOfCoachesRequiredTest() => isProperty<int>(false);
     }
 }

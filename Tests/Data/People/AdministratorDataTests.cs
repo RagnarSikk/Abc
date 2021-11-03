@@ -11,9 +11,7 @@ namespace Abc.Tests.Data.People {
     [TestClass]
     public class AdministratorDataTests : SealedTests<PersonData> {
         [TestMethod]
-        public void AdministartorIdTest() {
-            Assert.Inconclusive();
-        }
+        public void AdministartorIdTest() => isProperty<string>();
     }
     [TestClass]
     public class CoachDataTests : SealedTests<PersonData> {

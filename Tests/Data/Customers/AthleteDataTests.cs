@@ -17,6 +17,6 @@ namespace Abc.Tests.Data.Customers
         [TestMethod]
         public void HeightTest() => isProperty<double>(false);
         [TestMethod]
-        public void AmountOfVisitsTest() => isProperty<int>();
+        public void AmountOfVisitsTest() => isProperty<int>(false);
     }
 }
