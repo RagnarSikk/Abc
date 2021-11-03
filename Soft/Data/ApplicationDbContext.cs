@@ -1,11 +1,13 @@
 ﻿using Abc.Data.Customers;
 using Abc.Data.Others;
 using Abc.Data.People;
+using Abc.Facade.Customers;
 using Abc.Infra;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Abc.Soft.Data {
+namespace Abc.Soft.Data
+{
     public class ApplicationDbContext : IdentityDbContext {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Domain.Customers
 {
-    interface IAthletesRepository : IRepository<Athlete>
+    public interface IAthletesRepository : IRepository<Athlete>
     {
     }
 }
