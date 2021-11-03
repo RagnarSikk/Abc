@@ -3,6 +3,7 @@ using Abc.Infra.Common;
 using Abc.Data.Customers;
 using Abc.Data.Others;
 using Abc.Domain.Others;
+using Abc.Facade.Customers;
 
 namespace Abc.Infra.Customers
 {

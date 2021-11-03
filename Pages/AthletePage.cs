@@ -1,7 +1,9 @@
 ﻿using Abc.Data.Customers;
+using Abc.Facade.Customers;
 using Abc.Infra;
 
-namespace Abc.Pages {
+namespace Abc.Pages
+{
     public class AthletePage : AbstractPage<AthletePage, AthleteData> {
         public AthletePage(TrainingDbContext c) : base(c, c.Athletes) {
             Caption = "Athletes";

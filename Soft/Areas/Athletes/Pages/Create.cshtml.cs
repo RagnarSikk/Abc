@@ -1,9 +1,11 @@
 ﻿using Abc.Data.Customers;
+using Abc.Facade.Customers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
 
-namespace Abc.Soft.Areas.Athletes.Pages {
+namespace Abc.Soft.Areas.Athletes.Pages
+{
     public class CreateModel : PageModel {
         private readonly Abc.Soft.Data.ApplicationDbContext _context;
 
