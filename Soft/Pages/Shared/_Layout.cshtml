@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Common.Aids
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,27 +26,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Administrators" asp-page="/Index" asp-page-handler="index">Administrators</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Athletes" asp-page="/Index" asp-page-handler="index">Athletes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Coaches" asp-page="/Index" asp-page-handler="index">Coaches</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Equipments" asp-page="/Index" asp-page-handler="index">Equipments</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Nutritionists" asp-page="/Index" asp-page-handler="index">Nutritionists</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Physiotherapists" asp-page="/Index" asp-page-handler="index">Physiotherapists</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Therapists" asp-page="/Index" asp-page-handler="index">Therapists</a>
-                        </li>
+                        @Html.DropMenu("People",
+                            new Link("Administrators", new Uri("/People/Administrators/Index?handler=index", UriKind.Relative)),
+                            new Link("Nutritionists", new Uri("/People/Nutritionists/Index?handler=index", UriKind.Relative)),
+                            new Link("Physiotherapists", new Uri("/People/Physiotherapists/Index?handler=index", UriKind.Relative)),
+                            new Link("Coaches", new Uri("/People/Coaches/Index?handler=index", UriKind.Relative)),
+                            new Link("Therapists", new Uri("/People/Therapists/Index?handler=index", UriKind.Relative)))
+
+                        @Html.DropMenu("Customers",new Link("Athletes", new Uri("/Customers/Athletes/Index?handler=index", UriKind.Relative)))
+                          
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
