@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Domain.Customers
 {
-    public sealed class Athlete : UniqueEntity<AthleteData>
+    public sealed class Athlete : Person<AthleteData>
     {
         public Athlete(AthleteData d) : base(d) { }
         public double Weight => Data?.Weight ?? UnspecifiedDouble;

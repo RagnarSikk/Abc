@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Domain.People
 {
-    public sealed class Administrator : UniqueEntity<AdministratorData>
+    public sealed class Administrator : Person<AdministratorData>
     {
         public Administrator(AdministratorData d) : base(d) { }
         public string AdministartorId => Data?.AdministartorId ?? Unspecified;

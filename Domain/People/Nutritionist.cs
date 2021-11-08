@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Domain.People
 {
-    public sealed class Nutritionist : UniqueEntity<NutritionistData>
+    public sealed class Nutritionist : Person<NutritionistData>
     {
         public Nutritionist(NutritionistData d) : base(d) { }
 
