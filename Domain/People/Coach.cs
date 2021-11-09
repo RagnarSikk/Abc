@@ -12,7 +12,6 @@ namespace Abc.Domain.People
     {
         public Coach(CoachData d) : base(d) { }
 
-
     }
    
 }
