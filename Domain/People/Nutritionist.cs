@@ -12,6 +12,7 @@ namespace Abc.Domain.People
     {
         public Nutritionist(NutritionistData d) : base(d) { }
 
+        public string ServiceProviderId => Data.ServiceProviderId ?? Unspecified;
 
     }
 }

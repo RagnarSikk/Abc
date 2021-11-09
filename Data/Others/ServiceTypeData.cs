@@ -7,6 +7,6 @@ using Abc.Data.Common;
 
 namespace Abc.Data.Others
 {
-    class ServiceTypeData : DefinedEntityData
+    public class ServiceTypeData : DefinedEntityData
     { }
 }

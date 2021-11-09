@@ -12,6 +12,7 @@ namespace Abc.Domain.People
     {
         public Physiotherapist(PhysiotherapistData d) : base(d) { }
 
+        public string ServiceProviderId => Data.ServiceProviderId ?? Unspecified;
 
     }
 }
