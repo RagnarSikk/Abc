@@ -8,7 +8,6 @@ namespace Abc.Pages {
         }
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
-            createColumn(x => Item.AdministartorId);
         }
     }
 }
