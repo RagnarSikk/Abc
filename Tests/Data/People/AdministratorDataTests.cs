@@ -16,11 +16,14 @@ namespace Abc.Tests.Data.People {
     }
     [TestClass]
     public class NutritionistDataTests : SealedTests<PersonData> {
+        [TestMethod] public void ServiceProviderIdTest() => isProperty<string>();
     }
     [TestClass]
     public class PhysiotherapistDataTests : SealedTests<PersonData> {
+        [TestMethod] public void ServiceProviderIdTest() => isProperty<string>();
     }
     [TestClass]
     public class TherapistDataTests : SealedTests<PersonData> {
+        [TestMethod] public void ServiceProviderIdTest() => isProperty<string>();
     }
 }

@@ -30,4 +30,18 @@ namespace Abc.Tests.Data.Others {
         [TestMethod]
         public void NumberOfCoachesRequiredTest() => isProperty<int>(false);
     }
+    [TestClass]
+    public class ServiceDataTests : SealedTests<DefinedEntityData> {
+        [TestMethod] public void ServiceProviderIdTest() => isProperty<string>();
+        [TestMethod] public void AthleteIdTest() => isProperty<string>();
+    }
+    [TestClass]
+    public class ServiceTypeDataTests : SealedTests<DefinedEntityData> {
+
+    }
+    [TestClass]
+    public class ServiceProviderDataTests : SealedTests<DefinedEntityData> {
+        [TestMethod] public void ServiceTypeIdTest() => isProperty<string>();
+        [TestMethod] public void PersonIdTest() => isProperty<string>();
+    }
 }
