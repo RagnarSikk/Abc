@@ -1,4 +1,5 @@
 ﻿using Abc.Aids.Random;
+using System;
 using System.Diagnostics;
 
 namespace Abc.Tests
@@ -6,9 +7,10 @@ namespace Abc.Tests
     public abstract class TestAids: TestAssertions
     {
         protected object objUnderTests;
+        protected Type type;
         protected void isProperty<T>(bool isNullable = true) //Todo: Refacto this method
         {
-            var t = objUnderTests?.GetType();
+            var t = type;
             var n = getPropertyNameAfter(nameof(isProperty));
             var pi = t?.GetProperty(n);
             isNotNull(pi, 
@@ -27,7 +29,7 @@ namespace Abc.Tests
 
         protected void isProperty<T>(T expectedValue) //Todo: Refacto this method
         {
-            var t = objUnderTests?.GetType();
+            var t = type;
             var n = getPropertyNameAfter(nameof(isProperty));
             var pi = t?.GetProperty(n);
             isNotNull(pi,
