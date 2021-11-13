@@ -26,12 +26,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                        @Html.DropMenu("People",
-                            new Link("Administrators", new Uri("/People/Administrators/Index?handler=index", UriKind.Relative)),
-                            new Link("Nutritionists", new Uri("/People/Nutritionists/Index?handler=index", UriKind.Relative)),
-                            new Link("Physiotherapists", new Uri("/People/Physiotherapists/Index?handler=index", UriKind.Relative)),
-                            new Link("Coaches", new Uri("/People/Coaches/Index?handler=index", UriKind.Relative)),
-                            new Link("Therapists", new Uri("/People/Therapists/Index?handler=index", UriKind.Relative)))
+                        @Html.DropMenu("Administrator View",
+                            new Link("Administrators", new Uri("/AdminView/Administrators/Index?handler=index", UriKind.Relative)),
+                            new Link("Nutritionists", new Uri("/AdminView/Nutritionists/Index?handler=index", UriKind.Relative)),
+                            new Link("Physiotherapists", new Uri("/AdminView/Physiotherapists/Index?handler=index", UriKind.Relative)),
+                            new Link("Coaches", new Uri("/AdminView/Coaches/Index?handler=index", UriKind.Relative)),
+                            new Link("Therapists", new Uri("/AdminView/Therapists/Index?handler=index", UriKind.Relative)),
+                            new Link("Athletes", new Uri("/AdminView/Athletes/Index?handler=index", UriKind.Relative)),
+                            new Link("Trainings", new Uri("/AdminView/Training/Index?handler=index", UriKind.Relative)))
 
                         @Html.DropMenu("Customers",new Link("Athletes", new Uri("/Customers/Athletes/Index?handler=index", UriKind.Relative)))
                           

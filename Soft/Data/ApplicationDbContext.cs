@@ -34,5 +34,7 @@ namespace Abc.Soft.Data
         public DbSet<PhysiotherapistData> PhysiotherapistData { get; set; }
 
         public DbSet<TherapistData> TherapistData { get; set; }
+
+        public DbSet<TrainingData> TrainingData { get; set; }
     }
 }
