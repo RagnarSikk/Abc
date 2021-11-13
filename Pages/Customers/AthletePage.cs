@@ -14,6 +14,12 @@ namespace Abc.Pages.Customers
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
+            createColumn(x => Item.LastName);
+            createColumn(x => Item.FirstMidName);
+            createColumn(x => Item.DateOfBirth);
+            createColumn(x => Item.Gender);
+            createColumn(x => Item.PhoneNumber);
+            createColumn(x => Item.Email);
             createColumn(x => Item.Weight);
             createColumn(x => Item.Height);
             createColumn(x => Item.AmountOfVisits);

@@ -11,9 +11,6 @@ namespace Abc.Facade.Customers
 {
     public class AthleteViewFactory : AbstractViewFactory<AthleteData, Athlete, AthleteView>
     {
-        protected internal override Athlete toObject(AthleteData d)
-        {
-            throw new NotImplementedException();
-        }
+        protected internal override Athlete toObject(AthleteData d) => new Athlete(d);
     }
 }
