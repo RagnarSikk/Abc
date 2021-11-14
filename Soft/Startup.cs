@@ -1,3 +1,11 @@
+
+using Abc.Domain.Customers;
+using Abc.Domain.Others;
+using Abc.Domain.People;
+using Abc.Infra;
+using Abc.Infra.Customers;
+using Abc.Infra.Others;
+using Abc.Infra.People;
 using Abc.Soft.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,33 +14,73 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
-namespace Abc.Soft {
-    public class Startup {
-        public Startup(IConfiguration configuration) {
-            Configuration = configuration;
-        }
-
+namespace Soft
+{
+    public class Startup
+    {
+        private static string connection
+            => "DefaultConnection";
         public IConfiguration Configuration { get; }
+        public Startup(IConfiguration c) => Configuration = c;
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services) {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+        public void ConfigureServices(IServiceCollection services)
+        {
+            registerDbContexts(services);
+            registerAuthentication(services);
             services.AddRazorPages();
+            registerRepositories(services);
+            //const string connection = "DefaultConnection";
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(
+            //        Configuration.GetConnectionString(connection)));
+            //services.AddRazorPages();
+
+            //services.AddDbContext<ShopDbContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString(connection)));
+        }
+
+        private static void registerRepositories(IServiceCollection s)
+        {
+            s.AddScoped<ICoachesRepository, CoachesRepository>();
+            s.AddScoped<IAthletesRepository, AthletesRepository>();
+            s.AddScoped<IAdministratorsRepository, AdministratorsRepository>();
+            s.AddScoped<INutritionistsRepository, NutritionistsRepository>();
+            s.AddScoped<IPhysiotherapistsRepository, PhysiotherapistsRepository>();
+            s.AddScoped<ITherepistsRepository, TherepistsRepository>();
+            s.AddScoped<IEquipmentRepository, EquipmentRepository>();
+            s.AddScoped<ITrainingRepository, TrainingRepository>();
+        }
+        private void registerAuthentication(IServiceCollection s)
+            => s.AddDefaultIdentity<IdentityUser>(
+                options => options.SignIn.RequireConfirmedAccount = true)
+              .AddEntityFrameworkStores<ApplicationDbContext>();
+
+        private void registerDbContexts(IServiceCollection s)
+        {
+            registerDbContext<ApplicationDbContext>(s);
+            registerDbContext<TrainingDbContext>(s);
+        }
+        protected virtual void registerDbContext<T>(IServiceCollection s) where T : DbContext
+        {
+            s.AddDbContext<T>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString(connection)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
-            if (env.IsDevelopment()) {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
-                app.UseMigrationsEndPoint();
+                app.UseDatabaseErrorPage();
             }
-            else {
+            else
+            {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();

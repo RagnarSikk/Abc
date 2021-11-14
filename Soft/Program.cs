@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Soft;
 
 namespace Abc.Soft {
     public class Program {
