@@ -1,11 +1,12 @@
-﻿using Abc.Data.Common;
+﻿using System.Threading.Tasks;
+using Abc.Data.Common;
 using Abc.Domain.Common;
 using Abc.Facade.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Threading.Tasks;
 
-namespace Abc.Pages.Common {
+namespace Abc.Pages.Common
+{
 
     public abstract class ViewPage<TPage, TRepository, TDomain, TView, TData> :
         UnifiedPage<TPage, TRepository, TDomain, TView, TData>
@@ -13,13 +14,15 @@ namespace Abc.Pages.Common {
         where TRepository : class, ICrudMethods<TDomain>, ISorting, IFiltering, IPaging
         where TDomain : IEntity<TData>
         where TData : PeriodData, new()
-        where TView : PeriodView {
+        where TView : PeriodView
+    {
 
         protected ViewPage(TRepository r, string title) : base(r, title) { }
 
         public virtual async Task OnGetIndexAsync(string sortOrder,
             string id, string currentFilter, string searchString, int? pageIndex,
-            string fixedFilter, string fixedValue) {
+            string fixedFilter, string fixedValue)
+        {
             SelectedId = id;
             await getList(sortOrder, currentFilter, searchString, pageIndex,
                 fixedFilter, fixedValue).ConfigureAwait(true);
@@ -27,7 +30,8 @@ namespace Abc.Pages.Common {
 
         public virtual IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
-            string fixedFilter, string fixedValue, int? switchOfCreate) {
+            string fixedFilter, string fixedValue, int? switchOfCreate)
+        {
             FixedFilter = fixedFilter;
             FixedValue = fixedValue;
             SortOrder = sortOrder;
@@ -42,7 +46,8 @@ namespace Abc.Pages.Common {
             string searchString,
             int? pageIndex,
             string fixedFilter,
-            string fixedValue) {
+            string fixedValue)
+        {
             if (!await addObject(sortOrder, searchString, pageIndex, fixedFilter, fixedValue)
                 .ConfigureAwait(true)) return Page();
 
@@ -56,7 +61,8 @@ namespace Abc.Pages.Common {
             string searchString,
             int? pageIndex,
             string fixedFilter,
-            string fixedValue) {
+            string fixedValue)
+        {
             await getObject(id, sortOrder, searchString, pageIndex, fixedFilter, fixedValue).ConfigureAwait(true);
 
             return Page();
@@ -64,7 +70,8 @@ namespace Abc.Pages.Common {
 
         public virtual async Task<IActionResult> OnPostDeleteAsync(string id, string sortOrder, string searchString,
             int pageIndex,
-            string fixedFilter, string fixedValue) {
+            string fixedFilter, string fixedValue)
+        {
             await deleteObject(id, sortOrder, searchString, pageIndex, fixedFilter, fixedValue).ConfigureAwait(true);
 
             return Redirect(IndexUrl.ToString());
@@ -72,7 +79,8 @@ namespace Abc.Pages.Common {
 
         public virtual async Task<IActionResult> OnGetDetailsAsync(string id, string sortOrder, string searchString,
             int pageIndex,
-            string fixedFilter, string fixedValue) {
+            string fixedFilter, string fixedValue)
+        {
             await getObject(id, sortOrder, searchString, pageIndex, fixedFilter, fixedValue).ConfigureAwait(true);
 
             return Page();
@@ -84,14 +92,16 @@ namespace Abc.Pages.Common {
             string searchString,
             int pageIndex,
             string fixedFilter,
-            string fixedValue) {
+            string fixedValue)
+        {
             await getObject(id, sortOrder, searchString, pageIndex, fixedFilter, fixedValue).ConfigureAwait(true);
 
             return Page();
         }
 
         public virtual async Task<IActionResult> OnPostEditAsync(string sortOrder, string searchString, int pageIndex,
-            string fixedFilter, string fixedValue) {
+            string fixedFilter, string fixedValue)
+        {
             await updateObject(sortOrder, searchString, pageIndex, fixedFilter, fixedValue).ConfigureAwait(true);
 
             return Redirect(IndexUrl.ToString());

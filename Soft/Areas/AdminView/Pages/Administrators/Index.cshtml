@@ -1,36 +1,16 @@
 ﻿@page
-@model Abc.Soft.Areas.People.Pages.Administrators.IndexModel
+@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Consts
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.AdministratorPage
 
 @{
-    ViewData["Title"] = "Administrators";
+    Layout = "_Index";
+    var page = Model.PageUrl;
 }
 
-<h1>Administrators</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AdminstratorData[0].Id)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.AdminstratorData) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+@section Create {
+    @Html.Link(string.Empty, new Link(Captions.Create, Model.CreateUrl))
 }
-    </tbody>
-</table>
+
+@Html.ShowTable(Model)

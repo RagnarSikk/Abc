@@ -1,13 +1,16 @@
 ﻿using Abc.Aids.Reflection;
+using Abc.Data.Common;
 using Abc.Domain.Common;
 using Abc.Facade.Common;
 using Abc.Pages.Common.Extensions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Abc.Pages.Common {
     public abstract class UnifiedPage<TPage, TRepository, TDomain, TView, TData>
@@ -30,24 +33,17 @@ namespace Abc.Pages.Common {
             if (isCorrectIndex(i, Items)) Item = Items[i];
         }
 
-        private static bool isCorrectIndex<TList>(int i, IList<TList> l) => i >= 0 && i < l?.Count;
+        private bool isCorrectIndex<TList>(int i, IList<TList> l) => i >= 0 && i < l?.Count;
 
-        public virtual string GetName(IHtmlHelper<TPage> h, int i) => getName<string>(h, i);
-
-        protected string getName<TResult>(IHtmlHelper<TPage> h, int i) {
+        public virtual string GetName(IHtmlHelper<TPage> html, int i) {
             if (isCorrectIndex(i, Columns))
-                return h.DisplayNameFor(Columns[i] as Expression<Func<TPage, TResult>>);
+                return html.DisplayNameFor(Columns[i] as Expression<Func<TPage, string>>);
             return Undefined;
         }
 
-        public virtual IHtmlContent GetValue(IHtmlHelper<TPage> h, int i) => getValue<string>(h, i);
+        public virtual IHtmlContent GetValue(IHtmlHelper<TPage> html, int i)
+            => html.DisplayFor(Columns[i] as Expression<Func<TPage, string>>);
 
-        protected IHtmlContent getValue<TResult>(IHtmlHelper<TPage> h, int i) {
-            if (isCorrectIndex(i, Columns))
-                return h.DisplayFor(Columns[i] as Expression<Func<TPage, TResult>>);
-            return null;
-        }
-        protected IHtmlContent getRaw<TResult>(IHtmlHelper<TPage> h, TResult r) => h.Raw(r.ToString());
 
         public virtual Uri GetSortStringExpression(int i)
                     => isCorrectIndex(i, Columns)
