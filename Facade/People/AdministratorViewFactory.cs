@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Facade.People
 {
-    public class AdministratorViewFacotry : AbstractViewFactory<AdministratorData, Administrator, AdministratorView>
+    public class AdministratorViewFactory : AbstractViewFactory<AdministratorData, Administrator, AdministratorView>
     {
         protected internal override Administrator toObject(AdministratorData d) => new Administrator(d);
     }

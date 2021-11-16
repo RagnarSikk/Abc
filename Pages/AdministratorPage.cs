@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Linq.Expressions;
+using Abc.Facade;
 
 namespace Abc.Pages {
     public class AdministratorPage : ViewPage<AdministratorPage, IAdministratorsRepository, Administrator, AdministratorView, AdministratorData>
@@ -14,8 +15,8 @@ namespace Abc.Pages {
 
         public AdministratorPage(IAdministratorsRepository r) : base(r, "Administrators") { }
         protected internal override Uri pageUrl() => new Uri("/Administators", UriKind.Relative);
-        protected internal override Administrator toObject(AdministratorView v) => new AdministratorViewFacotry().Create(v);
-        protected internal override AdministratorView toView(Administrator o) => new AdministratorViewFacotry().Create(o);
+        protected internal override Administrator toObject(AdministratorView v) => new AdministratorViewFactory().Create(v);
+        protected internal override AdministratorView toView(Administrator o) => new AdministratorViewFactory().Create(o);
 
         protected override void createTableColumns()
         {

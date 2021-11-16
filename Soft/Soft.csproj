@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\AdminView\Pages\Services\" />
+    <Folder Include="Pages\sh\" />
   </ItemGroup>
 
 </Project>
