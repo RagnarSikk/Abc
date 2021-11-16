@@ -13,8 +13,8 @@ namespace Abc.Pages {
     {
         public CoachPage(ICoachesRepository r) : base(r, "Coaches") { }
         protected internal override Uri pageUrl() => new Uri("/Coaches", UriKind.Relative);
-        protected internal override Coach toObject(CoachView v) => new CoachViewFacotry().Create(v);
-        protected internal override CoachView toView(Coach o) => new CoachViewFacotry().Create(o);
+        protected internal override Coach toObject(CoachView v) => new CoachViewFactory().Create(v);
+        protected internal override CoachView toView(Coach o) => new CoachViewFactory().Create(o);
 
         protected override void createTableColumns() {
 

@@ -10,8 +10,8 @@ namespace Abc.Pages {
     {
         public NutritionistPage(INutritionistsRepository r) : base(r, "Nutritionists") { }
         protected internal override Uri pageUrl() => new Uri("/Nutritionists", UriKind.Relative);
-        protected internal override Nutritionist toObject(NutritionistView v) => new NutritionistViewFacotry().Create(v);
-        protected internal override NutritionistView toView(Nutritionist o) => new NutritionistViewFacotry().Create(o);
+        protected internal override Nutritionist toObject(NutritionistView v) => new NutritionistViewFactory().Create(v);
+        protected internal override NutritionistView toView(Nutritionist o) => new NutritionistViewFactory().Create(o);
 
 
         protected override void createTableColumns()

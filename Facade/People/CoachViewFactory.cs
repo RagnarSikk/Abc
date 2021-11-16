@@ -4,7 +4,7 @@ using Abc.Facade.Common;
 
 namespace Abc.Facade.People
 {
-    public class CoachViewFacotry : AbstractViewFactory<CoachData, Coach, CoachView>
+    public class CoachViewFactory : AbstractViewFactory<CoachData, Coach, CoachView>
     {
         protected internal override Coach toObject(CoachData d) => new Coach(d);
     }

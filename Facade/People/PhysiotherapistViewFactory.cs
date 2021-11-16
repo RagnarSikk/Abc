@@ -4,7 +4,7 @@ using Abc.Facade.Common;
 
 namespace Abc.Facade.People
 {
-    public class PhysiotherapistViewFacotry : AbstractViewFactory<PhysiotherapistData, Physiotherapist, PhysiotherapistView>
+    public class PhysiotherapistViewFactory : AbstractViewFactory<PhysiotherapistData, Physiotherapist, PhysiotherapistView>
     {
         protected internal override Physiotherapist toObject(PhysiotherapistData d) => new Physiotherapist(d);
     }
