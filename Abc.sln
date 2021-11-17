@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31717.71
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{D28E6DFA-B167-42ED-B438-F9F93F7333D3}"
 EndProject
@@ -13,13 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pages", "Pages\Pages.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soft", "Soft\Soft.csproj", "{313C283F-47D4-4576-BB89-4FC9B9820434}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aids", "Aids\Aids.csproj", "{B18F2007-2636-4E78-A6E6-C3071B4CEF11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aids", "Aids\Aids.csproj", "{B18F2007-2636-4E78-A6E6-C3071B4CEF11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A337E31C-1B0F-4726-929D-8DA85E8B6164}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{A337E31C-1B0F-4726-929D-8DA85E8B6164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{8DE889D4-4CD6-4A52-AC53-975E0930FB59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{8DE889D4-4CD6-4A52-AC53-975E0930FB59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{FBC3C3F9-AAD9-427D-9B02-7FCF4982C578}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

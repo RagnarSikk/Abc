@@ -1,0 +1,16 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.TrainingPage
+<body>
+
+    @Html.Show(m => m.Item.Id)
+    @Html.Show(m => m.Item.Name)
+    @Html.Show(m => m.Item.Definition)
+    @Html.Show(m => m.Item.LocationOfTraining)
+    @Html.Show(m => m.Item.NumberOfAthletes)
+    @Html.Show(m => m.Item.MaxNumberOfAthletes)
+    @Html.Show(m => m.Item.MinNumberOfAthletes)
+    @Html.Show(m => m.Item.NumberOfCoachesRequired)
+    @Html.Show(m => m.Item.AvailableEquipment)
+    @Html.Show(m => m.Item.From)
+    @Html.Show(m => m.Item.To)
+</body>
