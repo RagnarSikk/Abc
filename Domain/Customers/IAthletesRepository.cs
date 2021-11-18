@@ -1,6 +1,6 @@
-﻿using Abc.Domain.Common;
+﻿//using Abc.Domain.Common;
 
-namespace Abc.Domain.Customers {
-    public interface IAthletesRepository : IRepository<Athlete> {
-    }
-}
+//namespace Abc.Domain.Customers {
+//    public interface IAthletesRepository : IRepository<Athlete> {
+//    }
+//}

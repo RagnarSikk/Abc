@@ -1,9 +1,7 @@
 
-using Abc.Domain.Customers;
 using Abc.Domain.Others;
 using Abc.Domain.People;
 using Abc.Infra;
-using Abc.Infra.Customers;
 using Abc.Infra.Others;
 using Abc.Infra.People;
 using Abc.Soft.Data;
@@ -42,12 +40,9 @@ namespace Soft {
         private static void registerRepositories(IServiceCollection s) {
             s.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
             s.AddScoped<IServiceRepository, ServiceRepository>();
-            s.AddScoped<ICoachesRepository, CoachesRepository>();
-            s.AddScoped<IAthletesRepository, AthletesRepository>();
-            s.AddScoped<IAdministratorsRepository, AdministratorsRepository>();
-            s.AddScoped<INutritionistsRepository, NutritionistsRepository>();
-            s.AddScoped<IPhysiotherapistsRepository, PhysiotherapistsRepository>();
-            s.AddScoped<ITherepistsRepository, TherepistsRepository>();
+            s.AddScoped<IPersonRepository, PersonRepository>();
+            s.AddScoped<IPersonRoleRepository, PersonRoleRepository>();
+            s.AddScoped<IPersonRoleTypeRepository, PersonRoleTypeRepository>();
             s.AddScoped<IEquipmentRepository, EquipmentRepository>();
             s.AddScoped<ITrainingRepository, TrainingRepository>();
         }

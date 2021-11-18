@@ -1,6 +1,7 @@
 ﻿using Abc.Data.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Abc.Data.People;
 
 namespace Abc.Tests.Data.Common {
     [TestClass]
