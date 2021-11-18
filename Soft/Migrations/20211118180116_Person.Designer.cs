@@ -10,78 +10,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Abc.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211027092346_newBaseData")]
-    partial class newBaseData
+    [Migration("20211118180116_Person")]
+    partial class Person
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Abc.Data.AdminstratorData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("AdministartorId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("From")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("To")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Administrators");
-                });
-
-            modelBuilder.Entity("Abc.Data.AthleteData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AmountOfVisits")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("From")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Height")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("To")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Weight")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Athletes");
-                });
-
-            modelBuilder.Entity("Abc.Data.CoachData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime?>("From")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("To")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Coaches");
-                });
-
-            modelBuilder.Entity("Abc.Data.EquipmentData", b =>
+            modelBuilder.Entity("Abc.Data.Others.EquipmentData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -95,7 +35,7 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("Code")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Definition")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("From")
@@ -112,7 +52,7 @@ namespace Abc.Soft.Migrations
                     b.ToTable("Equipments");
                 });
 
-            modelBuilder.Entity("Abc.Data.NutritionistData", b =>
+            modelBuilder.Entity("Abc.Data.Others.ServiceData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -120,44 +60,170 @@ namespace Abc.Soft.Migrations
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ServiceProviderRoleId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ServiceTypeId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("To")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Nutritionists");
+                    b.ToTable("Services");
                 });
 
-            modelBuilder.Entity("Abc.Data.PhysiotherapistData", b =>
+            modelBuilder.Entity("Abc.Data.Others.ServiceTypeData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Definition")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("To")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Physiotherapists");
+                    b.ToTable("ServiceTypes");
                 });
 
-            modelBuilder.Entity("Abc.Data.TherapistData", b =>
+            modelBuilder.Entity("Abc.Data.Others.TrainingData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("AvailableEquipment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Definition")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("LocationOfTraining")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaxNumberOfAthletes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MinNumberOfAthletes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfAthletes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumberOfCoachesRequired")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("To")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Therapists");
+                    b.ToTable("Trainings");
+                });
+
+            modelBuilder.Entity("Abc.Data.People.PersonData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstMidName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("Abc.Data.People.PersonRoleData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Certificate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PersonId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PersonRoleTypeId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PersonRoles");
+                });
+
+            modelBuilder.Entity("Abc.Data.People.PersonRoleTypeData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Definition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PersonRoleTypes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
