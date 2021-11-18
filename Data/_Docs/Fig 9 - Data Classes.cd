@@ -102,13 +102,6 @@
       <FileName>Others\ServiceProviderData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Abc.Data.Others.ServiceTypeData">
-    <Position X="7.5" Y="6.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Others\ServiceTypeData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Abc.Data.Common.DefinedEntityData">
     <Position X="9.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
@@ -119,7 +112,7 @@
   <Class Name="Abc.Data.Common.NamedEntityData">
     <Position X="11.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\NamedEntityData.cs</FileName>
     </TypeIdentifier>
   </Class>

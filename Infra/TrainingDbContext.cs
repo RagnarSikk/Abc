@@ -15,6 +15,8 @@ namespace Abc.Infra {
         public DbSet<TherapistData> Therapists { get; set; }
         public DbSet<EquipmentData> Equipments { get; set; }
         public DbSet<TrainingData> Trainings { get; set; }
+        public DbSet<ServiceData> Services { get; set; }
+        public DbSet<ServiceTypeData> ServiceTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder b) {
             base.OnModelCreating(b);
@@ -29,6 +31,8 @@ namespace Abc.Infra {
             b.Entity<AthleteData>().ToTable(nameof(Athletes));
             b.Entity<AdministratorData>().ToTable(nameof(Administrators));
             b.Entity<TrainingData>().ToTable(nameof(Trainings));
+            b.Entity<ServiceData>().ToTable(nameof(Services));
+            b.Entity<ServiceTypeData>().ToTable(nameof(ServiceTypes));
         }
     }
 }

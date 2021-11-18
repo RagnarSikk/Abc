@@ -40,6 +40,8 @@ namespace Soft {
         }
 
         private static void registerRepositories(IServiceCollection s) {
+            s.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
+            s.AddScoped<IServiceRepository, ServiceRepository>();
             s.AddScoped<ICoachesRepository, CoachesRepository>();
             s.AddScoped<IAthletesRepository, AthletesRepository>();
             s.AddScoped<IAdministratorsRepository, AdministratorsRepository>();

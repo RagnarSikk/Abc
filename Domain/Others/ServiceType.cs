@@ -2,7 +2,7 @@
 using Abc.Domain.Common;
 
 namespace Abc.Domain.Others {
-    public class ServiceType : DefinedEntity<ServiceTypeData> {
+    public sealed class ServiceType : DefinedEntity<ServiceTypeData> {
         public ServiceType(ServiceTypeData d) : base(d) { }
     }
 }

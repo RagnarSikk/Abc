@@ -1,7 +1,8 @@
-﻿using Abc.Data.Common;
+﻿
+using Abc.Facade.Common;
 
-namespace Abc.Data.Others {
-    public sealed class ServiceData : UniqueEntityData {
+namespace Abc.Facade.Other {
+    public sealed class ServiceView : UniqueEntityView {
         public string ServiceProviderRoleId { get; set; }
         public string ServiceTypeId { get; set; }
     }

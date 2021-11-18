@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Abc.Data.Others.ServiceTypeData">
-    <Position X="1.5" Y="3.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Others\ServiceTypeData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Abc.Data.Common.DefinedEntityData">
     <Position X="1.5" Y="1" Width="2" />
     <TypeIdentifier>

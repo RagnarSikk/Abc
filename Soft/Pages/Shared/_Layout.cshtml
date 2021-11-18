@@ -27,6 +27,8 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                         @Html.DropMenu("Administrator View",
+                            new Link("Service types", new Uri("/AdminView/ServiceTypes/Index?handler=index", UriKind.Relative)),
+                            new Link("Services", new Uri("/AdminView/Services/Index?handler=index", UriKind.Relative)),
                             new Link("Administrators", new Uri("/AdminView/Administrators/Index?handler=index", UriKind.Relative)),
                             new Link("Nutritionists", new Uri("/AdminView/Nutritionists/Index?handler=index", UriKind.Relative)),
                             new Link("Physiotherapists", new Uri("/AdminView/Physiotherapists/Index?handler=index", UriKind.Relative)),

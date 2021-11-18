@@ -15,7 +15,7 @@ namespace Abc.Tests.Domain.Others {
             data = GetRandom.Object<ServiceData>();
             base.TestInitialize();
         }
-        [TestMethod] public void AthleteIdTest() => isProperty(data.AthleteId);
-        [TestMethod] public void ServiceProviderIdTest() => isProperty(data.ServiceProviderId);
+        [TestMethod] public void ServiceTypeIdTest() => isProperty(data.ServiceTypeId);
+        [TestMethod] public void ServiceProviderRoleIdTest() => isProperty(data.ServiceProviderRoleId);
     }
 }

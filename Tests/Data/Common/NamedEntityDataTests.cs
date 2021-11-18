@@ -7,6 +7,8 @@ namespace Abc.Tests.Data.Common {
         private class testClass : NamedEntityData { }
         protected override NamedEntityData createObject() => new testClass();
         [TestMethod] public void NameTest() => isProperty<string>();
+        [TestMethod] public void CodeTest() => isProperty<string>();
+
     }
 
 }

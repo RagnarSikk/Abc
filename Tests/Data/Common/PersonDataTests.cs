@@ -9,7 +9,6 @@ namespace Abc.Tests.Data.Common {
         protected override PersonData createObject() => new testClass();
         [TestMethod] public void LastNameTest() => isProperty<string>();
         [TestMethod] public void FirstMidNameTest() => isProperty<string>();
-        [TestMethod] public void FullNameTest() => isProperty<string>();
         [TestMethod] public void PhoneNumberTest() => isProperty<string>();
         [TestMethod] public void EmailTest() => isProperty<string>();
         [TestMethod] public void GenderTest() => isProperty<string>();
