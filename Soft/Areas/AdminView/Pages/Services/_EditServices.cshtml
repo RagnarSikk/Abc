@@ -1,0 +1,10 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Other.ServicePage
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    @Html.Editor(m =>m.Item.ServiceProviderRoleId)
+    @Html.Editor(m =>m.Item.ServiceTypeId)
+    @Html.Editor(m => m.Item.From)
+    @Html.Editor(m => m.Item.To)
+</body>
+
