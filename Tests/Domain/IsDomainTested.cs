@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain
-{
-    [TestClass] public class IsDomainTested : AssemblyTests {
+namespace Abc.Tests.Domain {
+    [TestClass]
+    public class IsDomainTested : AssemblyTests {
         protected override string assembly => "Abc.Domain";
         [TestMethod]
         public void IsCommonTested()

@@ -1,12 +1,10 @@
 ﻿using Abc.Domain.Common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Abc.Tests {
-    internal class RepoMock<T> : IRepository<T> where T: IUniqueEntity<T> {
+    internal class MockRepo<T> : IRepository<T> where T : IUniqueEntity<T> {
         private readonly List<T> list = new List<T>();
         public string SortOrder { get; set; }
         public string SearchString { get; set; }
@@ -26,7 +24,7 @@ namespace Abc.Tests {
 
         public async Task Delete(string id) {
             var item = await Get(id);
-            if(item is not null) list.Remove(item);
+            if (item is not null) list.Remove(item);
         }
         public Task<List<T>> Get() {
             throw new NotImplementedException();
@@ -34,15 +32,15 @@ namespace Abc.Tests {
         public async Task<T> Get(string id) {
             await Task.CompletedTask;
             return (T)GetById(id);
-        }        
+        }
 
-        public object GetById(string id) => list.Find(x => x.Id  == id);
+        public object GetById(string id) => list.Find(x => x.Id == id);
 
         public Task Update(T obj) {
             if (obj is not null) {
                 Delete(obj.Id);
                 list.Add(obj);
-            }         
+            }
             return Task.CompletedTask;
         }
     }

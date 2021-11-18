@@ -2,10 +2,8 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 
-namespace Abc.Pages.Common.Extensions
-{
-    public interface IIndexTable<TPage>
-    {
+namespace Abc.Pages.Common.Extensions {
+    public interface IIndexTable<TPage> {
         int ColumnsCount { get; }
         int RowsCount { get; }
         void SetItem(int i);

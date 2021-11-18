@@ -3,7 +3,7 @@ using System;
 
 namespace Abc.Domain.Common {
 
-    public abstract class ValueObject<TData> :BaseEntity where TData : class, new() {
+    public abstract class ValueObject<TData> : BaseEntity where TData : class, new() {
 
         protected readonly TData data;
         internal static Guid guid;
@@ -55,7 +55,8 @@ namespace Abc.Domain.Common {
             try {
                 guid = new Guid(s);
                 return true;
-            } catch (FormatException) { return false; }
+            }
+            catch (FormatException) { return false; }
         }
 
     }

@@ -1,38 +1,33 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Abc.Aids.Methods;
+﻿using Abc.Aids.Methods;
 using Abc.Data.Common;
 using Abc.Domain.Common;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Abc.Infra.Common
-{
+namespace Abc.Infra.Common {
 
     public abstract class BaseRepository<TDomain, TData> : ICrudMethods<TDomain>, IRepository
         where TDomain : IEntity<TData>
-        where TData : PeriodData, new()
-    {
+        where TData : PeriodData, new() {
 
         protected internal DbContext db;
         protected internal DbSet<TData> dbSet;
 
-        protected BaseRepository(DbContext c, DbSet<TData> s)
-        {
+        protected BaseRepository(DbContext c, DbSet<TData> s) {
             db = c;
             dbSet = s;
         }
 
-        public virtual async Task<List<TDomain>> Get()
-        {
+        public virtual async Task<List<TDomain>> Get() {
             var query = createSqlQuery();
             var set = await runSqlQueryAsync(query);
 
             return toDomainObjectsList(set);
         }
 
-        public async Task<TDomain> Get(string id)
-        {
+        public async Task<TDomain> Get(string id) {
             if (id is null) return toDomainObject(new TData());
 
             var d = await getData(id);
@@ -42,8 +37,7 @@ namespace Abc.Infra.Common
             return obj;
         }
 
-        public async Task Delete(string id)
-        {
+        public async Task Delete(string id) {
             if (id is null) return;
             var v = await getData(id);
             if (v is null) return;
@@ -51,8 +45,7 @@ namespace Abc.Infra.Common
             await db?.SaveChangesAsync();
         }
 
-        public async Task Add(TDomain obj)
-        {
+        public async Task Add(TDomain obj) {
             var d = getData(obj);
 
             if (d is null) return;
@@ -63,8 +56,7 @@ namespace Abc.Infra.Common
             await db.SaveChangesAsync();
         }
 
-        public async Task Update(TDomain obj)
-        {
+        public async Task Update(TDomain obj) {
             var d = getData(obj);
             d = copyData(d);
             db.Attach(d).State = EntityState.Modified;
@@ -87,8 +79,7 @@ namespace Abc.Infra.Common
 
         public object GetById(string id) => Get(id).GetAwaiter().GetResult();
 
-        protected internal virtual IQueryable<TData> createSqlQuery()
-        {
+        protected internal virtual IQueryable<TData> createSqlQuery() {
             var query = from s in dbSet select s;
 
             return query;
@@ -110,8 +101,7 @@ namespace Abc.Infra.Common
         internal List<TDomain> toDomainObjectsList(List<TData> set)
             => set.Select(toDomainObject).ToList();
 
-        private TData copyData(TData d)
-        {
+        private TData copyData(TData d) {
             var x = getDataById(d);
 
             if (x is null) return d;

@@ -1,20 +1,17 @@
 ﻿using Abc.Aids.Reflection;
-using Abc.Data.Common;
 using Abc.Domain.Common;
 using Abc.Facade.Common;
 using Abc.Pages.Common.Extensions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace Abc.Pages.Common {
     public abstract class UnifiedPage<TPage, TRepository, TDomain, TView, TData>
-        :TitledPage<TRepository, TDomain, TView, TData>, IIndexTable<TPage>
+        : TitledPage<TRepository, TDomain, TView, TData>, IIndexTable<TPage>
         where TPage : PageModel
         where TRepository : class, ICrudMethods<TDomain>, ISorting, IFiltering, IPaging
         where TView : PeriodView {

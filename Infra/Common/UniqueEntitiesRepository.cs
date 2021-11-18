@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Infra.Common {
 
-    public abstract class UniqueEntitiesRepository<TDomain, TData> :PaginatedRepository<TDomain, TData>
+    public abstract class UniqueEntitiesRepository<TDomain, TData> : PaginatedRepository<TDomain, TData>
         where TDomain : IEntity<TData>
         where TData : UniqueEntityData, new() {
 

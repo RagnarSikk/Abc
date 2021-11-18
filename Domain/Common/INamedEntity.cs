@@ -1,8 +1,8 @@
 ﻿namespace Abc.Domain.Common {
-    public interface INamedEntity :IUniqueEntity {
+    public interface INamedEntity : IUniqueEntity {
         string Name { get; }
     }
 
-    public interface INamedEntity<out TData> :INamedEntity, IEntity<TData> { }
+    public interface INamedEntity<out TData> : INamedEntity, IEntity<TData> { }
 
 }

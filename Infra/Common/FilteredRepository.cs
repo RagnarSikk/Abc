@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace Abc.Infra.Common {
 
-    public abstract class FilteredRepository<TDomain, TData> :SortedRepository<TDomain, TData>, IFiltering
+    public abstract class FilteredRepository<TDomain, TData> : SortedRepository<TDomain, TData>, IFiltering
         where TDomain : IEntity<TData>
         where TData : PeriodData, new() {
 

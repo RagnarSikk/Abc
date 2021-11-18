@@ -1,11 +1,9 @@
 ﻿using Abc.Data.Customers;
 using Abc.Data.Others;
 using Abc.Data.People;
-using Abc.Facade.Customers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Abc.Infra
-{
+namespace Abc.Infra {
     public class TrainingDbContext : DbContext {
         public TrainingDbContext(DbContextOptions<TrainingDbContext> options)
             : base(options) { }

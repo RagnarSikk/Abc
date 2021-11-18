@@ -3,11 +3,6 @@ using Abc.Data.Customers;
 using Abc.Domain.Common;
 using Abc.Domain.Customers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Abc.Tests.Domain.Customers {
     [TestClass]

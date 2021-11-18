@@ -1,11 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Abc.Tests
-{
-    public abstract class BaseClassTests<TBaseClass> : BaseTests { 
-        protected object obj
-        {
+namespace Abc.Tests {
+    public abstract class BaseClassTests<TBaseClass> : BaseTests {
+        protected object obj {
             get => objUnderTests;
             set => objUnderTests = value;
         }
@@ -13,8 +11,7 @@ namespace Abc.Tests
         protected virtual Type getBaseClass() => typeof(TBaseClass);
 
         [TestInitialize]
-        public virtual void TestInitialize()
-        {
+        public virtual void TestInitialize() {
             type = getTestableClassType();
             obj = createObject();
         }

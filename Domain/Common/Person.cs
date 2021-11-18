@@ -1,23 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Abc.Data.Common;
+﻿using Abc.Data.Common;
+using System;
 
-namespace Abc.Domain.Common
-{
+namespace Abc.Domain.Common {
     public abstract class Person<TData> : UniqueEntity<TData>, IPersonEntity
-        where TData : PersonData, new()
-    {
+        where TData : PersonData, new() {
         protected Person() : this(null) { }
         protected Person(TData d) : base(d) { }
         public string FirstMidName => Data?.FirstMidName ?? Unspecified;
         public string LastName => Data?.LastName ?? Unspecified;
-        public string FullName
-        {
-            get
-            {
+        public string FullName {
+            get {
                 return LastName + ", " + FirstMidName;
             }
         }

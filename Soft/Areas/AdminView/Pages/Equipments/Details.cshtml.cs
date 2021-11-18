@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace Abc.Soft.Areas.AdminView.Pages.Equipments {
     public class DetailsModel : PageModel {

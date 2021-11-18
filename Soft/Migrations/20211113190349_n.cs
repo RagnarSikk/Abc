@@ -1,12 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
-namespace Abc.Soft.Migrations
-{
-    public partial class n : Migration
-    {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
+namespace Abc.Soft.Migrations {
+    public partial class n : Migration {
+        protected override void Up(MigrationBuilder migrationBuilder) {
             migrationBuilder.DropColumn(
                 name: "Code",
                 table: "Equipments");
@@ -35,8 +32,7 @@ namespace Abc.Soft.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Trainings",
-                columns: table => new
-                {
+                columns: table => new {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     LocationOfTraining = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AvailableEquipment = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -49,14 +45,12 @@ namespace Abc.Soft.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Definition = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
-                constraints: table =>
-                {
+                constraints: table => {
                     table.PrimaryKey("PK_Trainings", x => x.Id);
                 });
         }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        protected override void Down(MigrationBuilder migrationBuilder) {
             migrationBuilder.DropTable(
                 name: "Trainings");
 

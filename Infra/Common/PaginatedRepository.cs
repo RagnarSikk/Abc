@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Abc.Infra.Common {
 
-    public abstract class PaginatedRepository<TDomain, TData> :FilteredRepository<TDomain, TData>, IPaging
+    public abstract class PaginatedRepository<TDomain, TData> : FilteredRepository<TDomain, TData>, IPaging
         where TDomain : IEntity<TData>
         where TData : PeriodData, new() {
 

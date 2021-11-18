@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Abc.Facade.Common
-{
-    public abstract class PersonView : UniqueEntityView
-    {
+namespace Abc.Facade.Common {
+    public abstract class PersonView : UniqueEntityView {
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
         [DisplayName("Full Name")]

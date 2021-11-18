@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Abc.Data.People;
+﻿using Abc.Data.People;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Threading.Tasks;
 
 namespace Abc.Soft.Areas.AdminView.Pages.Nutritionists {
     public class CreateModel : PageModel {

@@ -1,12 +1,11 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Abc.Data.Customers;
+﻿using Abc.Data.Customers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Abc.Soft.Areas.Customers.Pages.Athletes
-{
+namespace Abc.Soft.Areas.Customers.Pages.Athletes {
     public class EditModel : PageModel {
         private readonly Abc.Soft.Data.ApplicationDbContext _context;
 

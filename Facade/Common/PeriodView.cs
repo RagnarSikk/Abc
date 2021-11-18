@@ -1,12 +1,11 @@
-﻿using Abc.Data.Common;
-using Abc.Domain.Common;
+﻿using Abc.Domain.Common;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Abc.Facade.Common {
 
-    public abstract class PeriodView :BaseEntity {
+    public abstract class PeriodView : BaseEntity {
 
         internal static string setDisplayNameValue => "set_DisplayNameValue";
 

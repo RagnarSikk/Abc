@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Customers.AthleteData">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.PersonData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="3.375" />
+        <Point X="4.625" Y="3.375" />
+        <Point X="4.625" Y="1.875" />
+        <Point X="4" Y="1.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Customers\AthleteData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.People.AdministratorData">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.PersonData" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.438" />
+        <Point X="7.25" Y="3.438" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>People\AdministratorData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.People.CoachData">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.PersonData" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.438" />
+        <Point X="6.875" Y="3.438" />
+        <Point X="6.875" Y="1.999" />
+        <Point X="7.25" Y="1.999" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>People\CoachData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.People.NutritionistData">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.PersonData" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.438" />
+        <Point X="6.875" Y="3.438" />
+        <Point X="6.875" Y="4.616" />
+        <Point X="7.25" Y="4.616" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>People\NutritionistData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.People.TherapistData">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.PersonData" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="3.375" />
+        <Point X="4.625" Y="3.375" />
+        <Point X="4.625" Y="5.366" />
+        <Point X="4" Y="5.366" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>People\TherapistData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.People.PhysiotherapistData">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.PersonData" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="3.375" />
+        <Point X="4.625" Y="3.375" />
+        <Point X="4.625" Y="3.804" />
+        <Point X="4" Y="3.804" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>People\PhysiotherapistData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.PersonData" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACAAAAAQAAAAAAQAAAAAAAAAAAgAAg=</HashCode>
+      <FileName>Common\PersonData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Others.ServiceProviderData">
+    <Position X="5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Others\ServiceProviderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Others.ServiceTypeData">
+    <Position X="7.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Others\ServiceTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.DefinedEntityData">
+    <Position X="9.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\DefinedEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.NamedEntityData">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\NamedEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

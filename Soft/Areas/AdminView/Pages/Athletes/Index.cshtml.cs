@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Abc.Data.Customers;
+﻿using Abc.Data.Customers;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace Abc.Soft.Areas.AdminView.Pages.Athletes
-{
+namespace Abc.Soft.Areas.AdminView.Pages.Athletes {
     public class IndexModel : PageModel {
         private readonly Abc.Soft.Data.ApplicationDbContext _context;
 

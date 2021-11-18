@@ -1,16 +1,15 @@
-﻿using System;
-using System.Linq.Expressions;
-using Abc.Data.Customers;
+﻿using Abc.Data.Customers;
 using Abc.Domain.Customers;
 using Abc.Facade.Customers;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Linq.Expressions;
 
-namespace Abc.Pages.Customers
-{
-    public class AthletePage : ViewPage<AthletePage,IAthletesRepository,Athlete, AthleteView, AthleteData> {
-        public AthletePage(IAthletesRepository r) : base(r,"Athletes") { }
+namespace Abc.Pages.Customers {
+    public class AthletePage : ViewPage<AthletePage, IAthletesRepository, Athlete, AthleteView, AthleteData> {
+        public AthletePage(IAthletesRepository r) : base(r, "Athletes") { }
         protected internal override Uri pageUrl() => new Uri("/Customers/Athletes", UriKind.Relative);
         protected internal override Athlete toObject(AthleteView v) => new AthleteViewFactory().Create(v);
         protected internal override AthleteView toView(Athlete o) => new AthleteViewFactory().Create(o);
@@ -29,8 +28,7 @@ namespace Abc.Pages.Customers
             createColumn(x => Item.Height);
             createColumn(x => Item.AmountOfVisits);
         }
-        public override string GetName(IHtmlHelper<AthletePage> html, int i)
-        {
+        public override string GetName(IHtmlHelper<AthletePage> html, int i) {
             if (i == 1 || i == 2 || i == 4 || i == 5 || i == 6)
                 return html.DisplayNameFor(Columns[i] as Expression<Func<AthletePage, string>>);
             if (i == 3 || i == 7 || i == 8)
@@ -40,10 +38,9 @@ namespace Abc.Pages.Customers
             if (i == 11)
                 return html.DisplayNameFor(Columns[i] as Expression<Func<AthletePage, int>>);
             return base.GetName(html, i);
-           
+
         }
-        public override IHtmlContent GetValue(IHtmlHelper<AthletePage> html, int i)
-        {
+        public override IHtmlContent GetValue(IHtmlHelper<AthletePage> html, int i) {
             if (i == 1 || i == 2 || i == 4 || i == 5 || i == 6)
                 return html.DisplayFor(Columns[i] as Expression<Func<AthletePage, string>>);
             if (i == 3 || i == 7 || i == 8)

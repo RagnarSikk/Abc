@@ -2,7 +2,7 @@
 
 namespace Abc.Facade.Common {
 
-    public abstract class NamedView :UniqueEntityView {
+    public abstract class NamedView : UniqueEntityView {
 
         //public string Code { get; set; }
 

@@ -14,12 +14,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 
-namespace Soft
-{
-    public class Startup
-    {
+namespace Soft {
+    public class Startup {
         private static string connection
             => "DefaultConnection";
         public IConfiguration Configuration { get; }
@@ -27,8 +24,7 @@ namespace Soft
 
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices(IServiceCollection services) {
             registerDbContexts(services);
             registerAuthentication(services);
             services.AddRazorPages();
@@ -43,8 +39,7 @@ namespace Soft
             //        options.UseSqlServer(Configuration.GetConnectionString(connection)));
         }
 
-        private static void registerRepositories(IServiceCollection s)
-        {
+        private static void registerRepositories(IServiceCollection s) {
             s.AddScoped<ICoachesRepository, CoachesRepository>();
             s.AddScoped<IAthletesRepository, AthletesRepository>();
             s.AddScoped<IAdministratorsRepository, AdministratorsRepository>();
@@ -59,28 +54,23 @@ namespace Soft
                 options => options.SignIn.RequireConfirmedAccount = true)
               .AddEntityFrameworkStores<ApplicationDbContext>();
 
-        private void registerDbContexts(IServiceCollection s)
-        {
+        private void registerDbContexts(IServiceCollection s) {
             registerDbContext<ApplicationDbContext>(s);
             registerDbContext<TrainingDbContext>(s);
         }
-        protected virtual void registerDbContext<T>(IServiceCollection s) where T : DbContext
-        {
+        protected virtual void registerDbContext<T>(IServiceCollection s) where T : DbContext {
             s.AddDbContext<T>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString(connection)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+            if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
-            else
-            {
+            else {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();

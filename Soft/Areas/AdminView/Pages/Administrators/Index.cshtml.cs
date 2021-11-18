@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Abc.Data.People;
+﻿using Abc.Data.People;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Abc.Soft.Areas.AdminView.Pages.Administrators {
     public class IndexModel : PageModel {

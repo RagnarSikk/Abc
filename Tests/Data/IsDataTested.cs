@@ -1,7 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Data {
-    [TestClass] public class IsDataTested : AssemblyTests {
+    [TestClass]
+    public class IsDataTested : AssemblyTests {
         protected override string assembly => "Abc.Data";
         [TestMethod]
         public void IsCommonTested()

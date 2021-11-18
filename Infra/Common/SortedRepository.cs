@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace Abc.Infra.Common {
 
-    public abstract class SortedRepository<TDomain, TData> :BaseRepository<TDomain, TData>, ISorting
+    public abstract class SortedRepository<TDomain, TData> : BaseRepository<TDomain, TData>, ISorting
         where TDomain : IEntity<TData>
         where TData : PeriodData, new() {
 

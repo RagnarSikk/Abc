@@ -1,11 +1,10 @@
-﻿using System.Threading.Tasks;
-using Abc.Data.Customers;
+﻿using Abc.Data.Customers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
-namespace Abc.Soft.Areas.AdminView.Pages.Athletes
-{
+namespace Abc.Soft.Areas.AdminView.Pages.Athletes {
     public class DetailsModel : PageModel {
         private readonly Abc.Soft.Data.ApplicationDbContext _context;
 

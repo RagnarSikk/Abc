@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using Abc.Data.People;
+﻿using Abc.Data.People;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace Abc.Soft.Areas.People.Pages.Administrators {
     public class DetailsModel : PageModel {

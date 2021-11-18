@@ -1,12 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
-namespace Abc.Soft.Migrations
-{
-    public partial class i : Migration
-    {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
+namespace Abc.Soft.Migrations {
+    public partial class i : Migration {
+        protected override void Up(MigrationBuilder migrationBuilder) {
             migrationBuilder.RenameColumn(
                 name: "Description",
                 table: "Equipments",
@@ -229,8 +226,7 @@ namespace Abc.Soft.Migrations
                 nullable: true);
         }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        protected override void Down(MigrationBuilder migrationBuilder) {
             migrationBuilder.DropColumn(
                 name: "DateOfBirth",
                 table: "Therapists");

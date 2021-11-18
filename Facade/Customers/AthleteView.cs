@@ -1,11 +1,8 @@
-﻿using Abc.Data.Common;
-using Abc.Facade.Common;
+﻿using Abc.Facade.Common;
 using System.ComponentModel;
 
-namespace Abc.Facade.Customers
-{
-    public sealed class AthleteView : PersonView
-    {
+namespace Abc.Facade.Customers {
+    public sealed class AthleteView : PersonView {
         [DisplayName("Weight")]
         public double Weight { get; set; }
         public double Height { get; set; }

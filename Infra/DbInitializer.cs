@@ -11,7 +11,8 @@ namespace Abc.Infra {
             try {
                 db?.AddRange(set);
                 db?.SaveChanges();
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 Log.Exception(e);
                 rollBack(db);
                 addItems(set, db);
@@ -25,13 +26,15 @@ namespace Abc.Infra {
             try {
                 db?.Add(item);
                 db?.SaveChanges();
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 Log.Exception(e);
                 rollBack(db);
                 try {
                     db?.Update(item);
                     db?.SaveChanges();
-                } catch (Exception e1) {
+                }
+                catch (Exception e1) {
                     Log.Exception(e1);
                     rollBack(db);
                 }

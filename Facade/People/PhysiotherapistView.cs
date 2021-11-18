@@ -1,8 +1,6 @@
 ﻿using Abc.Facade.Common;
 
-namespace Abc.Facade.People
-{
-    public sealed class PhysiotherapistView : PersonView
-    {
+namespace Abc.Facade.People {
+    public sealed class PhysiotherapistView : PersonView {
     }
 }

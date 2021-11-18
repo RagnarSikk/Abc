@@ -4,10 +4,8 @@ using Abc.Facade.Other;
 using Abc.Pages.Common;
 using System;
 
-namespace Abc.Pages
-{
-    public class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData>
-    {
+namespace Abc.Pages {
+    public class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData> {
         public EquipmentPage(IEquipmentRepository r) : base(r, "Equipments") { }
         protected internal override Uri pageUrl() => new Uri("/Equipments", UriKind.Relative);
         protected internal override Equipment toObject(EquipmentView v) => new EquipmentViewFactory().Create(v);
