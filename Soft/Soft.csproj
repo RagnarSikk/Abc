@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Customers\Pages\" />
     <Folder Include="Pages\sh\" />
   </ItemGroup>
 
