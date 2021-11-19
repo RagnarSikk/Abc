@@ -31,11 +31,9 @@
                             new Link("Services", new Uri("/AdminView/Services/Index?handler=index", UriKind.Relative)),
                             new Link("Persons", new Uri("/AdminView/Persons/Index?handler=index", UriKind.Relative)),
                             new Link("Person Roles", new Uri("/AdminView/PersonRoles/Index?handler=index", UriKind.Relative)),
-                            new Link("Person Role Types", new Uri("/AdminView/PersonRoles/Index?handler=index", UriKind.Relative)),
-                            new Link("Athletes", new Uri("/AdminView/Athletes/Index?handler=index", UriKind.Relative)),
-                            new Link("Trainings", new Uri("/AdminView/Training/Index?handler=index", UriKind.Relative)))
+                            new Link("Person Role Types", new Uri("/AdminView/PersonRoleTypes/Index?handler=index", UriKind.Relative)))
 
-                        @Html.DropMenu("Customers",new Link("Athletes", new Uri("/Customers/Athletes/Index?handler=index", UriKind.Relative)))
+                        @Html.DropMenu("Persons",new Link("Person", new Uri("/Customers/Persons/Index?handler=index", UriKind.Relative)))
                           
                     </ul>
                     <partial name="_LoginPartial" />

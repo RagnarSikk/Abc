@@ -2,9 +2,11 @@
 using System.Linq.Expressions;
 using Abc.Data.People;
 using Abc.Domain.People;
+using Abc.Facade.Other;
 using Abc.Facade.People;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Abc.Pages.People
@@ -39,5 +41,13 @@ namespace Abc.Pages.People
         protected internal override PersonRoleType toObject(PersonRoleTypeView v) => new PersonRoleTypeViewFactory().Create(v);
 
         protected internal override PersonRoleTypeView toView(PersonRoleType o) => new PersonRoleTypeViewFactory().Create(o);
+
+        public override IActionResult OnGetCreate(
+            string sortOrder, string searchString, int? pageIndex,
+            string fixedFilter, string fixedValue, int? switchOfCreate)
+        {
+            Item = new PersonRoleTypeView();
+            return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
+        }
     }
 }
