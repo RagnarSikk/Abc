@@ -4,6 +4,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Data.People {
     [TestClass]
-    public class AdministratorDataTests : SealedTests<PersonData> {
+    public class PersonRoleTypeDataTests : SealedTests<DefinedEntityData> {
     }
 }

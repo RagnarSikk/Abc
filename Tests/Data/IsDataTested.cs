@@ -8,9 +8,6 @@ namespace Abc.Tests.Data {
         public void IsCommonTested()
             => isAllTested(assembly, nameSpace("Common"));
         [TestMethod]
-        public void IsCustomersTested()
-            => isAllTested(assembly, nameSpace("Customers"));
-        [TestMethod]
         public void IsOthersTested()
             => isAllTested(assembly, nameSpace("Others"));
         [TestMethod]

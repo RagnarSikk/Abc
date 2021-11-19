@@ -19,6 +19,7 @@ namespace Abc.Pages.People
         protected internal override Uri pageUrl() => new Uri("/Customers/Persons", UriKind.Relative);
         protected override void createTableColumns()
         {
+            createColumn(x => Item.Id); //Todo: sellest peaks lahti saama 
             createColumn(x => Item.LastName);
             createColumn(x => Item.FirstMidName);
             createColumn(x => Item.PhoneNumber);
@@ -31,7 +32,6 @@ namespace Abc.Pages.People
             string id, string currentFilter, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue)
         {
-            SelectedId = id;
             await getList(sortOrder, currentFilter, searchString, pageIndex,
                 fixedFilter, fixedValue).ConfigureAwait(true);
         }

@@ -46,8 +46,7 @@ namespace Abc.Pages.People
 
         public override IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
-            string fixedFilter, string fixedValue, int? switchOfCreate)
-        {
+            string fixedFilter, string fixedValue, int? switchOfCreate) {
             Item = new PersonView();
             return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
         }

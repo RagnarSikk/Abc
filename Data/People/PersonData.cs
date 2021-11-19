@@ -2,7 +2,7 @@
 using Abc.Data.Common;
 
 namespace Abc.Data.People {
-    public class PersonData : UniqueEntityData {
+    public sealed class PersonData : UniqueEntityData {
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
         public string PhoneNumber { get; set; }
