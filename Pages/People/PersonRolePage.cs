@@ -1,22 +1,18 @@
-﻿using System;
-using System.Linq.Expressions;
-using Abc.Data.People;
+﻿using Abc.Data.People;
 using Abc.Domain.People;
-using Abc.Facade.Other;
 using Abc.Facade.People;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Linq.Expressions;
 
-namespace Abc.Pages.People
-{
+namespace Abc.Pages.People {
 
-    public class PersonRolePage : ViewPage<PersonRolePage, IPersonRoleRepository, PersonRole, PersonRoleView, PersonRoleData>
-    {
+    public class PersonRolePage : ViewPage<PersonRolePage, IPersonRoleRepository, PersonRole, PersonRoleView, PersonRoleData> {
         public PersonRolePage(IPersonRoleRepository r) : base(r, "PersonRoles") { }
-        protected override void createTableColumns()
-        {
+        protected override void createTableColumns() {
             createColumn(x => Item.Id);
             createColumn(x => Item.PersonRoleTypeId);
             createColumn(x => Item.PersonId);
@@ -24,14 +20,12 @@ namespace Abc.Pages.People
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
-        public override string GetName(IHtmlHelper<PersonRolePage> html, int i)
-        {
+        public override string GetName(IHtmlHelper<PersonRolePage> html, int i) {
             if (i == 4 || i == 5)
                 return html.DisplayNameFor(Columns[i] as Expression<Func<PersonRolePage, DateTime?>>);
             return base.GetName(html, i);
         }
-        public override IHtmlContent GetValue(IHtmlHelper<PersonRolePage> html, int i)
-        {
+        public override IHtmlContent GetValue(IHtmlHelper<PersonRolePage> html, int i) {
             if (i == 4 || i == 5)
                 return html.DisplayFor(Columns[i] as Expression<Func<PersonRolePage, DateTime?>>);
             return base.GetValue(html, i);
@@ -45,8 +39,7 @@ namespace Abc.Pages.People
 
         public override IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
-            string fixedFilter, string fixedValue, int? switchOfCreate)
-        {
+            string fixedFilter, string fixedValue, int? switchOfCreate) {
             Item = new PersonRoleView();
             return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
         }

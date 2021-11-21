@@ -1,5 +1,4 @@
 ﻿using Abc.Data.Others;
-using Abc.Data.People;
 using Abc.Infra;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +16,7 @@ namespace Abc.Soft.Data {
         internal static void InitializeTables(ModelBuilder b) {
             TrainingDbContext.InitializeTables(b);
         }
-        
+
 
         public DbSet<EquipmentData> EquipmentData { get; set; }
 

@@ -1,10 +1,9 @@
-﻿using System;
-using Abc.Data.People;
+﻿using Abc.Data.People;
 using Abc.Domain.Common;
+using System;
 
 namespace Abc.Domain.People {
-    public class Person : UniqueEntity<PersonData>
-    {
+    public class Person : UniqueEntity<PersonData> {
         public Person(PersonData d) : base(d) { }
         public string FirstMidName => Data?.FirstMidName ?? Unspecified;
         public string LastName => Data?.LastName ?? Unspecified;

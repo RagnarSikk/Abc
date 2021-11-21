@@ -1,5 +1,5 @@
-﻿using System;
-using Abc.Data.Common;
+﻿using Abc.Data.Common;
+using System;
 
 namespace Abc.Data.People {
     public sealed class PersonData : UniqueEntityData {

@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Abc.Facade.Common;
+using System;
 using System.ComponentModel;
-using Abc.Facade.Common;
 
-namespace Abc.Facade.People
-{
-    public class PersonView: UniqueEntityView
-    {
+namespace Abc.Facade.People {
+    public class PersonView : UniqueEntityView {
         [DisplayName("Last Name")]
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
