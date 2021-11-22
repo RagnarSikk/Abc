@@ -1,51 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Abc.Data.Common.DefinedEntityData">
-    <Position X="0.5" Y="1" Width="2" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\DefinedEntityData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Abc.Data.Common.NamedEntityData">
-    <Position X="3.5" Y="1" Width="1.5" />
+    <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\NamedEntityData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Abc.Data.Common.UniqueEntityData">
-    <Position X="5.75" Y="1" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Common\UniqueEntityData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Abc.Data.Common.PeriodData">
-    <Position X="8.25" Y="1" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\PeriodData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Abc.Data.Others.ServiceTypeData" Collapsed="true">
-    <Position X="0.75" Y="3" Width="1.5" />
+  <Class Name="Abc.Data.Common.UniqueEntityData">
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Others\ServiceTypeData.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\UniqueEntityData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Abc.Data.Others.ServiceData">
-    <Position X="6" Y="3" Width="1.5" />
-    <InheritanceLine Type="Abc.Data.Common.UniqueEntityData" FixedToPoint="true">
-      <Path>
-        <Point X="6.625" Y="2.233" />
-        <Point X="6.625" Y="3" />
-      </Path>
-    </InheritanceLine>
+  <Class Name="Abc.Data.Others.BodyMetricData">
+    <Position X="4.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Others\ServiceData.cs</FileName>
+      <HashCode>AIAAAAAABAAAAAAEAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Others\BodyMetricData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Others.BodyMetricTypeData" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Others\BodyMetricTypeData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
