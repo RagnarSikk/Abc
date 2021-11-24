@@ -2,9 +2,9 @@
 @model Abc.Pages.People.PersonRolePage
 <body>
 <input type="hidden" asp-for="Item.Id" />
-
-    @Html.Editor(m => m.Item.PersonRoleTypeId)
-    @Html.Editor(m => m.Item.PersonId)
+    
+    @Html.DropDown(m => m.Item.PersonRoleTypeId, Model.PersonRoleType)
+    @Html.DropDown(m => m.Item.PersonId, Model.Persons)
     @Html.Editor(m => m.Item.Certificate)
     @Html.Editor(m => m.Item.From)
     @Html.Editor(m => m.Item.To)

@@ -6,12 +6,24 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace Abc.Pages.People {
 
-    public class PersonRolePage : ViewPage<PersonRolePage, IPersonRoleRepository, PersonRole, PersonRoleView, PersonRoleData> {
-        public PersonRolePage(IPersonRoleRepository r) : base(r, "PersonRoles") { }
+    public class PersonRolePage : ViewPage<PersonRolePage, IPersonRoleRepository, PersonRole, PersonRoleView, PersonRoleData> 
+    { //public PersonRolePage(IPersonRoleRepository r) : base(r, "PersonRoles") { }
+        public IEnumerable<SelectListItem> PersonRoleType { get; }
+        public IEnumerable<SelectListItem> Persons { get; }
+        public PersonRolePage(IPersonRoleRepository r, IPersonRoleTypeRepository c, IPersonRepository b)
+            : base(r, "PersonRoles")
+        {
+            PersonRoleType = newItemsList<PersonRoleType, PersonRoleTypeData>(c);
+            Persons = newItemsList<Person, PersonData>(b);
+        }
+        public string CatalogName(string id) => itemName(PersonRoleType, id);
+        public string BrandName(string id) => itemName(Persons, id);
+
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
             createColumn(x => Item.PersonRoleTypeId);

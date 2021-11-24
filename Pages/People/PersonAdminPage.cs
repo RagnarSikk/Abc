@@ -33,6 +33,7 @@ namespace Abc.Pages.People {
                 return html.DisplayNameFor(Columns[i] as Expression<Func<TPage, DateTime?>>);
             return base.GetName(html, i);
         }
+
         public override IHtmlContent GetValue(IHtmlHelper<TPage> html, int i) {
             if (i == 6 || i == 7 || i == 8)
                 return html.DisplayFor(Columns[i] as Expression<Func<TPage, DateTime?>>);
