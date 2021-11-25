@@ -9,17 +9,16 @@ using Abc.Domain.Common;
 using Abc.Domain.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Others
-{
+namespace Abc.Tests.Domain.Others {
     [TestClass]
-    public class BodyMetricTests : SealedTests<UniqueEntity<BodyMetricData>>
-    {
+    public class BodyMetricTests : SealedTests<UniqueEntity<BodyMetricData>> {
         private BodyMetricData data;
+        
+
         protected override object createObject() => new BodyMetric(data);
 
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             data = GetRandom.Object<BodyMetricData>();
             base.TestInitialize();
         }
