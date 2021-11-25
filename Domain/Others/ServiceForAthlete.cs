@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Abc.Domain.Common;
 using Abc.Domain.People;
 
-namespace Abc.Domain.Others
-{
-    public sealed class ServiceForAthlete : UniqueEntity<ServiceForAthleteData>
-    {
+namespace Abc.Domain.Others {
+    public sealed class ServiceForAthlete : UniqueEntity<ServiceForAthleteData> {
         public ServiceForAthlete(ServiceForAthleteData d) : base(d) { }
         public string PersonId => Data.PersonId ?? Unspecified;
         public string ServiceId => Data.ServiceId ?? Unspecified;

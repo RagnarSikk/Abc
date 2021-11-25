@@ -38,7 +38,7 @@ namespace Abc.Tests.Domain.Others {
                 personRepository.Add(new Person(d)).GetAwaiter();
             }
             GetRepository.SetServiceProvider(new MockServiceProvider(personRepository));
-        } 
+        }
         [TestMethod] public void PersonIdTest() => isProperty(data.PersonId);
         [TestMethod] public void ServiceIdTest() => isProperty(data.ServiceId);
         [TestMethod]

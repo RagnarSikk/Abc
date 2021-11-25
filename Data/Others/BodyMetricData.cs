@@ -1,9 +1,7 @@
 ﻿using Abc.Data.Common;
 
-namespace Abc.Data.Others
-{
-    public sealed class BodyMetricData : UniqueEntityData
-    {
+namespace Abc.Data.Others {
+    public sealed class BodyMetricData : UniqueEntityData {
         public double Weight { get; set; }
         public double Height { get; set; }
         public string PersonId { get; set; }

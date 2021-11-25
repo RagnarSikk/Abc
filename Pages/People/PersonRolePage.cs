@@ -11,13 +11,11 @@ using System.Linq.Expressions;
 
 namespace Abc.Pages.People {
 
-    public class PersonRolePage : ViewPage<PersonRolePage, IPersonRoleRepository, PersonRole, PersonRoleView, PersonRoleData> 
-    { //public PersonRolePage(IPersonRoleRepository r) : base(r, "PersonRoles") { }
+    public class PersonRolePage : ViewPage<PersonRolePage, IPersonRoleRepository, PersonRole, PersonRoleView, PersonRoleData> { //public PersonRolePage(IPersonRoleRepository r) : base(r, "PersonRoles") { }
         public IEnumerable<SelectListItem> PersonRoleType { get; }
         public IEnumerable<SelectListItem> Persons { get; }
         public PersonRolePage(IPersonRoleRepository r, IPersonRoleTypeRepository c, IPersonRepository b)
-            : base(r, "PersonRoles")
-        {
+            : base(r, "PersonRoles") {
             PersonRoleType = newItemsList<PersonRoleType, PersonRoleTypeData>(c);
             Persons = newItemsList<Person, PersonData>(b);
         }

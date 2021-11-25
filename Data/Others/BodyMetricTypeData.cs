@@ -1,6 +1,5 @@
 ﻿using Abc.Data.Common;
 
-namespace Abc.Data.Others
-{
+namespace Abc.Data.Others {
     public sealed class BodyMetricTypeData : DefinedEntityData { }
 }

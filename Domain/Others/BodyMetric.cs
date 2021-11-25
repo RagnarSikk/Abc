@@ -2,10 +2,8 @@
 using Abc.Domain.Common;
 using Abc.Domain.People;
 
-namespace Abc.Domain.Others
-{
-    public sealed class BodyMetric : UniqueEntity<BodyMetricData>
-    {
+namespace Abc.Domain.Others {
+    public sealed class BodyMetric : UniqueEntity<BodyMetricData> {
         public BodyMetric(BodyMetricData d) : base(d) { }
         public string PersonId => Data.PersonId ?? Unspecified;
         public string BodyMetricTypeId => Data.BodyMetricTypeId ?? Unspecified;
