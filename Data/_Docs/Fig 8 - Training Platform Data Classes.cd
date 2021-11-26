@@ -83,11 +83,11 @@
       <FileName>Others\ServiceTypeData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Abc.Data.Others.ServiceForAthleteData">
+  <Class Name="Abc.Data.Others.ServiceForPersonData">
     <Position X="7.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Others\ServiceForAthleteData.cs</FileName>
+      <FileName>Others\ServiceForPersonData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -3,8 +3,8 @@ using Abc.Domain.Common;
 using Abc.Domain.People;
 
 namespace Abc.Domain.Others {
-    public sealed class ServiceForAthlete : UniqueEntity<ServiceForAthleteData> {
-        public ServiceForAthlete(ServiceForAthleteData d) : base(d) { }
+    public sealed class ServiceForPerson : Entity<ServiceForPersonData> {
+        public ServiceForPerson(ServiceForPersonData d) : base(d) { }
         public string PersonId => Data.PersonId ?? Unspecified;
         public string ServiceId => Data.ServiceId ?? Unspecified;
 

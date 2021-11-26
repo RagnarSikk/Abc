@@ -8,8 +8,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Domain.Others {
     [TestClass]
-    public class ServiceForAthleteTests : SealedTests<UniqueEntity<ServiceForAthleteData>> {
-        private ServiceForAthleteData data;
+    public class ServiceForPersonTests : SealedTests<UniqueEntity<ServiceForPersonData>> {
+        private ServiceForPersonData data;
         private PersonData personData;
         private ServiceData serviceData;
         private IPersonRepository personRepository;
@@ -17,11 +17,11 @@ namespace Abc.Tests.Domain.Others {
 
         private class MockPersonRepository : MockRepo<Person>, IPersonRepository { }
         private class MockServiceRepository : MockRepo<Service>, IServiceRepository { }
-        protected override object createObject() => new ServiceForAthlete(data);
+        protected override object createObject() => new ServiceForPerson(data);
 
         [TestInitialize]
         public override void TestInitialize() {
-            data = GetRandom.Object<ServiceForAthleteData>();
+            data = GetRandom.Object<ServiceForPersonData>();
             createMockPersonRepo();
             base.TestInitialize();
         }
@@ -43,7 +43,7 @@ namespace Abc.Tests.Domain.Others {
         [TestMethod] public void ServiceIdTest() => isProperty(data.ServiceId);
         [TestMethod]
         public void PersonTest() {
-            var p = (obj as ServiceForAthlete).Person;
+            var p = (obj as ServiceForPerson).Person;
             isNotNull(p);
             areEqual(personData.Id, p.Id);
             areEqual(personData.FirstMidName, p.FirstMidName);
@@ -72,7 +72,7 @@ namespace Abc.Tests.Domain.Others {
 
         [TestMethod]
         public void ServiceTest() { //TODO: p should not be null, fix mockservicerepo..
-            var p = (obj as ServiceForAthlete).Service;
+            var p = (obj as ServiceForPerson).Service;
             isNull(p);
             //areEqual(serviceData.Id, p.Id);
             //areEqual(serviceData.ServiceProviderRoleId, p.ServiceProviderRoleId);

@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Data.Others {
     [TestClass]
-    public class ServiceForAthleteDataTests : SealedTests<UniqueEntityData> {
+    public class ServiceForPersonDataTests : SealedTests<UniqueEntityData> {
         [TestMethod]
         public void PersonIdTest() => isProperty<string>();
         [TestMethod]
