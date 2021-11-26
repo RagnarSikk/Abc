@@ -1,0 +1,12 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Other.BodyMetricPage
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    @Html.Editor(m =>m.Item.Height)
+    @Html.Editor(m =>m.Item.Weight)
+    @Html.Editor(m =>m.Item.PersonId)
+    @Html.Editor(m =>m.Item.BodyMetricTypeId)
+    @Html.Editor(m => m.Item.From)
+    @Html.Editor(m => m.Item.To)
+</body>
+

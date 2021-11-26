@@ -45,6 +45,7 @@ namespace Soft {
             s.AddScoped<IPersonRoleTypeRepository, PersonRoleTypeRepository>();
             s.AddScoped<IEquipmentRepository, EquipmentRepository>();
             s.AddScoped<ITrainingRepository, TrainingRepository>();
+            s.AddScoped<IBodyMetricRepository, BodyMetricRepository>();
         }
         private void registerAuthentication(IServiceCollection s)
             => s.AddDefaultIdentity<IdentityUser>(
