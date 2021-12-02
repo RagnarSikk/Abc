@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Abc.Infra {
-    public class DbInitializer {
+    public class DbInitializer
+    {
+
         static internal protected void addSet<T>(IEnumerable<T> set, DbContext db) where T : PeriodData {
             try {
                 db?.AddRange(set);
@@ -59,5 +61,6 @@ namespace Abc.Infra {
                 }
             }
         }
+
     }
 }
