@@ -38,6 +38,19 @@ namespace Abc.Aids.Reflection {
                 return a?.DisplayName ?? name;
             }, string.Empty);
         }
+        public static string DisplayName(string propertyName, Type t)
+        {
+            return Safe.Run(() => {
+                var name = propertyName ?? string.Empty;
+                var p = t.GetProperty(name);
+                var list = p?.GetCustomAttributes(typeof(DisplayNameAttribute), true);
+
+                if (list is null || list.Length < 1) return name;
+                var a = list.Cast<DisplayNameAttribute>().Single();
+
+                return a?.DisplayName ?? name;
+            }, string.Empty);
+        }
 
         private static string name(Expression ex) {
             var member = ex as MemberExpression;

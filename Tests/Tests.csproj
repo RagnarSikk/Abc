@@ -25,7 +25,6 @@
     <Folder Include="Aids\" />
     <Folder Include="Core\" />
     <Folder Include="Domain\Common\" />
-    <Folder Include="Facade\Common\" />
     <Folder Include="Facade\Customers\" />
     <Folder Include="Facade\Others\" />
     <Folder Include="Facade\People\" />

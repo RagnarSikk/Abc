@@ -17,15 +17,14 @@ namespace Abc.Infra
         private static void addPersons(TrainingDbContext db)
         {
             if (db.Persons.Any()) return;
-
-            var persons = new PersonData[] {
-                new() {
-                    FirstMidName = "Carson", LastName = "Alexander", Email = "carson.alexander@gmail.com", PhoneNumber = "554433212"
-                },
-            };
-
-            db.Persons.AddRange(persons);
-            db.SaveChanges();
+            
+            addItem(new PersonData()
+            {
+                FirstMidName = "Carson",
+                LastName = "Alexander",
+                Email = "carson.alexander@gmail.com",
+                PhoneNumber = "554433212"
+            }, db);
         }
     }
 }
