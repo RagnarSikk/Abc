@@ -1,7 +1,7 @@
 ﻿using Abc.Facade.Common;
 using System.ComponentModel;
 
-namespace Abc.Facade.Other {
+namespace Abc.Facade.Others {
     public sealed class TrainingView : DefinedView {
         [DisplayName("Location of Training")]
         public string LocationOfTraining { get; set; }

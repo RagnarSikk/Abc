@@ -2,14 +2,13 @@
 using System.Linq.Expressions;
 using Abc.Data.Others;
 using Abc.Domain.Others;
-using Abc.Facade.Other;
+using Abc.Facade.Others;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Abc.Pages.Other
-{
+namespace Abc.Pages.Other {
     public sealed class BodyMetricPage : ViewPage<BodyMetricPage, IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData>
     {
         public BodyMetricPage(IBodyMetricRepository r) : base(r, "Body Metrics") { }

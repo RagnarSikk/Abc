@@ -1,6 +1,6 @@
 ﻿using Abc.Data.Others;
 using Abc.Domain.Others;
-using Abc.Facade.Other;
+using Abc.Facade.Others;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
