@@ -3,6 +3,7 @@ using Abc.Domain.People;
 using Abc.Facade.Common;
 using Abc.Facade.People;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PersonRoleViewTests = Abc.Tests.Facade.People.PersonRoleViewTests;
 
 namespace Abc.Tests.Facade.Common {
     [TestClass] public class AbstractViewFactoryTests : AbstractTests<object> {

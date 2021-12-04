@@ -1,6 +1,6 @@
 ﻿using Abc.Facade.Common;
 
 namespace Abc.Facade.People {
-    public class PersonRoleTypeView : DefinedView {
+    public sealed class PersonRoleTypeView : DefinedView {
     }
 }

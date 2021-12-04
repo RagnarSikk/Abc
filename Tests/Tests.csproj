@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Facade\Customers\**" />
+    <EmbeddedResource Remove="Facade\Customers\**" />
+    <None Remove="Facade\Customers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.1" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.1" />
@@ -25,9 +31,7 @@
     <Folder Include="Aids\" />
     <Folder Include="Core\" />
     <Folder Include="Domain\Common\" />
-    <Folder Include="Facade\Customers\" />
     <Folder Include="Facade\Others\" />
-    <Folder Include="Facade\People\" />
     <Folder Include="Infra\Common\" />
     <Folder Include="Infra\Customers\" />
     <Folder Include="Infra\Others\" />
