@@ -22,14 +22,20 @@ namespace Abc.Tests {
         }
         [TestMethod]
         protected Type getTestableClassType() {
+
             var testClassName = GetType().FullName;
             var testableClassName = testClassName.Replace("Tests", string.Empty);
             testableClassName = testableClassName.Replace("..", ".");
             var solutionName = testableClassName.GetHead();
             var projectName = testableClassName.GetTail().GetHead();
             var l = GetSolution.TypesForAssembly($"{solutionName}.{projectName}");
-            var expectedType = l.Where(x => x.FullName == testableClassName).ToList()[0];
-            return expectedType;
+            var list = l?.Where(x => x.FullName == testableClassName)?.ToList();
+            if (list?.Count == 0)
+            {
+                testableClassName += "`";
+                list = l?.Where(x => x.FullName.StartsWith(testableClassName))?.ToList();
+            }
+            return (list?.Count() > 0) ? list[0] : null;
         }
         [TestMethod]
         public virtual void IsTested() {
