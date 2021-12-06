@@ -1,8 +1,8 @@
 ﻿@using Abc.Pages.Common.Extensions
 @model Abc.Pages.People.PersonBasePage
 <body>
-<input type="hidden" asp-for="Item.Id" />
-
+@*<input type="hidden" asp-for="Item.Id" />*@
+    @Html.Editor(m => m.Item.Id)
     @Html.Editor(m => m.Item.LastName)
     @Html.Editor(m => m.Item.FirstMidName)
     @Html.Editor(m => m.Item.PhoneNumber)

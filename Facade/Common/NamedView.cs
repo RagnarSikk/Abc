@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Abc.Domain.Common;
 
 namespace Abc.Facade.Common {
 

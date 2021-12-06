@@ -8,14 +8,14 @@ namespace Abc.Facade.Common {
         where TView : PeriodView, new()
         where TObject : IEntity<TData> {
 
-        public TObject Create(TView v) {
+        public virtual TObject Create(TView v) {
             var d = new TData();
             Copy.Members(v, d);
             return toObject(d);
         }
         internal protected abstract TObject toObject(TData d);
 
-        public TView Create(TObject o) {
+        public virtual TView Create(TObject o) {
             var v = new TView();
             Copy.Members(o.Data, v);
             return v;

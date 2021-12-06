@@ -10,6 +10,5 @@ namespace Abc.Domain.People {
 
         public Person Person => new GetFrom<IPersonRepository, Person>().ById(PersonId);
         public PersonRoleType PersonRoleType => new GetFrom<IPersonRoleTypeRepository, PersonRoleType>().ById(PersonRoleTypeId);
-
     }
 }

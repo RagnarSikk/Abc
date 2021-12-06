@@ -1,4 +1,3 @@
-
 using Abc.Domain.Others;
 using Abc.Domain.People;
 using Abc.Infra;

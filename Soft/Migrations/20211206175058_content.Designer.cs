@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Abc.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211126135550_bodymetric")]
-    partial class bodymetric
+    [Migration("20211206175058_content")]
+    partial class content
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

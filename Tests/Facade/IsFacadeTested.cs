@@ -1,5 +1,4 @@
-﻿using Abc.Tests.Data;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade
 {
