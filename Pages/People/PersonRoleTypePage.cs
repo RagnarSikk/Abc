@@ -19,16 +19,17 @@ namespace Abc.Pages.People {
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
-        public override string GetName(IHtmlHelper<PersonRoleTypePage> html, int i) {
-            if (i == 4 || i == 5)
-                return html.DisplayNameFor(Columns[i] as Expression<Func<PersonRoleTypePage, DateTime?>>);
-            return base.GetName(html, i);
-        }
-        public override IHtmlContent GetValue(IHtmlHelper<PersonRoleTypePage> html, int i) {
-            if (i == 4 || i == 5)
-                return html.DisplayFor(Columns[i] as Expression<Func<PersonRoleTypePage, DateTime?>>);
-            return base.GetValue(html, i);
-        }
+        public override string GetName(IHtmlHelper<PersonRoleTypePage> h, int i) => i switch
+        {
+            4 or 5 => getName<DateTime?>(h, i),
+            _ => base.GetName(h, i)
+        };
+
+        public override IHtmlContent GetValue(IHtmlHelper<PersonRoleTypePage> h, int i) => i switch
+        {
+            4 or 5 => getValue<DateTime?>(h, i),
+            _ => base.GetValue(h, i)
+        };
 
         protected internal override Uri pageUrl() => new Uri("/AdminView/PersonRoleTypes", UriKind.Relative);
 

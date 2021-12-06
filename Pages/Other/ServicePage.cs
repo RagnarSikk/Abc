@@ -19,16 +19,18 @@ namespace Abc.Pages.Other {
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
-        public override string GetName(IHtmlHelper<ServicePage> html, int i) {
-            if (i == 3 || i == 4)
-                return html.DisplayNameFor(Columns[i] as Expression<Func<ServicePage, DateTime?>>);
-            return base.GetName(html, i);
-        }
-        public override IHtmlContent GetValue(IHtmlHelper<ServicePage> html, int i) {
-            if (i == 3 || i == 4)
-                return html.DisplayFor(Columns[i] as Expression<Func<ServicePage, DateTime?>>);
-            return base.GetValue(html, i);
-        }
+
+        public override string GetName(IHtmlHelper<ServicePage> h, int i) => i switch
+        {
+            3 or 4 => getName<DateTime?>(h, i),
+            _ => base.GetName(h, i)
+        };
+
+        public override IHtmlContent GetValue(IHtmlHelper<ServicePage> h, int i) => i switch
+        {
+            3 or 4 => getValue<DateTime?>(h, i),
+            _ => base.GetValue(h, i)
+        };
 
         protected internal override Uri pageUrl() => new Uri("/AdminView/Services", UriKind.Relative);
         protected internal override Service toObject(ServiceView v) => new ServiceViewFactory().Create(v);
