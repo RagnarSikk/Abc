@@ -75,7 +75,7 @@
 //            var p = (obj as ServiceForPerson).Service;
 //            isNull(p);
 //            //areEqual(serviceData.Id, p.Id);
-//            //areEqual(serviceData.ServiceProviderRoleId, p.ServiceProviderRoleId);
+//            //areEqual(serviceData.PersonRoleTypeId, p.PersonRoleTypeId);
 //            //areEqual(serviceData.ServiceTypeId, p.ServiceTypeId);
 //        }
 //    }

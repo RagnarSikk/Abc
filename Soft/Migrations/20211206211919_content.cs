@@ -137,7 +137,7 @@ namespace Abc.Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ServiceProviderRoleId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PersonRoleTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ServiceTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
                     To = table.Column<DateTime>(type: "datetime2", nullable: true)

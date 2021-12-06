@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Abc.Data.Others;
 using Abc.Data.People;
 
 namespace Abc.Infra
@@ -10,6 +11,75 @@ namespace Abc.Infra
             addPersons(db);
             addPersonRoles(db);
             addPersonRoleTypes(db);
+            addServices(db);
+            addServiceTypes(db);
+        }
+
+        private static void addServices(TrainingDbContext db)
+        {
+            if (db.Services.Any()) return;
+            addItem(new ServiceData()
+            {
+                PersonRoleTypeId = "1",
+                ServiceTypeId = "1",
+            }, db);
+            addItem(new ServiceData()
+            {
+                PersonRoleTypeId = "1",
+                ServiceTypeId = "3",
+            }, db);
+            addItem(new ServiceData()
+            {
+                PersonRoleTypeId = "4",
+                ServiceTypeId = "5",
+            }, db);
+        }
+
+        private static void addServiceTypes(TrainingDbContext db)
+        {
+             if(db.ServiceTypes.Any()) return;
+             addItem(new ServiceTypeData()
+             {
+                 Id = "1",
+                 Name = "Personal Training",
+                 Code = "T1",
+             },db);
+             addItem(new ServiceTypeData()
+             {
+                 Id = "2",
+                 Name = "HIIT",
+                 Code = "T2",
+             }, db);
+             addItem(new ServiceTypeData()
+             {
+                 Id = "3",
+                 Name = "Cardio training",
+                 Code = "T3",
+             }, db);
+             addItem(new ServiceTypeData()
+             {
+                 Id = "4",
+                 Name = "Strength training",
+                 Code = "T4",
+             }, db);
+             addItem(new ServiceTypeData()
+             {
+                 Id = "5",
+                 Name = "Massage",
+                 Code = "M1",
+             }, db);
+             addItem(new ServiceTypeData()
+             {
+                 Id = "6",
+                 Name = "Nutrition counseling",
+                 Code = "N1",
+             }, db);
+             addItem(new ServiceTypeData()
+             {
+                 Id = "7",
+                 Name = "Taping and splinting",
+                 Code = "P1",
+             }, db);
         }
 
         private static void addPersons(TrainingDbContext db)

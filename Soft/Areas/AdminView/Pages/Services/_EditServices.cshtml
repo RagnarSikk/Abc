@@ -2,8 +2,9 @@
 @model Abc.Pages.Other.ServicePage
 <body>
     <input type="hidden" asp-for="Item.Id" />
-    @Html.Editor(m =>m.Item.ServiceProviderRoleId)
-    @Html.Editor(m =>m.Item.ServiceTypeId)
+
+    @Html.DropDown(m => m.Item.ServiceTypeId, Model.ServiceTypes)
+    @Html.DropDown(m => m.Item.PersonRoleTypeId, Model.PersonRoleTypes)
     @Html.Editor(m => m.Item.From)
     @Html.Editor(m => m.Item.To)
 </body>

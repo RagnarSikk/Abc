@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Abc.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211206175058_content")]
+    [Migration("20211206211919_content")]
     partial class content
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,7 +88,7 @@ namespace Abc.Soft.Migrations
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ServiceProviderRoleId")
+                    b.Property<string>("PersonRoleTypeId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ServiceTypeId")

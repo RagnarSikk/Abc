@@ -3,8 +3,8 @@
 <body>
 
     @Html.Show(m => m.Item.Id)
-    @Html.Show(m => m.Item.ServiceProviderRoleId)
-    @Html.Show(m => m.Item.ServiceTypeId)
+    @Html.Show(m => m.Item.ServiceTypeId, Model.ServiceTypeName(Model.Item.ServiceTypeId))
+    @Html.Show(m => m.Item.PersonRoleTypeId, Model.PersonRoleTypeName(Model.Item.PersonRoleTypeId))
     @Html.Show(m => m.Item.From)
     @Html.Show(m => m.Item.To)
 

@@ -86,7 +86,7 @@ namespace Abc.Soft.Migrations
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ServiceProviderRoleId")
+                    b.Property<string>("PersonRoleTypeId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ServiceTypeId")
