@@ -14,6 +14,7 @@ namespace Abc.Infra {
         public DbSet<PersonRoleData> PersonRoles { get; set; }
         public DbSet<PersonRoleTypeData> PersonRoleTypes { get; set; }
         public DbSet<BodyMetricData> BodyMetrics { get; set; }
+        public DbSet<BodyMetricTypeData> BodyMetricTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder b) {
             base.OnModelCreating(b);
@@ -28,6 +29,7 @@ namespace Abc.Infra {
             b.Entity<PersonRoleData>().ToTable(nameof(PersonRoles));
             b.Entity<PersonRoleTypeData>().ToTable(nameof(PersonRoleTypes));
             b.Entity<BodyMetricData>().ToTable(nameof(BodyMetrics));
+            b.Entity<BodyMetricTypeData>().ToTable(nameof(BodyMetricTypes));
         }
     }
 }

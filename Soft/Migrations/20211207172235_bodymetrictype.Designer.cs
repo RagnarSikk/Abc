@@ -4,14 +4,16 @@ using Abc.Soft.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Abc.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211207172235_bodymetrictype")]
+    partial class bodymetrictype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,13 +32,16 @@ namespace Abc.Soft.Migrations
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
 
+                    b.Property<double>("Height")
+                        .HasColumnType("float");
+
                     b.Property<string>("PersonId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("To")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Value")
+                    b.Property<double>("Weight")
                         .HasColumnType("float");
 
                     b.HasKey("Id");

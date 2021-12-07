@@ -3,10 +3,9 @@
 <body>
 
     @Html.Show(m => m.Item.Id)
-    @Html.Show(m =>m.Item.Height)
-    @Html.Show(m =>m.Item.Weight)
-    @Html.Show(m =>m.Item.PersonId)
-    @Html.Show(m =>m.Item.BodyMetricTypeId)
+    @Html.Show(m =>m.Item.Value)
+    @Html.Show(m => m.Item.PersonId, Model.PersonName(Model.Item.PersonId))
+    @Html.Show(m =>m.Item.BodyMetricTypeId, Model.BodyMetricTypeName(Model.Item.BodyMetricTypeId))
     @Html.Show(m => m.Item.From)
     @Html.Show(m => m.Item.To)
 
