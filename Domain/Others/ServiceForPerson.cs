@@ -1,6 +1,8 @@
 ﻿using Abc.Data.Others;
 using Abc.Domain.Common;
+using Abc.Domain.Others.Repositories;
 using Abc.Domain.People;
+using Abc.Domain.People.Repositories;
 
 namespace Abc.Domain.Others {
     public sealed class ServiceForPerson : Entity<ServiceForPersonData> {

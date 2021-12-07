@@ -2,7 +2,7 @@
 using Abc.Domain.People;
 using Abc.Facade.Common;
 
-namespace Abc.Facade.People {
+namespace Abc.Facade.People.Factories {
     public class PersonRoleTypeViewFactory : AbstractViewFactory<PersonRoleTypeData, PersonRoleType, PersonRoleTypeView> {
         protected internal override PersonRoleType toObject(PersonRoleTypeData d) => new(d);
     }

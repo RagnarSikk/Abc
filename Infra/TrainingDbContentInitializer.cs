@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Abc.Data.Others;
 using Abc.Data.People;
+using Abc.Domain.Others;
 
 namespace Abc.Infra
 {
@@ -13,6 +14,42 @@ namespace Abc.Infra
             addPersonRoleTypes(db);
             addServices(db);
             addServiceTypes(db);
+            addBodyMetricTypes(db);
+            addBodyMetrics(db);
+        }
+
+        private static void addBodyMetrics(TrainingDbContext db)
+        {
+            if (db.BodyMetrics.Any()) return;
+            addItem(new BodyMetricData()
+            {
+                Value = 60,
+                BodyMetricTypeId = "2",
+                PersonId = "3"
+            }, db);
+            addItem(new BodyMetricData()
+            {
+                Value = 163.5,
+                BodyMetricTypeId = "1",
+                PersonId = "3"
+            }, db);
+        }
+
+        private static void addBodyMetricTypes(TrainingDbContext db)
+        {
+            if (db.BodyMetricTypes.Any()) return;
+            addItem(new BodyMetricTypeData()
+            {
+                Id = "1",
+                Name = "Height",
+                Definition = "cm"
+            }, db);
+            addItem(new BodyMetricTypeData()
+            {
+                Id = "2",
+                Name = "Weight",
+                Definition = "kg"
+            }, db);
         }
 
         private static void addServices(TrainingDbContext db)
@@ -131,6 +168,11 @@ namespace Abc.Infra
                 PersonId = "2",
                 PersonRoleTypeId = "1",
                 Certificate = "Coach"
+            }, db);
+            addItem(new PersonRoleData()
+            {
+                PersonId = "3",
+                PersonRoleTypeId = "5"
             }, db);
         }
         private static void addPersonRoleTypes(TrainingDbContext db)

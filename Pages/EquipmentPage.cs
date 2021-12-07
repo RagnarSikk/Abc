@@ -3,6 +3,8 @@ using Abc.Domain.Others;
 using Abc.Facade.Others;
 using Abc.Pages.Common;
 using System;
+using Abc.Domain.Others.Repositories;
+using Abc.Facade.Others.Factories;
 
 namespace Abc.Pages {
     public class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData> {

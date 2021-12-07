@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Abc.Domain.People.Repositories;
+using Abc.Facade.People.Factories;
 
 namespace Abc.Pages.People {
     public abstract class PersonAdminPage<TPage>

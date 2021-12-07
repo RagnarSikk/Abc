@@ -19,7 +19,6 @@ namespace Abc.Tests.Domain.Others {
         }
         [TestMethod] public void PersonIdTest() => isProperty(data.PersonId);
         [TestMethod] public void BodyMetricTypeIdTest() => isProperty(data.BodyMetricTypeId);
-        [TestMethod] public void HeightTest() => isProperty(data.Height);
-        [TestMethod] public void WeightTest() => isProperty(data.Weight);
+        [TestMethod] public void ValueTest() => isProperty(data.Value);
     }
 }

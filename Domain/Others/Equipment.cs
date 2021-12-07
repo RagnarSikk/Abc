@@ -2,7 +2,7 @@
 using Abc.Domain.Common;
 
 namespace Abc.Domain.Others {
-    public sealed class Equipment : DefinedEntity<EquipmentData> {
+    public sealed class Equipment : UniqueEntity<EquipmentData> {
         public Equipment(EquipmentData d) : base(d) { }
 
         public int AmountAvailable => Data?.AmountAvailable ?? UnspecifiedInteger;

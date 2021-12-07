@@ -1,5 +1,6 @@
 ﻿using Abc.Data.People;
 using Abc.Domain.Common;
+using Abc.Domain.People.Repositories;
 
 namespace Abc.Domain.People {
     public class PersonRole : UniqueEntity<PersonRoleData> {

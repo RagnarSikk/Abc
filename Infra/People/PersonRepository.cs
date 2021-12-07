@@ -1,5 +1,6 @@
 ﻿using Abc.Data.People;
 using Abc.Domain.People;
+using Abc.Domain.People.Repositories;
 using Abc.Infra.Common;
 
 namespace Abc.Infra.People {

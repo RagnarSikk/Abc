@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Linq.Expressions;
+using Abc.Domain.Others.Repositories;
+using Abc.Facade.Others.Factories;
 
 namespace Abc.Pages.Other {
     public sealed class ServiceTypePage : ViewPage<ServiceTypePage, IServiceTypeRepository, ServiceType, ServiceTypeView, ServiceTypeData> {

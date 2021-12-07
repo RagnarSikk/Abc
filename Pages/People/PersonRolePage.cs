@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using Abc.Domain.People.Repositories;
+using Abc.Facade.People.Factories;
 
 namespace Abc.Pages.People {
 

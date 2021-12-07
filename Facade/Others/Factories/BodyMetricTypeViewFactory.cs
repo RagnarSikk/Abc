@@ -2,7 +2,7 @@
 using Abc.Domain.Others;
 using Abc.Facade.Common;
 
-namespace Abc.Facade.Others
+namespace Abc.Facade.Others.Factories
 {
     public class BodyMetricTypeViewFactory : AbstractViewFactory<BodyMetricTypeData, BodyMetricType, BodyMetricTypeView>
     {
