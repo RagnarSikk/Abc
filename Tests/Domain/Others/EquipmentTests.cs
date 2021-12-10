@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Domain.Others {
     [TestClass]
-    public class EquipmentTests : SealedTests<DefinedEntity<EquipmentData>> {
+    public class EquipmentTests : SealedTests<UniqueEntity<EquipmentData>> {
         private EquipmentData data;
         protected override object createObject() => new Equipment(data);
 

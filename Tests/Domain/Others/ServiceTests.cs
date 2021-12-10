@@ -36,7 +36,7 @@ namespace Abc.Tests.Domain.Others {
             GetRepository.SetServiceProvider(new MockServiceProvider(serviceTypeRepository));
         }
         [TestMethod] public void ServiceTypeIdTest() => isProperty(data.ServiceTypeId);
-        [TestMethod] public void ServiceProviderRoleIdTest() => isProperty(data.PersonRoleTypeId);
+        [TestMethod] public void PersonRoleTypeIdTest() => isProperty(data.PersonRoleTypeId);
         [TestMethod]
         public void ServiceTypeTest() {
             var p = (obj as Service).ServiceType;
