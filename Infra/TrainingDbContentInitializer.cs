@@ -33,6 +33,30 @@ namespace Abc.Infra
                 BodyMetricTypeId = "1",
                 PersonId = "3"
             }, db);
+            addItem(new BodyMetricData()
+            {
+                Value = 85,
+                BodyMetricTypeId = "2",
+                PersonId = "2"
+            }, db);
+            addItem(new BodyMetricData()
+            {
+                Value = 163.5,
+                BodyMetricTypeId = "1",
+                PersonId = "2"
+            }, db);
+            addItem(new BodyMetricData()
+            {
+                Value = 100,
+                BodyMetricTypeId = "2",
+                PersonId = "1"
+            }, db);
+            addItem(new BodyMetricData()
+            {
+                Value = 193.5,
+                BodyMetricTypeId = "1",
+                PersonId = "1"
+            }, db);
         }
 
         private static void addBodyMetricTypes(TrainingDbContext db)
@@ -146,6 +170,15 @@ namespace Abc.Infra
             addItem(new PersonData()
             {
                 Id = "3",
+                FirstMidName = "Amy",
+                LastName = "Hale",
+                Email = "amy.hale@gmail.com",
+                PhoneNumber = "54321123",
+                Gender = "Female"
+            }, db);
+            addItem(new PersonData()
+            {
+                Id = "4",
                 FirstMidName = "Amy",
                 LastName = "Hale",
                 Email = "amy.hale@gmail.com",
