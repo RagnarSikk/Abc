@@ -9,7 +9,7 @@ using Abc.Facade.Others.Factories;
 namespace Abc.Pages {
     public class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData> {
         public EquipmentPage(IEquipmentRepository r) : base(r, "Equipments") { }
-        protected internal override Uri pageUrl() => new Uri("/Equipments", UriKind.Relative);
+        protected internal override Uri pageUrl() => new Uri("/AdminView/Equipments", UriKind.Relative);
         protected internal override Equipment toObject(EquipmentView v) => new EquipmentViewFactory().Create(v);
         protected internal override EquipmentView toView(Equipment o) => new EquipmentViewFactory().Create(o);
 

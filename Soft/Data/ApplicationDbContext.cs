@@ -18,8 +18,8 @@ namespace Abc.Soft.Data {
         }
 
 
-        public DbSet<EquipmentData> EquipmentData { get; set; }
+        //public DbSet<EquipmentData> EquipmentData { get; set; }
 
-        public DbSet<TrainingData> TrainingData { get; set; }
+        //public DbSet<TrainingData> TrainingData { get; set; }
     }
 }

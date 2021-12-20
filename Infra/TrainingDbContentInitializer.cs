@@ -16,6 +16,25 @@ namespace Abc.Infra
             addServiceTypes(db);
             addBodyMetricTypes(db);
             addBodyMetrics(db);
+            addEquipments(db);
+        }
+
+
+        private static void addEquipments(TrainingDbContext db)
+        {
+            if (db.Equipments.Any()) return;
+            addItem(new EquipmentData()
+            {
+                AmountInUsing = 1,
+                AmountAvailable = 2,
+
+            }, db);
+            addItem(new EquipmentData()
+            {
+                AmountInUsing = 3,
+                AmountAvailable = 4,
+
+            }, db);
         }
 
         private static void addBodyMetrics(TrainingDbContext db)
