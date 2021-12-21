@@ -15,7 +15,7 @@ namespace Abc.Tests.Domain.Others {
             data = GetRandom.Object<EquipmentData>();
             base.TestInitialize();
         }
-        [TestMethod] public void AmountAvailableTest() => isProperty(data.AmountAvailable);
-        [TestMethod] public void AmountInUsingTest() => isProperty(data.AmountInUsing);
+        [TestMethod] public void PersonRoleTypeIdTest() => isProperty(data.PersonRoleTypeId);
+        [TestMethod] public void EquipmentTypeIdTest() => isProperty(data.EquipmentTypeId);
     }
 }

@@ -17,22 +17,46 @@ namespace Abc.Infra
             addBodyMetricTypes(db);
             addBodyMetrics(db);
             addEquipments(db);
+            addEquipmentTypes(db);
         }
 
+        private static void addEquipmentTypes(TrainingDbContext db) {
+            if (db.EquipmentTypes.Any()) return;
+            addItem(new EquipmentTypeData() {
+                Id = "1",
+                Name = "Korvpallid",
+                Definition = "Korvpalli treeningute jaoks",
+                Code = "A1"
+                
+            }, db);
+            addItem(new EquipmentTypeData() {
+                Id = "2",
+                Name = "Jalgpallid",
+                Definition = "Jalgpalli treeningute jaoks",
+                Code = "A2"
 
+            }, db);
+            addItem(new EquipmentTypeData() {
+                Id = "3",
+                Name = "VorkPallid",
+                Definition = "Vorkpalli treeningute jaoks",
+                Code = "A3"
+
+            }, db);
+        }
         private static void addEquipments(TrainingDbContext db)
         {
             if (db.Equipments.Any()) return;
             addItem(new EquipmentData()
             {
-                AmountInUsing = 1,
-                AmountAvailable = 2,
+                PersonRoleTypeId = "1",
+                EquipmentTypeId = "2"
 
             }, db);
             addItem(new EquipmentData()
             {
-                AmountInUsing = 3,
-                AmountAvailable = 4,
+                PersonRoleTypeId = "2",
+                EquipmentTypeId = "3"
 
             }, db);
         }

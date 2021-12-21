@@ -1,0 +1,11 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Other.EquipmentPage
+<body>
+
+    @Html.Show(m => m.Item.Id)
+    @Html.Show(m => m.Item.EquipmentTypeId, Model.EquipmentTypeName(Model.Item.EquipmentTypeId))
+    @Html.Show(m => m.Item.PersonRoleTypeId, Model.PersonRoleTypeName(Model.Item.PersonRoleTypeId))
+    @Html.Show(m => m.Item.From)
+    @Html.Show(m => m.Item.To)
+
+</body>

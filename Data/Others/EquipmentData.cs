@@ -2,7 +2,7 @@
 
 namespace Abc.Data.Others {
     public sealed class EquipmentData : UniqueEntityData {
-        public int AmountAvailable { get; set; }
-        public int AmountInUsing { get; set; }
+        public string PersonRoleTypeId { get; set; }
+        public string EquipmentTypeId { get; set; }
     }
 }

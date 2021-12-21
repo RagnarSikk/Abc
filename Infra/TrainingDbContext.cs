@@ -7,6 +7,7 @@ namespace Abc.Infra {
         public TrainingDbContext(DbContextOptions<TrainingDbContext> options)
             : base(options) { }
         public DbSet<EquipmentData> Equipments { get; set; }
+        public DbSet<EquipmentTypeData> EquipmentTypes { get; set; }
         public DbSet<TrainingData> Trainings { get; set; }
         public DbSet<ServiceData> Services { get; set; }
         public DbSet<ServiceTypeData> ServiceTypes { get; set; }
@@ -22,6 +23,7 @@ namespace Abc.Infra {
         }
         public static void InitializeTables(ModelBuilder b) {
             b.Entity<EquipmentData>().ToTable(nameof(Equipments));
+            b.Entity<EquipmentTypeData>().ToTable(nameof(EquipmentTypes));
             b.Entity<TrainingData>().ToTable(nameof(Trainings));
             b.Entity<ServiceData>().ToTable(nameof(Services));
             b.Entity<ServiceTypeData>().ToTable(nameof(ServiceTypes));
