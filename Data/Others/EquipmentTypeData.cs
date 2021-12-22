@@ -6,5 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Abc.Data.Others {
-    public sealed class EquipmentTypeData : DefinedEntityData { }
+    public sealed class EquipmentTypeData : DefinedEntityData {
+        public int AmountAvailable { get; set; }
+    }
 }

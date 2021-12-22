@@ -25,6 +25,7 @@ namespace Abc.Infra
             addItem(new EquipmentTypeData() {
                 Id = "1",
                 Name = "Korvpallid",
+                AmountAvailable = 30,
                 Definition = "Korvpalli treeningute jaoks",
                 Code = "A1"
                 
@@ -32,6 +33,7 @@ namespace Abc.Infra
             addItem(new EquipmentTypeData() {
                 Id = "2",
                 Name = "Jalgpallid",
+                AmountAvailable = 20,
                 Definition = "Jalgpalli treeningute jaoks",
                 Code = "A2"
 
@@ -39,6 +41,7 @@ namespace Abc.Infra
             addItem(new EquipmentTypeData() {
                 Id = "3",
                 Name = "VorkPallid",
+                AmountAvailable = 25,
                 Definition = "Vorkpalli treeningute jaoks",
                 Code = "A3"
 
@@ -50,13 +53,16 @@ namespace Abc.Infra
             addItem(new EquipmentData()
             {
                 PersonRoleTypeId = "1",
-                EquipmentTypeId = "2"
+                EquipmentTypeId = "2",
+                Amount = 5
+                
 
             }, db);
             addItem(new EquipmentData()
             {
                 PersonRoleTypeId = "2",
-                EquipmentTypeId = "3"
+                EquipmentTypeId = "3",
+                Amount = 10
 
             }, db);
         }

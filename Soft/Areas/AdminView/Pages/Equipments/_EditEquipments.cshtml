@@ -5,6 +5,7 @@
 
     @Html.DropDown(m => m.Item.EquipmentTypeId, Model.EquipmentTypes)
     @Html.DropDown(m => m.Item.PersonRoleTypeId, Model.PersonRoleTypes)
+    @Html.Editor(m => m.Item.Amount)
     @Html.Editor(m => m.Item.From)
     @Html.Editor(m => m.Item.To)
 </body>

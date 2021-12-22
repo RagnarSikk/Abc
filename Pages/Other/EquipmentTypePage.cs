@@ -22,16 +22,17 @@ namespace Abc.Pages.Other {
             createColumn(x => Item.Name);
             createColumn(x => Item.Code);
             createColumn(x => Item.Definition);
+            createColumn(x => Item.AmountAvailable);
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
         public override string GetName(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
-            4 or 5 => getName<DateTime?>(h, i),
+            5 or 6 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
-            4 or 5 => getValue<DateTime?>(h, i),
+            5 or 6 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
