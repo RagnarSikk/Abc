@@ -41,12 +41,12 @@ namespace Abc.Soft {
         private static void registerRepositories(IServiceCollection s) {
             s.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
             s.AddScoped<IServiceRepository, ServiceRepository>();
+            s.AddScoped<IServiceForPersonRepository, ServiceForPersonRepository>();
             s.AddScoped<IPersonRepository, PersonRepository>();
             s.AddScoped<IPersonRoleRepository, PersonRoleRepository>();
             s.AddScoped<IPersonRoleTypeRepository, PersonRoleTypeRepository>();
             s.AddScoped<IEquipmentRepository, EquipmentRepository>();
             s.AddScoped<IEquipmentTypeRepository, EquipmentTypeRepository>();
-            s.AddScoped<ITrainingRepository, TrainingRepository>();
             s.AddScoped<IBodyMetricRepository, BodyMetricRepository>();
             s.AddScoped<IBodyMetricTypeRepository, BodyMetricTypeRepository>();
         }

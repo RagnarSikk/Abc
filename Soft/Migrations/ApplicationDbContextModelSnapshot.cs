@@ -74,6 +74,9 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
                     b.Property<string>("EquipmentTypeId")
                         .HasColumnType("nvarchar(max)");
 
@@ -95,6 +98,9 @@ namespace Abc.Soft.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AmountAvailable")
+                        .HasColumnType("int");
 
                     b.Property<string>("Code")
                         .HasColumnType("nvarchar(max)");
@@ -138,6 +144,28 @@ namespace Abc.Soft.Migrations
                     b.ToTable("Services");
                 });
 
+            modelBuilder.Entity("Abc.Data.Others.ServiceForPersonData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PersonId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ServiceId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ServicesForPerson");
+                });
+
             modelBuilder.Entity("Abc.Data.Others.ServiceTypeData", b =>
                 {
                     b.Property<string>("Id")
@@ -161,49 +189,6 @@ namespace Abc.Soft.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ServiceTypes");
-                });
-
-            modelBuilder.Entity("Abc.Data.Others.TrainingData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("AvailableEquipment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("From")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LocationOfTraining")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MaxNumberOfAthletes")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MinNumberOfAthletes")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NumberOfAthletes")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NumberOfCoachesRequired")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("To")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Trainings");
                 });
 
             modelBuilder.Entity("Abc.Data.People.PersonData", b =>

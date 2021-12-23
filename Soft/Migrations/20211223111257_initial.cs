@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Abc.Soft.Migrations
 {
-    public partial class content : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,10 +51,9 @@ namespace Abc.Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Weight = table.Column<double>(type: "float", nullable: false),
-                    Height = table.Column<double>(type: "float", nullable: false),
-                    PersonId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Value = table.Column<double>(type: "float", nullable: false),
                     BodyMetricTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PersonId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
                     To = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -64,12 +63,10 @@ namespace Abc.Soft.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Equipments",
+                name: "BodyMetricTypes",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    AmountAvailable = table.Column<int>(type: "int", nullable: false),
-                    AmountInUsing = table.Column<int>(type: "int", nullable: false),
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
                     To = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -78,7 +75,40 @@ namespace Abc.Soft.Migrations
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_BodyMetricTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Equipments",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Amount = table.Column<int>(type: "int", nullable: false),
+                    PersonRoleTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EquipmentTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    From = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    To = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
                     table.PrimaryKey("PK_Equipments", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EquipmentTypes",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AmountAvailable = table.Column<int>(type: "int", nullable: false),
+                    From = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    To = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Definition = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EquipmentTypes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -148,6 +178,21 @@ namespace Abc.Soft.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ServicesForPerson",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PersonId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ServiceId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    From = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    To = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ServicesForPerson", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ServiceTypes",
                 columns: table => new
                 {
@@ -161,28 +206,6 @@ namespace Abc.Soft.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ServiceTypes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Trainings",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    LocationOfTraining = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AvailableEquipment = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MaxNumberOfAthletes = table.Column<int>(type: "int", nullable: false),
-                    MinNumberOfAthletes = table.Column<int>(type: "int", nullable: false),
-                    NumberOfAthletes = table.Column<int>(type: "int", nullable: false),
-                    NumberOfCoachesRequired = table.Column<int>(type: "int", nullable: false),
-                    From = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    To = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Code = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Definition = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Trainings", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -352,7 +375,13 @@ namespace Abc.Soft.Migrations
                 name: "BodyMetrics");
 
             migrationBuilder.DropTable(
+                name: "BodyMetricTypes");
+
+            migrationBuilder.DropTable(
                 name: "Equipments");
+
+            migrationBuilder.DropTable(
+                name: "EquipmentTypes");
 
             migrationBuilder.DropTable(
                 name: "PersonRoles");
@@ -367,10 +396,10 @@ namespace Abc.Soft.Migrations
                 name: "Services");
 
             migrationBuilder.DropTable(
-                name: "ServiceTypes");
+                name: "ServicesForPerson");
 
             migrationBuilder.DropTable(
-                name: "Trainings");
+                name: "ServiceTypes");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
