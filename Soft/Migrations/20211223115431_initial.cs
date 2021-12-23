@@ -95,6 +95,21 @@ namespace Abc.Soft.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "EquipmentsForPerson",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PersonId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EquipmentId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    From = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    To = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EquipmentsForPerson", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "EquipmentTypes",
                 columns: table => new
                 {
@@ -379,6 +394,9 @@ namespace Abc.Soft.Migrations
 
             migrationBuilder.DropTable(
                 name: "Equipments");
+
+            migrationBuilder.DropTable(
+                name: "EquipmentsForPerson");
 
             migrationBuilder.DropTable(
                 name: "EquipmentTypes");

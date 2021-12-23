@@ -18,7 +18,28 @@ namespace Abc.Infra
             addBodyMetrics(db);
             addEquipments(db);
             addEquipmentTypes(db);
+            //addServiceForPersons(db);
         }
+        //private static void addServiceForPersons(TrainingDbContext db) {
+        //    if (db.ServicesForPerson.Any()) return;
+        //    addItem(new ServiceForPersonData() {
+        //        Id = "1",
+        //        PersonId = "2",
+        //        ServiceId = "2",
+                
+
+        //    }, db);
+        //    addItem(new ServiceForPersonData() {
+        //        PersonId = "2",
+        //        ServiceId = "1"
+
+        //    }, db);
+        //    addItem(new ServiceForPersonData() {
+        //        PersonId = "3",
+        //        ServiceId = "3"
+
+        //    }, db);
+        //}
 
         private static void addEquipmentTypes(TrainingDbContext db) {
             if (db.EquipmentTypes.Any()) return;

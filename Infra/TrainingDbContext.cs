@@ -8,6 +8,7 @@ namespace Abc.Infra {
             : base(options) { }
         public DbSet<EquipmentData> Equipments { get; set; }
         public DbSet<EquipmentTypeData> EquipmentTypes { get; set; }
+        public DbSet<EquipmentForPersonData> EquipmentsForPerson { get; set; }
         public DbSet<ServiceData> Services { get; set; }
         public DbSet<ServiceTypeData> ServiceTypes { get; set; }
         public DbSet<ServiceForPersonData> ServicesForPerson { get; set; }
@@ -24,6 +25,7 @@ namespace Abc.Infra {
         public static void InitializeTables(ModelBuilder b) {
             b.Entity<EquipmentData>().ToTable(nameof(Equipments));
             b.Entity<EquipmentTypeData>().ToTable(nameof(EquipmentTypes));
+            b.Entity<EquipmentForPersonData>().ToTable(nameof(EquipmentsForPerson));
             b.Entity<ServiceData>().ToTable(nameof(Services));
             b.Entity<ServiceTypeData>().ToTable(nameof(ServiceTypes));
             b.Entity<ServiceForPersonData>().ToTable(nameof(ServicesForPerson));

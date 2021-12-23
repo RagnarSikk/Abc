@@ -94,6 +94,28 @@ namespace Abc.Soft.Migrations
                     b.ToTable("Equipments");
                 });
 
+            modelBuilder.Entity("Abc.Data.Others.EquipmentForPersonData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("EquipmentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("From")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PersonId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("To")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EquipmentsForPerson");
+                });
+
             modelBuilder.Entity("Abc.Data.Others.EquipmentTypeData", b =>
                 {
                     b.Property<string>("Id")
