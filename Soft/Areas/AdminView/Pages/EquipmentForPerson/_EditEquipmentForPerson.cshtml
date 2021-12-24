@@ -1,0 +1,11 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Other.EquipmentForPersonPage
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+
+    @Html.DropDown(m => m.Item.EquipmentId, Model.EquipmentTypes)
+    @Html.DropDown(m => m.Item.PersonId, Model.Persons)
+    @Html.Editor(m => m.Item.From)
+    @Html.Editor(m => m.Item.To)
+</body>
+
