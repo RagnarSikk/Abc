@@ -5,11 +5,9 @@ using Microsoft.Extensions.Hosting;
 
 namespace Abc.Soft {
     public class Program {
-        public static void Main(string[] args)
-        {
+        public static void Main(string[] args) {
             var host = CreateHostBuilder(args).Build();
-            using (var scope = host.Services.CreateScope())
-            {
+            using (var scope = host.Services.CreateScope()) {
                 var services = scope.ServiceProvider;
                 var db = services.GetRequiredService<TrainingDbContext>();
                 TrainingDbContentInitializer.Initialize(db);

@@ -1,10 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Facade
-{
+namespace Abc.Tests.Facade {
     [TestClass]
-    public class IsFacadeTested : AssemblyTests
-    {
+    public class IsFacadeTested : AssemblyTests {
         protected override string assembly => "Abc.Facade";
         [TestMethod]
         public void IsCommonTested()

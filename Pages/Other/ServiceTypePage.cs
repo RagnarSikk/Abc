@@ -1,14 +1,13 @@
 ﻿using Abc.Data.Others;
 using Abc.Domain.Others;
+using Abc.Domain.Others.Repositories;
 using Abc.Facade.Others;
+using Abc.Facade.Others.Factories;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
-using System.Linq.Expressions;
-using Abc.Domain.Others.Repositories;
-using Abc.Facade.Others.Factories;
 
 namespace Abc.Pages.Other {
     public sealed class ServiceTypePage : ViewPage<ServiceTypePage, IServiceTypeRepository, ServiceType, ServiceTypeView, ServiceTypeData> {
@@ -22,14 +21,12 @@ namespace Abc.Pages.Other {
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
-        public override string GetName(IHtmlHelper<ServiceTypePage> h, int i) => i switch
-        {
+        public override string GetName(IHtmlHelper<ServiceTypePage> h, int i) => i switch {
             4 or 5 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
-        public override IHtmlContent GetValue(IHtmlHelper<ServiceTypePage> h, int i) => i switch
-        {
+        public override IHtmlContent GetValue(IHtmlHelper<ServiceTypePage> h, int i) => i switch {
             4 or 5 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };

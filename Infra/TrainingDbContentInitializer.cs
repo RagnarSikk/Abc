@@ -1,14 +1,10 @@
-﻿using System.Linq;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Abc.Data.People;
-using Abc.Domain.Others;
+using System.Linq;
 
-namespace Abc.Infra
-{
-    public class TrainingDbContentInitializer : DbInitializer
-    {
-        public static void Initialize(TrainingDbContext db)
-        {
+namespace Abc.Infra {
+    public class TrainingDbContentInitializer : DbInitializer {
+        public static void Initialize(TrainingDbContext db) {
             addPersons(db);
             addPersonRoles(db);
             addPersonRoleTypes(db);
@@ -26,7 +22,7 @@ namespace Abc.Infra
         //        Id = "1",
         //        PersonId = "2",
         //        ServiceId = "2",
-                
+
 
         //    }, db);
         //    addItem(new ServiceForPersonData() {
@@ -49,7 +45,7 @@ namespace Abc.Infra
                 AmountAvailable = 30,
                 Definition = "Korvpalli treeningute jaoks",
                 Code = "A1"
-                
+
             }, db);
             addItem(new EquipmentTypeData() {
                 Id = "2",
@@ -68,19 +64,16 @@ namespace Abc.Infra
 
             }, db);
         }
-        private static void addEquipments(TrainingDbContext db)
-        {
+        private static void addEquipments(TrainingDbContext db) {
             if (db.Equipments.Any()) return;
-            addItem(new EquipmentData()
-            {
+            addItem(new EquipmentData() {
                 PersonRoleTypeId = "1",
                 EquipmentTypeId = "2",
                 Amount = 5
-                
+
 
             }, db);
-            addItem(new EquipmentData()
-            {
+            addItem(new EquipmentData() {
                 PersonRoleTypeId = "2",
                 EquipmentTypeId = "3",
                 Amount = 10
@@ -88,137 +81,113 @@ namespace Abc.Infra
             }, db);
         }
 
-        private static void addBodyMetrics(TrainingDbContext db)
-        {
+        private static void addBodyMetrics(TrainingDbContext db) {
             if (db.BodyMetrics.Any()) return;
-            addItem(new BodyMetricData()
-            {
+            addItem(new BodyMetricData() {
                 Value = 60,
                 BodyMetricTypeId = "2",
                 PersonId = "3"
             }, db);
-            addItem(new BodyMetricData()
-            {
+            addItem(new BodyMetricData() {
                 Value = 163.5,
                 BodyMetricTypeId = "1",
                 PersonId = "3"
             }, db);
-            addItem(new BodyMetricData()
-            {
+            addItem(new BodyMetricData() {
                 Value = 85,
                 BodyMetricTypeId = "2",
                 PersonId = "2"
             }, db);
-            addItem(new BodyMetricData()
-            {
+            addItem(new BodyMetricData() {
                 Value = 163.5,
                 BodyMetricTypeId = "1",
                 PersonId = "2"
             }, db);
-            addItem(new BodyMetricData()
-            {
+            addItem(new BodyMetricData() {
                 Value = 100,
                 BodyMetricTypeId = "2",
                 PersonId = "1"
             }, db);
-            addItem(new BodyMetricData()
-            {
+            addItem(new BodyMetricData() {
                 Value = 193.5,
                 BodyMetricTypeId = "1",
                 PersonId = "1"
             }, db);
         }
 
-        private static void addBodyMetricTypes(TrainingDbContext db)
-        {
+        private static void addBodyMetricTypes(TrainingDbContext db) {
             if (db.BodyMetricTypes.Any()) return;
-            addItem(new BodyMetricTypeData()
-            {
+            addItem(new BodyMetricTypeData() {
                 Id = "1",
                 Name = "Height",
                 Definition = "cm"
             }, db);
-            addItem(new BodyMetricTypeData()
-            {
+            addItem(new BodyMetricTypeData() {
                 Id = "2",
                 Name = "Weight",
                 Definition = "kg"
             }, db);
         }
 
-        private static void addServices(TrainingDbContext db)
-        {
+        private static void addServices(TrainingDbContext db) {
             if (db.Services.Any()) return;
-            addItem(new ServiceData()
-            {
+            addItem(new ServiceData() {
                 PersonRoleTypeId = "1",
                 ServiceTypeId = "1",
             }, db);
-            addItem(new ServiceData()
-            {
+            addItem(new ServiceData() {
                 PersonRoleTypeId = "1",
                 ServiceTypeId = "3",
             }, db);
-            addItem(new ServiceData()
-            {
+            addItem(new ServiceData() {
                 PersonRoleTypeId = "4",
                 ServiceTypeId = "5",
             }, db);
         }
 
-        private static void addServiceTypes(TrainingDbContext db)
-        {
-             if(db.ServiceTypes.Any()) return;
-             addItem(new ServiceTypeData()
-             {
-                 Id = "1",
-                 Name = "Personal Training",
-                 Code = "T1",
-             },db);
-             addItem(new ServiceTypeData()
-             {
-                 Id = "2",
-                 Name = "HIIT",
-                 Code = "T2",
-             }, db);
-             addItem(new ServiceTypeData()
-             {
-                 Id = "3",
-                 Name = "Cardio training",
-                 Code = "T3",
-             }, db);
-             addItem(new ServiceTypeData()
-             {
-                 Id = "4",
-                 Name = "Strength training",
-                 Code = "T4",
-             }, db);
-             addItem(new ServiceTypeData()
-             {
-                 Id = "5",
-                 Name = "Massage",
-                 Code = "M1",
-             }, db);
-             addItem(new ServiceTypeData()
-             {
-                 Id = "6",
-                 Name = "Nutrition counseling",
-                 Code = "N1",
-             }, db);
-             addItem(new ServiceTypeData()
-             {
-                 Id = "7",
-                 Name = "Taping and splinting",
-                 Code = "P1",
-             }, db);
+        private static void addServiceTypes(TrainingDbContext db) {
+            if (db.ServiceTypes.Any()) return;
+            addItem(new ServiceTypeData() {
+                Id = "1",
+                Name = "Personal Training",
+                Code = "T1",
+            }, db);
+            addItem(new ServiceTypeData() {
+                Id = "2",
+                Name = "HIIT",
+                Code = "T2",
+            }, db);
+            addItem(new ServiceTypeData() {
+                Id = "3",
+                Name = "Cardio training",
+                Code = "T3",
+            }, db);
+            addItem(new ServiceTypeData() {
+                Id = "4",
+                Name = "Strength training",
+                Code = "T4",
+            }, db);
+            addItem(new ServiceTypeData() {
+                Id = "5",
+                Name = "Massage",
+                Code = "M1",
+            }, db);
+            addItem(new ServiceTypeData() {
+                Id = "6",
+                Name = "Nutrition counseling",
+                Code = "N1",
+            }, db);
+            addItem(new ServiceTypeData() {
+                Id = "7",
+                Name = "Taping and splinting",
+                Code = "P1",
+            }, db);
         }
 
-        private static void addPersons(TrainingDbContext db)
-        {
+        private static void addPersons(TrainingDbContext db) {
             if (db.Persons.Any()) return;
-            
-            addItem(new PersonData()
-            {
+
+            addItem(new PersonData() {
                 Id = "1",
                 FirstMidName = "Carson",
                 LastName = "Alexander",
@@ -227,8 +196,7 @@ namespace Abc.Infra
                 Gender = "Male"
             }, db);
 
-            addItem(new PersonData()
-            {
+            addItem(new PersonData() {
                 Id = "2",
                 FirstMidName = "Allan",
                 LastName = "Rivers",
@@ -237,8 +205,7 @@ namespace Abc.Infra
                 Gender = "Male"
             }, db);
 
-            addItem(new PersonData()
-            {
+            addItem(new PersonData() {
                 Id = "3",
                 FirstMidName = "Amy",
                 LastName = "Hale",
@@ -246,8 +213,7 @@ namespace Abc.Infra
                 PhoneNumber = "54321123",
                 Gender = "Female"
             }, db);
-            addItem(new PersonData()
-            {
+            addItem(new PersonData() {
                 Id = "4",
                 FirstMidName = "Amy",
                 LastName = "Hale",
@@ -256,68 +222,57 @@ namespace Abc.Infra
                 Gender = "Female"
             }, db);
         }
-        private static void addPersonRoles(TrainingDbContext db)
-        {
-            if(db.PersonRoles.Any()) return;
-            addItem(new PersonRoleData()
-            {
+        private static void addPersonRoles(TrainingDbContext db) {
+            if (db.PersonRoles.Any()) return;
+            addItem(new PersonRoleData() {
                 PersonId = "1",
                 PersonRoleTypeId = "1",
                 Certificate = "Coach"
             }, db);
 
-            addItem(new PersonRoleData()
-            {
+            addItem(new PersonRoleData() {
                 PersonId = "2",
                 PersonRoleTypeId = "1",
                 Certificate = "Coach"
             }, db);
-            addItem(new PersonRoleData()
-            {
+            addItem(new PersonRoleData() {
                 PersonId = "3",
                 PersonRoleTypeId = "5"
             }, db);
         }
-        private static void addPersonRoleTypes(TrainingDbContext db)
-        {
+        private static void addPersonRoleTypes(TrainingDbContext db) {
             if (db.PersonRoleTypes.Any()) return;
-            addItem(new PersonRoleTypeData()
-            {
+            addItem(new PersonRoleTypeData() {
                 Id = "1",
                 Name = "Coach",
                 Code = "C1"
             }, db);
 
-            addItem(new PersonRoleTypeData()
-            {
+            addItem(new PersonRoleTypeData() {
                 Id = "2",
                 Name = "Nutritionist",
                 Code = "N1"
             }, db);
 
-            addItem(new PersonRoleTypeData()
-            {
+            addItem(new PersonRoleTypeData() {
                 Id = "3",
                 Name = "Therapist",
                 Code = "T1"
             }, db);
 
-            addItem(new PersonRoleTypeData()
-            {
+            addItem(new PersonRoleTypeData() {
                 Id = "4",
                 Name = "Physiotherapist",
                 Code = "P1"
             }, db);
 
-            addItem(new PersonRoleTypeData()
-            {
+            addItem(new PersonRoleTypeData() {
                 Id = "5",
                 Name = "Athlete",
                 Code = "A1"
             }, db);
 
-            addItem(new PersonRoleTypeData()
-            {
+            addItem(new PersonRoleTypeData() {
                 Id = "6",
                 Name = "Administrator",
                 Code = "A2"

@@ -1,17 +1,17 @@
 ﻿using Abc.Data.Others;
+using Abc.Data.People;
 using Abc.Domain.Others;
-using Abc.Facade.Others;
-using Abc.Pages.Common;
-using System;
 using Abc.Domain.Others.Repositories;
+using Abc.Domain.People;
+using Abc.Domain.People.Repositories;
+using Abc.Facade.Others;
 using Abc.Facade.Others.Factories;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
-using Abc.Domain.People.Repositories;
-using Abc.Domain.People;
-using Abc.Data.People;
 
 namespace Abc.Pages.Other {
     public sealed class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData> {

@@ -5,7 +5,7 @@ namespace Abc.Tests.Facade.Common {
 
     [TestClass]
     public class NamedViewTests : AbstractTests<UniqueEntityView> {
-        private class testClass: NamedView { }
+        private class testClass : NamedView { }
 
         [TestMethod] public void CodeTest() => isDisplayProperty<string>("Code");
         [TestMethod] public void NameTest() => isRequiredProperty<string>("Name");

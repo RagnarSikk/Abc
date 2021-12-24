@@ -38,8 +38,7 @@ namespace Abc.Aids.Reflection {
                 return a?.DisplayName ?? name;
             }, string.Empty);
         }
-        public static string DisplayName(string propertyName, Type t)
-        {
+        public static string DisplayName(string propertyName, Type t) {
             return Safe.Run(() => {
                 var name = propertyName ?? string.Empty;
                 var p = t.GetProperty(name);

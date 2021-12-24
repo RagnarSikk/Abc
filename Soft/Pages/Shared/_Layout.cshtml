@@ -39,7 +39,10 @@
                             new Link("Body Metrics", new Uri("/AdminView/BodyMetrics/Index?handler=index", UriKind.Relative)))
 
                         @Html.DropMenu("Customers",
+                            new Link("Services", new Uri("/Customers/ServiceForPerson/Index?handler=index", UriKind.Relative)),
+                            new Link("Equipments", new Uri("/Customers/EquipmentForPerson/Index?handler=index", UriKind.Relative)),
                             new Link("Persons", new Uri("/Customers/Persons/Index?handler=index", UriKind.Relative)))
+                            
                           
                     </ul>
                     <partial name="_LoginPartial" />

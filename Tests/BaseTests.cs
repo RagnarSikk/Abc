@@ -30,8 +30,7 @@ namespace Abc.Tests {
             var projectName = testableClassName.GetTail().GetHead();
             var l = GetSolution.TypesForAssembly($"{solutionName}.{projectName}");
             var list = l?.Where(x => x.FullName == testableClassName)?.ToList();
-            if (list?.Count == 0)
-            {
+            if (list?.Count == 0) {
                 testableClassName += "`";
                 list = l?.Where(x => x.FullName.StartsWith(testableClassName))?.ToList();
             }

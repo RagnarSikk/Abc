@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Abc.Tests {
     public abstract class AbstractTests<TBaseClass> : BaseClassTests<TBaseClass> {

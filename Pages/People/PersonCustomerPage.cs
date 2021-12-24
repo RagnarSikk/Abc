@@ -1,9 +1,8 @@
-﻿using Abc.Domain.People;
+﻿using Abc.Domain.People.Repositories;
 using Abc.Facade.People;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
-using Abc.Domain.People.Repositories;
 
 namespace Abc.Pages.People {
     public sealed class PersonCustomerPage : PersonAdminPage<PersonCustomerPage> {

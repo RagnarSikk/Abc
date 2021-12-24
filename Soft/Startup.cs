@@ -1,6 +1,4 @@
-using Abc.Domain.Others;
 using Abc.Domain.Others.Repositories;
-using Abc.Domain.People;
 using Abc.Domain.People.Repositories;
 using Abc.Infra;
 using Abc.Infra.Others;

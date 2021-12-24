@@ -11,14 +11,16 @@ namespace Abc.Tests.Facade {
         where TObject : IEntity<TData> {
         protected virtual string[] excludeProperties => System.Array.Empty<string>();
         [TestMethod] public void CreateTest() { }
-        [TestMethod] public void CreateObjectTest() {
+        [TestMethod]
+        public void CreateObjectTest() {
             var v = random<TView>();
             doBeforeCreateObjectTest(v);
             var o = (obj as TFactory).Create(v);
             areEqualProperties(v, o.Data, excludeProperties);
             doAfterCreateObjectTest(v, o);
         }
-        [TestMethod] public void CreateViewTest() {
+        [TestMethod]
+        public void CreateViewTest() {
             var d = random<TData>();
             doBeforeCreateViewTest(d);
             var o = createObject(d);
@@ -26,8 +28,8 @@ namespace Abc.Tests.Facade {
             areEqualProperties(d, v, excludeProperties);
             doAfterCreateViewTest(o, v);
         }
-        protected virtual void doAfterCreateViewTest(TObject o, TView v) {}
-        protected virtual void doAfterCreateObjectTest(TView v, TObject o) {}
+        protected virtual void doAfterCreateViewTest(TObject o, TView v) { }
+        protected virtual void doAfterCreateObjectTest(TView v, TObject o) { }
         protected virtual void doBeforeCreateViewTest(TData d) { }
         protected virtual void doBeforeCreateObjectTest(TView v) { }
         protected abstract TObject createObject(TData d);
