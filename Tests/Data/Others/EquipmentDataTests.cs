@@ -5,8 +5,10 @@ namespace Abc.Tests.Data.Others {
     [TestClass]
     public class EquipmentDataTests : SealedTests<UniqueEntityData> {
         [TestMethod]
-        public void AmountAvailableTest() => isProperty<int>(false);
+        public void AmountTest() => isProperty<int>(false);
         [TestMethod]
-        public void AmountInUsingTest() => isProperty<int>(false);
+        public void PersonRoleTypeIdTest () => isProperty<string>(false);
+        [TestMethod]
+        public void EquipmentTypeIdTest() => isProperty<string>(false);
     }
 }
