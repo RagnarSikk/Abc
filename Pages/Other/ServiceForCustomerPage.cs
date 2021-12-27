@@ -21,8 +21,10 @@ namespace Abc.Pages.Other {
 
         public ServiceForCustomerPage(IServiceForPersonRepository r, IServiceTypeRepository b, IPersonRepository c)
             : base(r, "Servicesn") {
-            ServiceTypes = newItemsList<ServiceType, ServiceTypeData>(b);
-            Persons = newItemsList<Person, PersonData>(c);
+            //ServiceTypes = newItemsList<ServiceType, ServiceTypeData>(b);
+            //Persons = newItemsList<Person, PersonData>(c);
+            ServiceTypes = newItemsList<ServiceType, ServiceTypeData>(b, null, x => x.Name);
+            Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
         }
         public string PersonName(string id) => itemName(Persons, id);
         public string ServiceTypeName(string id) => itemName(ServiceTypes, id);
