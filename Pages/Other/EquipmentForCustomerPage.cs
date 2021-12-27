@@ -23,8 +23,6 @@ namespace Abc.Pages.Other {
         public EquipmentForCustomerPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c)
             : base(r, "Equipments")
         {
-            //EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b);
-            //Persons = newItemsList<Person, PersonData>(c);
             EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b, null, x=> x.Name);
             Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
         }
