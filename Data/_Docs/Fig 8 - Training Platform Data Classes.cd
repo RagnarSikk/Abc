@@ -13,6 +13,7 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\NamedEntityData.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Abc.Data.Common.PeriodData">
     <Position X="7.75" Y="3.25" Width="1.5" />
@@ -55,13 +56,6 @@
       <FileName>People\PersonRoleTypeData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Abc.Data.Others.BodyMetricData">
-    <Position X="6" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AIAAAAAABAAAAAAEAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Others\BodyMetricData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Abc.Data.Others.BodyMetricTypeData" Collapsed="true">
     <Position X="0.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
@@ -72,7 +66,7 @@
   <Class Name="Abc.Data.Others.ServiceData">
     <Position X="4.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Others\ServiceData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -88,6 +82,21 @@
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Others\ServiceForPersonData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Others.EquipmentColourData" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Others\EquipmentColourData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Others.BodyMetricData">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Others\BodyMetricData.cs</FileName>
+      <NewMemberFileName>Others\EquipmentData.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
