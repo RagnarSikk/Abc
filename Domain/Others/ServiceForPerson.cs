@@ -5,7 +5,7 @@ using Abc.Domain.People;
 using Abc.Domain.People.Repositories;
 
 namespace Abc.Domain.Others {
-    public sealed class ServiceForPerson : Entity<ServiceForPersonData> {
+    public sealed class ServiceForPerson : UniqueEntity<ServiceForPersonData> {
         public ServiceForPerson(ServiceForPersonData d) : base(d) { }
         public string PersonId => Data.PersonId ?? Unspecified;
         public string ServiceId => Data.ServiceId ?? Unspecified;
