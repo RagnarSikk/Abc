@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 
-namespace Abc.Pages.Other {
+namespace Abc.Pages.Others {
     public sealed class EquipmentForPersonPage : ViewPage<EquipmentForPersonPage, IEquipmentForPersonRepository, EquipmentForPerson,
         EquipmentForPersonView, EquipmentForPersonData> {
 
@@ -24,7 +24,7 @@ namespace Abc.Pages.Other {
             : base(r, "Equipments For Person") {
             //EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b);
             //Persons = newItemsList<Person, PersonData>(c);
-            EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b, null, x=> x.Name);
+            EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b, null, x => x.Name);
             Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
         }
         public string PersonName(string id) => itemName(Persons, id);

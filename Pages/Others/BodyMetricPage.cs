@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 
-namespace Abc.Pages.Other {
+namespace Abc.Pages.Others {
     public sealed class BodyMetricPage : ViewPage<BodyMetricPage, IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData> {
         public IEnumerable<SelectListItem> Persons { get; }
         public IEnumerable<SelectListItem> BodyMetricTypes { get; }

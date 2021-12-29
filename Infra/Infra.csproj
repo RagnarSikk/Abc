@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Common\doc\**" />
+    <EmbeddedResource Remove="Common\doc\**" />
+    <None Remove="Common\doc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
       <PrivateAssets>all</PrivateAssets>
@@ -17,10 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Facade\Facade.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Common\doc\" />
   </ItemGroup>
 
 </Project>

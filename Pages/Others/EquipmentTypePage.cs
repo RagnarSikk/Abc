@@ -9,36 +9,37 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 
-namespace Abc.Pages.Other {
-    public sealed class ServiceTypePage : ViewPage<ServiceTypePage, IServiceTypeRepository, ServiceType, ServiceTypeView, ServiceTypeData> {
-        public ServiceTypePage(IServiceTypeRepository r) : base(r, "Service types") { }
+namespace Abc.Pages.Others {
+    public sealed class EquipmentTypePage : ViewPage<EquipmentTypePage, IEquipmentTypeRepository, EquipmentType, EquipmentTypeView, EquipmentTypeData> {
+        public EquipmentTypePage(IEquipmentTypeRepository r) : base(r, "Equipment types") { }
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
             createColumn(x => Item.Name);
             createColumn(x => Item.Code);
             createColumn(x => Item.Definition);
+            createColumn(x => Item.AmountAvailable);
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
-        public override string GetName(IHtmlHelper<ServiceTypePage> h, int i) => i switch {
-            4 or 5 => getName<DateTime?>(h, i),
+        public override string GetName(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
+            5 or 6 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
-        public override IHtmlContent GetValue(IHtmlHelper<ServiceTypePage> h, int i) => i switch {
-            4 or 5 => getValue<DateTime?>(h, i),
+        public override IHtmlContent GetValue(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
+            5 or 6 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
-        protected internal override Uri pageUrl() => new Uri("/AdminView/ServiceTypes", UriKind.Relative);
-        protected internal override ServiceType toObject(ServiceTypeView v) => new ServiceTypeViewFactory().Create(v);
+        protected internal override Uri pageUrl() => new Uri("/AdminView/EquipmentTypes", UriKind.Relative);
+        protected internal override EquipmentType toObject(EquipmentTypeView v) => new EquipmentTypeViewFactory().Create(v);
 
-        protected internal override ServiceTypeView toView(ServiceType o) => new ServiceTypeViewFactory().Create(o);
+        protected internal override EquipmentTypeView toView(EquipmentType o) => new EquipmentTypeViewFactory().Create(o);
         public override IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue, int? switchOfCreate) {
-            Item = new ServiceTypeView();
+            Item = new EquipmentTypeView();
             return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
         }
     }

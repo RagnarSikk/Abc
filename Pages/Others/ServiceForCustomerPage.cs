@@ -13,14 +13,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 
-namespace Abc.Pages.Other {
-    public sealed class ServiceForPersonPage : ViewPage<ServiceForPersonPage, IServiceForPersonRepository, ServiceForPerson, ServiceForPersonView, ServiceForPersonData> {
+namespace Abc.Pages.Others {
+    public sealed class ServiceForCustomerPage : ViewPage<ServiceForPersonPage, IServiceForPersonRepository, ServiceForPerson, ServiceForPersonView, ServiceForPersonData> {
 
         public IEnumerable<SelectListItem> ServiceTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
 
-        public ServiceForPersonPage(IServiceForPersonRepository r, IServiceTypeRepository b, IPersonRepository c)
-            : base(r, "Services For Person") {
+        public ServiceForCustomerPage(IServiceForPersonRepository r, IServiceTypeRepository b, IPersonRepository c)
+            : base(r, "Servicesn") {
             ServiceTypes = newItemsList<ServiceType, ServiceTypeData>(b, null, x => x.Name);
             Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
         }
@@ -29,7 +29,6 @@ namespace Abc.Pages.Other {
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
-            createColumn(x => Item.Name);
             createColumn(x => Item.PersonId);
             createColumn(x => Item.ServiceId);
             createColumn(x => Item.From);
@@ -37,18 +36,18 @@ namespace Abc.Pages.Other {
         }
 
         public override string GetName(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
-            4 or 5 => getName<DateTime?>(h, i),
+            3 or 4 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
-            2 => getRaw(h, PersonName(Item.PersonId)),
-            3 => getRaw(h, ServiceTypeName(Item.ServiceId)),
-            4 or 5 => getValue<DateTime?>(h, i),
+            1 => getRaw(h, PersonName(Item.PersonId)),
+            2 => getRaw(h, ServiceTypeName(Item.ServiceId)),
+            3 or 4 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
-        protected internal override Uri pageUrl() => new Uri("/AdminView/ServiceForPerson", UriKind.Relative);
+        protected internal override Uri pageUrl() => new Uri("/Customers/ServiceForPerson", UriKind.Relative);
         protected internal override ServiceForPerson toObject(ServiceForPersonView v) => new ServiceForPersonViewFactory().Create(v);
 
         protected internal override ServiceForPersonView toView(ServiceForPerson o) => new ServiceForPersonViewFactory().Create(o);

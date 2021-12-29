@@ -1,5 +1,4 @@
-﻿using Abc.Aids.Random;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Abc.Data.People;
 using Abc.Domain.Common;
 using Abc.Domain.Others;
@@ -7,11 +6,9 @@ using Abc.Domain.Others.Repositories;
 using Abc.Domain.People.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Others
-{
+namespace Abc.Tests.Domain.Others {
     [TestClass]
-    class EquipmentForPersonTest :SealedTests<UniqueEntity<EquipmentForPersonData>>
-    {
+    class EquipmentForPersonTest : SealedTests<UniqueEntity<EquipmentForPersonData>> {
         private EquipmentForPersonData data;
         private IPersonRepository personRepo;
         private IEquipmentRepository equipmentRepo;
@@ -20,5 +17,5 @@ namespace Abc.Tests.Domain.Others
         private EquipmentForPerson equipmentForPerson;
 
         protected override object createObject() => new EquipmentForPerson(data);
-    } 
+    }
 }
