@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 
 namespace Abc.Pages.Others {
-    public sealed class ServiceForCustomerPage : ViewPage<ServiceForPersonPage, IServiceForPersonRepository, ServiceForPerson, ServiceForPersonView, ServiceForPersonData> {
+    public sealed class ServiceForCustomerPage : ViewPage<ServiceForCustomerPage, IServiceForPersonRepository, ServiceForPerson, ServiceForPersonView, ServiceForPersonData> {
 
         public IEnumerable<SelectListItem> ServiceTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
@@ -35,12 +35,12 @@ namespace Abc.Pages.Others {
             createColumn(x => Item.To);
         }
 
-        public override string GetName(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
+        public override string GetName(IHtmlHelper<ServiceForCustomerPage> h, int i) => i switch {
             3 or 4 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
-        public override IHtmlContent GetValue(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
+        public override IHtmlContent GetValue(IHtmlHelper<ServiceForCustomerPage> h, int i) => i switch {
             1 => getRaw(h, PersonName(Item.PersonId)),
             2 => getRaw(h, ServiceTypeName(Item.ServiceId)),
             3 or 4 => getValue<DateTime?>(h, i),

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 
 namespace Abc.Pages.Others {
-    public sealed class EquipmentForCustomerPage : ViewPage<EquipmentForPersonPage, IEquipmentForPersonRepository, EquipmentForPerson,
+    public sealed class EquipmentForCustomerPage : ViewPage<EquipmentForCustomerPage, IEquipmentForPersonRepository, EquipmentForPerson,
         EquipmentForPersonView, EquipmentForPersonData> {
 
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
@@ -37,12 +37,12 @@ namespace Abc.Pages.Others {
             createColumn(x => Item.To);
         }
 
-        public override string GetName(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
+        public override string GetName(IHtmlHelper<EquipmentForCustomerPage> h, int i) => i switch {
             4 or 5 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
-        public override IHtmlContent GetValue(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
+        public override IHtmlContent GetValue(IHtmlHelper<EquipmentForCustomerPage> h, int i) => i switch {
             2 => getRaw(h, PersonName(Item.PersonId)),
             3 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
             4 or 5 => getValue<DateTime?>(h, i),
