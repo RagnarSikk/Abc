@@ -29,6 +29,7 @@ namespace Abc.Pages.Other {
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
+            createColumn(x => Item.Name);
             createColumn(x => Item.PersonId);
             createColumn(x => Item.ServiceId);
             createColumn(x => Item.From);
@@ -36,14 +37,14 @@ namespace Abc.Pages.Other {
         }
 
         public override string GetName(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
-            3 or 4 => getName<DateTime?>(h, i),
+            4 or 5 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
-            1 => getRaw(h, PersonName(Item.PersonId)),
-            2 => getRaw(h, ServiceTypeName(Item.ServiceId)),
-            3 or 4 => getValue<DateTime?>(h, i),
+            2 => getRaw(h, PersonName(Item.PersonId)),
+            3 => getRaw(h, ServiceTypeName(Item.ServiceId)),
+            4 or 5 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 

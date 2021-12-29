@@ -2,7 +2,7 @@
 @model Abc.Pages.Other.EquipmentForPersonPage
 <body>
     <input type="hidden" asp-for="Item.Id" />
-
+    @Html.Editor(m => m.Item.Name)
     @Html.DropDown(m => m.Item.EquipmentId, Model.EquipmentTypes)
     @Html.DropDown(m => m.Item.PersonId, Model.Persons)
     @Html.Editor(m => m.Item.From)
