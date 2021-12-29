@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Abc.Aids.Random;
 using Abc.Data.Common;
 using Abc.Data.Others;
@@ -56,7 +52,7 @@ namespace Abc.Tests
 
         internal static IBodyMetricRepository BodyMetric()
             => createMockRepo<MockBodyMetricRepo, BodyMetric, BodyMetricData>();
-        internal static IBodyMetricTypeRepository BodyMetrictype()
+        internal static IBodyMetricTypeRepository BodyMetricType()
             => createMockRepo<MockBodyMetricTypeRepo, BodyMetricType, BodyMetricTypeData>();
         internal static IEquipmentForPersonRepository EquipmentForPerson()
             => createMockRepo<MockEquipmentForPersonRepo, EquipmentForPerson, EquipmentForPersonData>();

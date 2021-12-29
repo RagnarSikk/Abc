@@ -3,7 +3,7 @@ using Abc.Domain.Common;
 using Abc.Domain.People.Repositories;
 
 namespace Abc.Domain.People {
-    public class PersonRole : UniqueEntity<PersonRoleData> {
+    public sealed class PersonRole : UniqueEntity<PersonRoleData> {
         public PersonRole(PersonRoleData d) : base(d) { }
         public string PersonRoleTypeId => Data.PersonRoleTypeId ?? Unspecified;
         public string PersonId => Data.PersonId ?? Unspecified;
