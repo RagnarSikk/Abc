@@ -2,7 +2,7 @@
 using Abc.Domain.Common;
 
 namespace Abc.Domain.People {
-    public class PersonRoleType : DefinedEntity<PersonRoleTypeData> {
+    public sealed class PersonRoleType : DefinedEntity<PersonRoleTypeData> {
         public PersonRoleType(PersonRoleTypeData d) : base(d) { }
     }
 }

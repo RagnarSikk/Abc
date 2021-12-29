@@ -6,9 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Domain.People {
     [TestClass]
-    public class PersonTests : ClassTests<UniqueEntity<PersonData>> {
+    public class PersonTests : SealedTests<UniqueEntity<PersonData>> {
         private PersonData data;
-
 
         protected override object createObject() => new Person(data);
 
