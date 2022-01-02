@@ -18,6 +18,8 @@ namespace Abc.Infra {
         public DbSet<BodyMetricData> BodyMetrics { get; set; }
         public DbSet<BodyMetricTypeData> BodyMetricTypes { get; set; }
         public DbSet<EquipmentColourData> EquipmentColours { get; set; }
+        public DbSet<BrandData> Brand { get; set; }
+
         protected override void OnModelCreating(ModelBuilder b) {
             base.OnModelCreating(b);
             InitializeTables(b);
