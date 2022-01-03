@@ -16,6 +16,6 @@ namespace Abc.Tests {
             obj = createObject();
         }
         [TestMethod] public void CanCreateTest() => Assert.IsNotNull(createObject());
-        [TestMethod] public void IsInheritedTest() => areEqual(getBaseClass(), type.BaseType);
+        [TestMethod] public virtual void IsInheritedTest() => areEqual(getBaseClass(), type.BaseType);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Abc.Tests {
     public abstract class SealedTests<TBaseClass> : ClassTests<TBaseClass> {
-        [TestMethod] public void IsSealed() => isTrue(type.IsSealed);
+        [TestMethod] public virtual void IsSealed() => isTrue(type.IsSealed);
     }
 
 }
