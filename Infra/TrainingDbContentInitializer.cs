@@ -16,6 +16,7 @@ namespace Abc.Infra {
             addEquipmentTypes(db);
             //addServiceForPersons(db);
         }
+
         //private static void addServiceForPersons(TrainingDbContext db) {
         //    if (db.ServicesForPerson.Any()) return;
         //    addItem(new ServiceForPersonData() {

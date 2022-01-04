@@ -37,6 +37,7 @@ namespace Abc.Infra {
             b.Entity<BodyMetricData>().ToTable(nameof(BodyMetrics));
             b.Entity<BodyMetricTypeData>().ToTable(nameof(BodyMetricTypes));
             b.Entity<EquipmentColourData>().ToTable(nameof(EquipmentColours));
+            b.Entity<BrandData>().ToTable(nameof(Brand));
 
         }
     }

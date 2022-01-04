@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\AdminView\Pages\Brand - Copy\" />
     <Folder Include="Pages\sh\" />
   </ItemGroup>
 
