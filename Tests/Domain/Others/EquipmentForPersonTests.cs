@@ -4,7 +4,6 @@ using Abc.Data.People;
 using Abc.Domain.Common;
 using Abc.Domain.Others;
 using Abc.Domain.Others.Repositories;
-using Abc.Domain.People;
 using Abc.Domain.People.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

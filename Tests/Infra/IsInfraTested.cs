@@ -1,5 +1,4 @@
-﻿using Abc.Tests.Data;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Infra
 {
@@ -10,5 +9,11 @@ namespace Abc.Tests.Infra
         [TestMethod]
         public void IsCommonTested()
             => isAllTested(assembly, nameSpace("Common"));
+        [TestMethod]
+        public void IsOtherTested()
+            => isAllTested(assembly, nameSpace("Other"));
+        [TestMethod]
+        public void IsPeopleTested()
+            => isAllTested(assembly, nameSpace("People"));
     }
 }

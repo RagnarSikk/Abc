@@ -36,8 +36,6 @@
     <Folder Include="Core\" />
     <Folder Include="Domain\Common\" />
     <Folder Include="Facade\Others\" />
-    <Folder Include="Infra\Others\" />
-    <Folder Include="Infra\People\" />
     <Folder Include="Soft\" />
   </ItemGroup>
 
