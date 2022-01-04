@@ -48,6 +48,7 @@ namespace Abc.Soft {
             s.AddScoped<IEquipmentForPersonRepository, EquipmentForPersonRepository>();
             s.AddScoped<IBodyMetricRepository, BodyMetricRepository>();
             s.AddScoped<IEquipmentColourRepository, EquipmentColourRepository>();
+            s.AddScoped<IBrandRepository, BrandRepository>();
             s.AddScoped<IBodyMetricTypeRepository, BodyMetricTypeRepository>();
         }
         private void registerAuthentication(IServiceCollection s)
