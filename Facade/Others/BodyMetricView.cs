@@ -1,5 +1,7 @@
-﻿using Abc.Facade.Common;
+﻿using System;
+using Abc.Facade.Common;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Abc.Facade.Others {
     public sealed class BodyMetricView : UniqueEntityView {
