@@ -28,7 +28,10 @@ namespace Abc.Facade.People {
             ErrorMessage = "Invalid email")]
         [DisplayName("Email")] public string Email { get; set; }
         [DisplayName("Gender")] public string Gender { get; set; }
-        [Required] 
+
+        [Required]
+        [DataType(DataType.Date)]
         [DisplayName("Date of Birth")] public DateTime? DateOfBirth { get; set; }
+
     }
 }
