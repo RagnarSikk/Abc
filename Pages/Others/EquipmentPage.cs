@@ -44,7 +44,6 @@ namespace Abc.Pages.Others {
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentPage> h, int i) => i switch {
             1 => getRaw(h, PersonRoleTypeName(Item.PersonRoleTypeId)),
             2 => getRaw(h, EquipmentTypeName(Item.EquipmentTypeId)),
-            3 => getValue<int>(h,i),
             4 or 5 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
@@ -53,7 +52,7 @@ namespace Abc.Pages.Others {
         protected internal override Equipment toObject(EquipmentView v) => new EquipmentViewFactory().Create(v);
 
         protected internal override EquipmentView toView(Equipment o) => new EquipmentViewFactory().Create(o);
-        public override IActionResult OnGetCreate(
+         public override IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue, int? switchOfCreate) {
             Item = new EquipmentView();
