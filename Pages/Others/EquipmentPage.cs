@@ -52,7 +52,7 @@ namespace Abc.Pages.Others {
         protected internal override Equipment toObject(EquipmentView v) => new EquipmentViewFactory().Create(v);
 
         protected internal override EquipmentView toView(Equipment o) => new EquipmentViewFactory().Create(o);
-        public override IActionResult OnGetCreate(
+         public override IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue, int? switchOfCreate) {
             Item = new EquipmentView();
