@@ -30,7 +30,7 @@ namespace Abc.Pages.Others {
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
-            createColumn(x => Item.Name);
+            //createColumn(x => Item.Name);
             createColumn(x => Item.PersonId);
             createColumn(x => Item.EquipmentId);
             createColumn(x => Item.From);

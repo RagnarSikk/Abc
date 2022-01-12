@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace Abc.Facade.Others {
 
-    public sealed class EquipmentView : DefinedView {
+    public sealed class EquipmentView : UniqueEntityView {
         [DisplayName("Amount")] public string Amount { get; set; }
         [DisplayName("Equipment Provider?")] public string PersonRoleTypeId { get; set; }
         [DisplayName("Equipment Type")] public string EquipmentTypeId { get; set; }
