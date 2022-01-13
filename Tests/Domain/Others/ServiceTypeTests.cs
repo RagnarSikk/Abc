@@ -10,8 +10,7 @@ namespace Abc.Tests.Domain.Others {
         private ServiceTypeData data;
         protected override object createObject() => new ServiceType(data);
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             data = GetRandom.Object<ServiceTypeData>();
             base.TestInitialize();
         }

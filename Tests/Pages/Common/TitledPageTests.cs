@@ -1,10 +1,10 @@
-﻿using Abc.Pages.Common;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Abc.Domain.Others;
 using Abc.Domain.Others.Repositories;
 using Abc.Facade.Others;
+using Abc.Pages.Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Abc.Tests.Pages.Common {
 
@@ -13,7 +13,7 @@ namespace Abc.Tests.Pages.Common {
         : AbstractTests<PagedPage<IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData>> {
         private class testClass :
             TitledPage<IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData> {
-            public testClass(IBodyMetricRepository r) : base(r, nameof(BodyMetric)+"s") { }
+            public testClass(IBodyMetricRepository r) : base(r, nameof(BodyMetric) + "s") { }
 
             protected override Uri pageUrl() {
                 throw new NotImplementedException();

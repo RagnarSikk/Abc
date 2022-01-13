@@ -1,10 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Infra
-{
+namespace Abc.Tests.Infra {
     [TestClass]
-    public class DbInitializerTests: ClassTests<object>
-    {
+    public class DbInitializerTests : ClassTests<object> {
         //static internal protected void addSet<T>(IEnumerable<T> set, DbContext db) where T : PeriodData
         //{
         //    try

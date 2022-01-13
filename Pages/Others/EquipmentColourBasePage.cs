@@ -9,12 +9,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 
-namespace Abc.Pages.Others
-{
+namespace Abc.Pages.Others {
     public abstract class EquipmentColourBasePage<TPage> :
-        
+
         ViewPage<TPage, IEquipmentColourRepository, EquipmentColour, EquipmentColourView, EquipmentColourData>
-        where TPage: PageModel{
+        where TPage : PageModel {
         protected EquipmentColourBasePage(IEquipmentColourRepository r) : base(r, "EquipmentColour") { }
 
         protected internal override EquipmentColour toObject(EquipmentColourView v) => new EquipmentColourViewFactory().Create(v);

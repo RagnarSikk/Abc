@@ -1,5 +1,4 @@
-﻿using System;
-using Abc.Aids.Random;
+﻿using Abc.Aids.Random;
 using Abc.Data.Common;
 using Abc.Data.Others;
 using Abc.Data.People;
@@ -8,6 +7,7 @@ using Abc.Domain.Others;
 using Abc.Domain.Others.Repositories;
 using Abc.Domain.People;
 using Abc.Domain.People.Repositories;
+using System;
 
 namespace Abc.Tests {
     internal static class MockRepos {

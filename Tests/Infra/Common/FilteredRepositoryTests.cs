@@ -5,8 +5,7 @@ using Abc.Infra.Common;
 using Abc.Infra.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Infra.Common
-{
+namespace Abc.Tests.Infra.Common {
 
     [TestClass]
     public class FilteredRepositoryTests : AbstractRepoTests<BodyMetricRepository, BodyMetric, BodyMetricData> {
@@ -18,7 +17,7 @@ namespace Abc.Tests.Infra.Common
         [TestMethod]
         public override void IsInheritedTest() {
             var b = getBaseClass();
-            isTrue(b.Name.StartsWith(nameof(SortedRepository<BodyMetric,BodyMetricData>)));
+            isTrue(b.Name.StartsWith(nameof(SortedRepository<BodyMetric, BodyMetricData>)));
         }
         [TestMethod] public void SearchStringTest() => isProperty<string>();
         [TestMethod] public void CurrentFilterTest() => isProperty<string>();

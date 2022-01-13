@@ -20,7 +20,7 @@ namespace Abc.Pages.Others {
         public IEnumerable<SelectListItem> Persons { get; }
 
         public ServiceForCustomerPage(IServiceForPersonRepository r, IServiceTypeRepository b, IPersonRepository c)
-            : base(r, "Servicesn") {
+            : base(r, "Services for Customers") {
             ServiceTypes = newItemsList<ServiceType, ServiceTypeData>(b, null, x => x.Name);
             Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
         }

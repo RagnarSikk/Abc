@@ -5,7 +5,8 @@ namespace Abc.Tests.Pages.Common.Aids {
 
     [TestClass]
     public class HrefTests : BaseTests {
-        [TestInitialize] public void TestInitialize() {
+        [TestInitialize]
+        public void TestInitialize() {
             type = typeof(Href);
         }
 

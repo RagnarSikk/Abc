@@ -20,8 +20,7 @@ namespace Abc.Tests.Domain.Others {
         protected override object createObject() => new Equipment(data);
 
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             data = GetRandom.Object<EquipmentData>();
             personRoleTypeRepo = MockRepos.PersonRoleTypeRepository(data.PersonRoleTypeId, out personRoleTypeData);
             equipmentTypeRepo = MockRepos.EquipmentTypeRepository(data.EquipmentTypeId, out equipmentTypeData);
@@ -33,14 +32,14 @@ namespace Abc.Tests.Domain.Others {
         [TestMethod] public void PersonRoleTypeIdTest() => isProperty(data.PersonRoleTypeId);
         [TestMethod] public void EquipmentTypeIdTest() => isProperty(data.EquipmentTypeId);
 
-        [TestMethod] public void PersonRoleTypeTest()
-        {
+        [TestMethod]
+        public void PersonRoleTypeTest() {
             isNull(equipment.PersonRoleType);
             GetRepository.SetServiceProvider(new MockServiceProvider(personRoleTypeRepo));
             areEqualProperties(personRoleTypeData, equipment.PersonRoleType.Data);
-        } 
-        [TestMethod] public void EquipmentTypeTest()
-        {
+        }
+        [TestMethod]
+        public void EquipmentTypeTest() {
             isNull(equipment.EquipmentType);
             GetRepository.SetServiceProvider(new MockServiceProvider(equipmentTypeRepo));
             areEqualProperties(equipmentTypeData, equipment.EquipmentType.Data);

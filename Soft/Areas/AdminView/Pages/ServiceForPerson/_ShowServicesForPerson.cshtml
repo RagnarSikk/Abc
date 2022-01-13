@@ -3,7 +3,7 @@
 <body>
 
     @Html.Show(m => m.Item.Id)
-    @Html.Show(m => m.Item.Name)
+@*    @Html.Show(m => m.Item.Name)*@
     @Html.Show(m => m.Item.ServiceId, Model.ServiceTypeName(Model.Item.ServiceId))
     @Html.Show(m => m.Item.PersonId, Model.PersonName(Model.Item.PersonId))
     @Html.Show(m => m.Item.From)

@@ -20,11 +20,10 @@ namespace Abc.Tests.Domain.People {
         [TestMethod] public void PersonRoleTypeIdTest() => isProperty(data.PersonRoleTypeId);
         [TestMethod] public void PersonIdTest() => isProperty(data.PersonId);
         [TestMethod] public void CertificateTest() => isProperty(data.Certificate);
-        
+
 
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             data = GetRandom.Object<PersonRoleData>();
             personRepo = MockRepos.PersonRepository(data.PersonId, out personData);
             personRoleTypeRepo = MockRepos.PersonRoleTypeRepository(data.PersonRoleTypeId, out personRoleTypeData);
@@ -33,15 +32,13 @@ namespace Abc.Tests.Domain.People {
         }
 
         [TestMethod]
-        public void PersonTest()
-        {
+        public void PersonTest() {
             isNull(personRole.Person);
             GetRepository.SetServiceProvider(new MockServiceProvider(personRepo));
             areEqualProperties(personData, personRole.Person.Data);
         }
         [TestMethod]
-        public void PersonRoleTypeTest()
-        {
+        public void PersonRoleTypeTest() {
             isNull(personRole.PersonRoleType);
             GetRepository.SetServiceProvider(new MockServiceProvider(personRoleTypeRepo));
             areEqualProperties(personRoleTypeData, personRole.PersonRoleType.Data);

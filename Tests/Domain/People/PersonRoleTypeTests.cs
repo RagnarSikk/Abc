@@ -10,8 +10,7 @@ namespace Abc.Tests.Domain.People {
         private PersonRoleTypeData data;
         protected override object createObject() => new PersonRoleType(data);
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             data = GetRandom.Object<PersonRoleTypeData>();
             base.TestInitialize();
         }
