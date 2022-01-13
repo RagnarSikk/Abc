@@ -6,6 +6,7 @@
 @*    @Html.Show(m => m.Item.Name)*@
     @Html.Show(m => m.Item.EquipmentId, Model.EquipmentTypeName(Model.Item.EquipmentId))
     @Html.Show(m => m.Item.PersonId, Model.PersonName(Model.Item.PersonId))
+    @Html.Show(m => m.Item.PersonRoleTypeId, Model.PersonRoleName(Model.Item.PersonRoleTypeId))
     @Html.Show(m => m.Item.Amount)
     @Html.Show(m => m.Item.From)
     @Html.Show(m => m.Item.To)

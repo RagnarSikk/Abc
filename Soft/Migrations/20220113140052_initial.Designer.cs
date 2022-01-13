@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Abc.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220112140845_proov")]
-    partial class proov
+    [Migration("20220113140052_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -158,6 +158,9 @@ namespace Abc.Soft.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PersonId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PersonRoleTypeId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("To")

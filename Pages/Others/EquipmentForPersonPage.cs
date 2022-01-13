@@ -21,19 +21,23 @@ namespace Abc.Pages.Others {
 
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
+        public IEnumerable<SelectListItem> PersonRoleTypes { get; }
 
-        public EquipmentForPersonPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c)
+        public EquipmentForPersonPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c, IPersonRoleTypeRepository d)
             : base(r, "Equipments For Person") {
             EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b, null, x => x.Name);
             Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
+            PersonRoleTypes = newItemsList<PersonRoleType, PersonRoleTypeData>(d);
         }
 
         public string PersonName(string id) => itemName(Persons, id);
+        public string PersonRoleName(string id) => itemName(PersonRoleTypes, id);
         public string EquipmentTypeName(string id) => itemName(EquipmentTypes, id);
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
             createColumn(x => Item.PersonId);
+            createColumn(x => Item.PersonRoleTypeId);
             createColumn(x => Item.EquipmentId);
             createColumn(x => Item.Amount);
             createColumn(x => Item.From);
@@ -41,14 +45,15 @@ namespace Abc.Pages.Others {
         }
 
         public override string GetName(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
-            4 or 5 => getName<DateTime?>(h, i),
+            5 or 6 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
             1 => getRaw(h, PersonName(Item.PersonId)),
-            2 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
-            4 or 5 => getValue<DateTime?>(h, i),
+            2 => getRaw(h, PersonRoleName(Item.PersonRoleTypeId)),
+            3 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
+            5 or 6 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 

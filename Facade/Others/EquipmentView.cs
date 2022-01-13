@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Abc.Facade.Others {
 
     public sealed class EquipmentView : UniqueEntityView {
-        [DisplayName("Equipment Provider?")] public string PersonRoleTypeId { get; set; }
+        [DisplayName("Equipment ??????")] public string PersonRoleTypeId { get; set; }
         [DisplayName("Equipment Type")] public string EquipmentTypeId { get; set; }
         [DisplayName("Amount")] public string Amount { get; set; }
 
