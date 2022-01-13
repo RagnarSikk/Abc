@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Pages.Common.Aids {
 
     [TestClass]
-    public class ArgsTests: SealedTests<object> {
+    public class ArgsTests : SealedTests<object> {
 
         //public Uri PageUrl { get; internal set; }
         //public string ItemId { get; internal set; }

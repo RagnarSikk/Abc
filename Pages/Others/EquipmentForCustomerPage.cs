@@ -14,16 +14,17 @@ using System;
 using System.Collections.Generic;
 
 namespace Abc.Pages.Others {
-    
-    public sealed class EquipmentForCustomerPage : EquipmentForPersonPage<EquipmentForCustomerPage> {
-        public EquipmentForCustomerPage(IEquipmentForPersonRepository r) : base(r) { }
+
+    public sealed class EquipmentForCustomerPage : ViewPage<EquipmentForCustomerPage,
+        IEquipmentForPersonRepository, EquipmentForPerson, EquipmentForPersonView, EquipmentForPersonData> {
+
         protected internal override Uri pageUrl() => new Uri("/Customers/EquipmentForPerson", UriKind.Relative);
 
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
 
         public EquipmentForCustomerPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c)
-            : base(r) {
+            : base(r, "Equipments for Customers") {
             EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b, null, x => x.Name);
             Persons = newItemsList<Person, PersonData>(c, null, x => x.FirstMidName + " " + x.LastName);
         }
@@ -32,9 +33,9 @@ namespace Abc.Pages.Others {
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
-            //createColumn(x => Item.Name);
             createColumn(x => Item.PersonId);
             createColumn(x => Item.EquipmentId);
+            createColumn(x => Item.Amount);
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
@@ -45,20 +46,22 @@ namespace Abc.Pages.Others {
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentForCustomerPage> h, int i) => i switch {
-            2 => getRaw(h, PersonName(Item.PersonId)),
-            3 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
+            1 => getRaw(h, PersonName(Item.PersonId)),
+            2 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
             4 or 5 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
-       
-    //protected internal override EquipmentForPerson toObject(EquipmentForPersonView v) => new EquipmentForPersonViewFactory().Create(v);
 
-    //protected internal override EquipmentForPersonView toView(EquipmentForPerson o) => new EquipmentForPersonViewFactory().Create(o);
-    //public override IActionResult OnGetCreate(
-    //    string sortOrder, string searchString, int? pageIndex,
-    //    string fixedFilter, string fixedValue, int? switchOfCreate) {
-    //    Item = new EquipmentForPersonView();
-    //    return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
-}}
-    
+        protected internal override EquipmentForPerson toObject(EquipmentForPersonView v) => new EquipmentForPersonViewFactory().Create(v);
+
+        protected internal override EquipmentForPersonView toView(EquipmentForPerson o) => new EquipmentForPersonViewFactory().Create(o);
+        public override IActionResult OnGetCreate(
+            string sortOrder, string searchString, int? pageIndex,
+            string fixedFilter, string fixedValue, int? switchOfCreate) {
+            Item = new EquipmentForPersonView();
+            return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
+        }
+    }
+}
+

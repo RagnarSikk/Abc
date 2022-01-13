@@ -15,8 +15,8 @@ using System;
 using System.Collections.Generic;
 
 namespace Abc.Pages.Others {
-    
-   public abstract class EquipmentForPersonPage<TPage>
+
+    public abstract class EquipmentForPersonPage<TPage>
         : ViewPage<TPage, IEquipmentForPersonRepository, EquipmentForPerson, EquipmentForPersonView, EquipmentForPersonData>
         where TPage : PageModel {
 

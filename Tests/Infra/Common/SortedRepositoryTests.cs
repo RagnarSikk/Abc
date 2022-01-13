@@ -1,11 +1,10 @@
-﻿using Abc.Infra.Common;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Abc.Domain.Others;
+using Abc.Infra.Common;
 using Abc.Infra.Others;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Infra.Common
-{
+namespace Abc.Tests.Infra.Common {
 
     [TestClass]
     public class SortedRepositoryTests : AbstractRepoTests<BodyMetricRepository, BodyMetric, BodyMetricData> {

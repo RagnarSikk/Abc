@@ -8,11 +8,9 @@ using Abc.Domain.People;
 using Abc.Domain.People.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Others
-{
+namespace Abc.Tests.Domain.Others {
     [TestClass]
-    public class ServiceForPersonTests : SealedTests<UniqueEntity<ServiceForPersonData>>
-    {
+    public class ServiceForPersonTests : SealedTests<UniqueEntity<ServiceForPersonData>> {
         private ServiceForPersonData data;
         private PersonData personData;
         private ServiceData serviceData;
@@ -25,22 +23,18 @@ namespace Abc.Tests.Domain.Others
         protected override object createObject() => new ServiceForPerson(data);
 
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             data = GetRandom.Object<ServiceForPersonData>();
             createMockPersonRepo();
             base.TestInitialize();
         }
-        private void createMockPersonRepo()
-        {
+        private void createMockPersonRepo() {
             var count = GetRandom.UInt8(10, 20);
             var idx = GetRandom.UInt8(0, count);
             personRepo = new MockPersonRepository();
-            for (var i = 0; i < count; i++)
-            {
+            for (var i = 0; i < count; i++) {
                 var d = GetRandom.Object<PersonData>();
-                if (idx == i)
-                {
+                if (idx == i) {
                     d.Id = data.PersonId;
                     personData = d;
                 }
@@ -50,10 +44,9 @@ namespace Abc.Tests.Domain.Others
         }
         [TestMethod] public void PersonIdTest() => isProperty(data.PersonId);
         [TestMethod] public void ServiceIdTest() => isProperty(data.ServiceId);
-     
+
         [TestMethod]
-        public void PersonTest()
-        {
+        public void PersonTest() {
             var p = (obj as ServiceForPerson).Person;
             isNotNull(p);
             areEqual(personData.Id, p.Id);
@@ -75,23 +68,19 @@ namespace Abc.Tests.Domain.Others
         //   areEqual(serviceData.ServiceTypeId, p.ServiceTypeId);
         //}
         [TestMethod]
-        public void ServiceTest()
-        {
+        public void ServiceTest() {
             isNull(serviceForPerson.Service);
             GetRepository.SetServiceProvider(new MockServiceProvider(serviceRepo));
             areEqualProperties(serviceData, serviceForPerson.Service.Data);
         }
 
-        private void createMockServiceRepo()
-        {
+        private void createMockServiceRepo() {
             var count = GetRandom.UInt8(10, 20);
             var idx = GetRandom.UInt8(0, count);
             serviceRepo = new MockServiceRepository();
-            for (var i = 0; i < count; i++)
-            {
+            for (var i = 0; i < count; i++) {
                 var d = GetRandom.Object<ServiceData>();
-                if (idx == i)
-                {
+                if (idx == i) {
                     d.Id = data.ServiceId;
                     serviceData = d;
                 }

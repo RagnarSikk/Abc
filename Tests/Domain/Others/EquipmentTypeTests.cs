@@ -4,16 +4,14 @@ using Abc.Domain.Common;
 using Abc.Domain.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Others
-{
+namespace Abc.Tests.Domain.Others {
     [TestClass]
-    public class EquipmentTypeTests : SealedTests<DefinedEntity<EquipmentTypeData>>
-    {
+    public class EquipmentTypeTests : SealedTests<DefinedEntity<EquipmentTypeData>> {
         private EquipmentTypeData data;
 
         protected override object createObject() => new EquipmentType(data);
-        [TestInitialize] public override void TestInitialize()
-        {
+        [TestInitialize]
+        public override void TestInitialize() {
             data = GetRandom.Object<EquipmentTypeData>();
             base.TestInitialize();
         }

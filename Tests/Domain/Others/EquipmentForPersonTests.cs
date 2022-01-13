@@ -7,11 +7,9 @@ using Abc.Domain.Others.Repositories;
 using Abc.Domain.People.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Others
-{
+namespace Abc.Tests.Domain.Others {
     [TestClass]
-    public class EquipmentForPersonTests :SealedTests<UniqueEntity<EquipmentForPersonData>>
-    {
+    public class EquipmentForPersonTests : SealedTests<UniqueEntity<EquipmentForPersonData>> {
         private EquipmentForPersonData data;
         private IPersonRepository personRepo;
         private IEquipmentRepository equipmentRepo;
@@ -23,8 +21,8 @@ namespace Abc.Tests.Domain.Others
         //private class MockServiceRepository : MockRepo<Equipment>, IEquipmentRepository { }
 
         protected override object createObject() => new EquipmentForPerson(data);
-        [TestInitialize] public override void TestInitialize()
-        {
+        [TestInitialize]
+        public override void TestInitialize() {
             data = GetRandom.Object<EquipmentForPersonData>();
             personRepo = MockRepos.PersonRepository(data.PersonId, out personData);
             equipmentRepo = MockRepos.EquipmentRepository(data.EquipmentId, out equipmentData);
@@ -34,17 +32,17 @@ namespace Abc.Tests.Domain.Others
 
         [TestMethod] public void PersonIdTest() => isProperty(data.PersonId);
         [TestMethod] public void EquipmentIdTest() => isProperty(data.EquipmentId);
-        [TestMethod] public void PersonTest() 
-        {
+        [TestMethod]
+        public void PersonTest() {
             isNull(equipmentForPerson.Person);
             GetRepository.SetServiceProvider(new MockServiceProvider(personRepo));
             areEqualProperties(personData, equipmentForPerson.Person.Data);
         }
-        [TestMethod] public void EquipmentTest()
-        {
+        [TestMethod]
+        public void EquipmentTest() {
             isNull(equipmentForPerson.Equipment);
             GetRepository.SetServiceProvider(new MockServiceProvider(equipmentRepo));
             areEqualProperties(equipmentData, equipmentForPerson.Equipment.Data);
         }
-    } 
+    }
 }

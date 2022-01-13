@@ -1,11 +1,9 @@
 ﻿using Abc.Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Infra
-{
+namespace Abc.Tests.Infra {
     [TestClass]
-    public class ConstantsTests: BaseTests
-    {
+    public class ConstantsTests : BaseTests {
         [TestInitialize]
         public void TestInitialize() {
             type = typeof(Constants);

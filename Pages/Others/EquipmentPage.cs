@@ -16,14 +16,16 @@ using System.Collections.Generic;
 namespace Abc.Pages.Others {
     public sealed class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData> {
 
+
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> PersonRoleTypes { get; }
 
-        public EquipmentPage(IEquipmentRepository r, IEquipmentTypeRepository b, IPersonRoleTypeRepository c)
+        protected EquipmentPage(IEquipmentRepository r, IEquipmentTypeRepository b, IPersonRoleTypeRepository c)
             : base(r, "Equipments") {
             EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b);
             PersonRoleTypes = newItemsList<PersonRoleType, PersonRoleTypeData>(c);
         }
+
         public string PersonRoleTypeName(string id) => itemName(PersonRoleTypes, id);
         public string EquipmentTypeName(string id) => itemName(EquipmentTypes, id);
 
@@ -52,9 +54,9 @@ namespace Abc.Pages.Others {
         protected internal override Equipment toObject(EquipmentView v) => new EquipmentViewFactory().Create(v);
 
         protected internal override EquipmentView toView(Equipment o) => new EquipmentViewFactory().Create(o);
-         public override IActionResult OnGetCreate(
-            string sortOrder, string searchString, int? pageIndex,
-            string fixedFilter, string fixedValue, int? switchOfCreate) {
+        public override IActionResult OnGetCreate(
+           string sortOrder, string searchString, int? pageIndex,
+           string fixedFilter, string fixedValue, int? switchOfCreate) {
             Item = new EquipmentView();
             return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
         }

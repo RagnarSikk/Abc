@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Pages.Common {
 
     [TestClass]
-    public class CrudPageTests 
+    public class CrudPageTests
         : AbstractTests<BasePage<IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData>> {
         private class testClass :
             CrudPage<IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData> {

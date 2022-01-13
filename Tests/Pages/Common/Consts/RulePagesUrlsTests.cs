@@ -5,7 +5,8 @@ namespace Abc.Tests.Pages.Common.Consts {
 
     [TestClass]
     public class RulePagesUrlsTests : BaseTests {
-        [TestInitialize] public void TestInitialize() 
+        [TestInitialize]
+        public void TestInitialize()
             => type = typeof(RulePagesUrls);
 
         //public static string RuleSets => "/Rules/Sets";

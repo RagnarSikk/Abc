@@ -1,15 +1,14 @@
-﻿using Abc.Pages.Common;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Abc.Data.Others;
+﻿using Abc.Data.Others;
 using Abc.Domain.Others;
 using Abc.Domain.Others.Repositories;
 using Abc.Facade.Others;
+using Abc.Pages.Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Abc.Tests.Pages.Common {
     public class MockViewsPage :
-        ViewsPage<MockViewsPage, IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData>
-    {
+        ViewsPage<MockViewsPage, IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData> {
         public MockViewsPage(IBodyMetricRepository r) : base(r, nameof(BodyMetric) + "s") { }
         protected override void createTableColumns() {
             //throw new NotImplementedException();
@@ -31,6 +30,6 @@ namespace Abc.Tests.Pages.Common {
     public class ViewsPageTests
         : AbstractTests<ViewPage<MockViewsPage, IBodyMetricRepository, BodyMetric, BodyMetricView, BodyMetricData>> {
         protected override object createObject() => new MockViewsPage(MockRepos.BodyMetric());
-       
+
     }
 }

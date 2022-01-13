@@ -2,7 +2,8 @@
 
 namespace Abc.Tests.Pages.Common.Aids {
 
-    [TestClass] public class LinkTests: ClassTests<object> {
+    [TestClass]
+    public class LinkTests : ClassTests<object> {
         //public LinkTests(string displayName, string relativeLink) : this(displayName, new Uri(relativeLink + "?handler=index", UriKind.Relative)) { }
         //public LinkTests(string displayName, Uri url, string propertyName = null) {
         //    DisplayName = displayName;

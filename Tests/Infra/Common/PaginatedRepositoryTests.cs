@@ -4,8 +4,7 @@ using Abc.Infra.Common;
 using Abc.Infra.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Infra.Common
-{
+namespace Abc.Tests.Infra.Common {
 
     [TestClass]
     public class PaginatedRepositoryTests : AbstractRepoTests<BodyMetricRepository, BodyMetric, BodyMetricData> {

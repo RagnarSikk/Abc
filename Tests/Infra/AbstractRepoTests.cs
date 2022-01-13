@@ -4,7 +4,7 @@ using Abc.Infra.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Infra {
-    public abstract class AbstractRepoTests<TRepo, TDomain, TData>: 
+    public abstract class AbstractRepoTests<TRepo, TDomain, TData> :
         RepoTests<TRepo, TDomain, TData>
         where TRepo : UniqueEntitiesRepository<TDomain, TData>
         where TDomain : UniqueEntity<TData>
