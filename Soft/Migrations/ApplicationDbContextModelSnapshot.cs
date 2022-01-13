@@ -158,6 +158,9 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("PersonId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PersonRoleTypeId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("To")
                         .HasColumnType("datetime2");
 

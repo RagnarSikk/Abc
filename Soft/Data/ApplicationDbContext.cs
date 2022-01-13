@@ -15,10 +15,5 @@ namespace Abc.Soft.Data {
         internal static void InitializeTables(ModelBuilder b) {
             TrainingDbContext.InitializeTables(b);
         }
-
-
-        //public DbSet<EquipmentData> EquipmentData { get; set; }
-
-        //public DbSet<TrainingData> TrainingData { get; set; }
     }
 }
