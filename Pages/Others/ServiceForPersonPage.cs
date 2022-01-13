@@ -37,14 +37,14 @@ namespace Abc.Pages.Others {
         }
 
         public override string GetName(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
-            4 or 5 => getName<DateTime?>(h, i),
+            3 or 4 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<ServiceForPersonPage> h, int i) => i switch {
-            2 => getRaw(h, PersonName(Item.PersonId)),
-            3 => getRaw(h, ServiceTypeName(Item.ServiceId)),
-            4 or 5 => getValue<DateTime?>(h, i),
+            1 => getRaw(h, PersonName(Item.PersonId)),
+            2 => getRaw(h, ServiceTypeName(Item.ServiceId)),
+            3 or 4 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 

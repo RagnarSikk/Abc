@@ -16,11 +16,10 @@ using System.Collections.Generic;
 namespace Abc.Pages.Others {
     public sealed class EquipmentPage : ViewPage<EquipmentPage, IEquipmentRepository, Equipment, EquipmentView, EquipmentData> {
 
-
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> PersonRoleTypes { get; }
 
-        protected EquipmentPage(IEquipmentRepository r, IEquipmentTypeRepository b, IPersonRoleTypeRepository c)
+        public EquipmentPage(IEquipmentRepository r, IEquipmentTypeRepository b, IPersonRoleTypeRepository c)
             : base(r, "Equipments") {
             EquipmentTypes = newItemsList<EquipmentType, EquipmentTypeData>(b);
             PersonRoleTypes = newItemsList<PersonRoleType, PersonRoleTypeData>(c);

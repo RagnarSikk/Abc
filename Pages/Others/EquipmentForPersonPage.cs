@@ -16,15 +16,11 @@ using System.Collections.Generic;
 
 namespace Abc.Pages.Others {
 
-    public abstract class EquipmentForPersonPage<TPage>
-        : ViewPage<TPage, IEquipmentForPersonRepository, EquipmentForPerson, EquipmentForPersonView, EquipmentForPersonData>
-        where TPage : PageModel {
+     public sealed class EquipmentForPersonPage : ViewPage<EquipmentForPersonPage,
+        IEquipmentForPersonRepository, EquipmentForPerson, EquipmentForPersonView, EquipmentForPersonData> {
 
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
-        protected EquipmentForPersonPage(IEquipmentForPersonRepository r) : base(r, "Equipments For Person") { }
-
-        //protected EquipmentForPersonPage(IEquipmentForPersonRepository r, IEquipmentForPersonRepository b) : base(r, "Equipments For Person") { }
 
         public EquipmentForPersonPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c)
             : base(r, "Equipments For Person") {
@@ -39,19 +35,20 @@ namespace Abc.Pages.Others {
             createColumn(x => Item.Id);
             createColumn(x => Item.PersonId);
             createColumn(x => Item.EquipmentId);
+            createColumn(x => Item.Amount);
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
 
-        public override string GetName(IHtmlHelper<TPage> h, int i) => i switch {
-            3 or 4 => getName<DateTime?>(h, i),
+        public override string GetName(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
+            4 or 5 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
-        public override IHtmlContent GetValue(IHtmlHelper<TPage> h, int i) => i switch {
+        public override IHtmlContent GetValue(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
             1 => getRaw(h, PersonName(Item.PersonId)),
             2 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
-            3 or 4 => getValue<DateTime?>(h, i),
+            4 or 5 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
