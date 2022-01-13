@@ -14,29 +14,36 @@ namespace Abc.Infra {
             addBodyMetrics(db);
             addEquipments(db);
             addEquipmentTypes(db);
-            //addServiceForPersons(db);
+            addBrands(db);
+            addEquipmentColours(db);
         }
 
-        //private static void addServiceForPersons(TrainingDbContext db) {
-        //    if (db.ServicesForPerson.Any()) return;
-        //    addItem(new ServiceForPersonData() {
-        //        Id = "1",
-        //        PersonId = "2",
-        //        ServiceId = "2",
+        private static void addBrands(TrainingDbContext db)
+        {
+            if (db.Brand.Any()) return;
+            addItem(new BrandData()
+            {
+                Id = "1",
+                Code = "2",
+                Name = "Nike",
 
 
-        //    }, db);
-        //    addItem(new ServiceForPersonData() {
-        //        PersonId = "2",
-        //        ServiceId = "1"
+            }, db);
+            
+        }
+        private static void addEquipmentColours(TrainingDbContext db)
+        {
+            if (db.EquipmentColours.Any()) return;
+            addItem(new EquipmentColourData()
+            {
+                Id = "2",
+                Code = "55",
+                Name = "White",
 
-        //    }, db);
-        //    addItem(new ServiceForPersonData() {
-        //        PersonId = "3",
-        //        ServiceId = "3"
 
-        //    }, db);
-        //}
+            }, db);
+
+        }
 
         private static void addEquipmentTypes(TrainingDbContext db) {
             if (db.EquipmentTypes.Any()) return;
