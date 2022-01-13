@@ -6,11 +6,9 @@
 
 @{
     Layout = "_Index";
-    var page = Model.PageUrl;
 }
 
 @section Create {
-    @Html.Link(string.Empty, new Link(Captions.Create, Model.CreateUrl))
 }
 
-@Html.ShowTable(Model)
+@Html.ShowTable(Model, null, null, "Details", null)

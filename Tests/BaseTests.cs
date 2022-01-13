@@ -6,23 +6,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Abc.Tests {
-    public class BaseTests : TestAids {
-
+namespace Abc.Tests
+{
+    public class BaseTests : TestAids
+    {
         [TestCleanup]
-        public virtual void TestCleanup() {
+        public virtual void TestCleanup()
+        {
             objUnderTests = null;
             type = null;
         }
         [TestMethod]
-        public virtual void IsSpecifiedClassTested() {
+        public virtual void IsSpecifiedClassTested()
+        {
             if (type == null) notTested(notSpecifiedMsg);
             var testClassName = GetType().Name;
             isTrue(testClassName.StartsWith(testableClassName));
         }
-        [TestMethod]
-        protected Type getTestableClassType() {
-
+        protected Type getTestableClassType()
+        {
             var testClassName = GetType().FullName;
             var testableClassName = testClassName.Replace("Tests", string.Empty);
             testableClassName = testableClassName.Replace("..", ".");
@@ -30,14 +32,16 @@ namespace Abc.Tests {
             var projectName = testableClassName.GetTail().GetHead();
             var l = GetSolution.TypesForAssembly($"{solutionName}.{projectName}");
             var list = l?.Where(x => x.FullName == testableClassName)?.ToList();
-            if (list?.Count == 0) {
+            if (list?.Count == 0)
+            {
                 testableClassName += "`";
                 list = l?.Where(x => x.FullName.StartsWith(testableClassName))?.ToList();
             }
             return (list?.Count() > 0) ? list[0] : null;
         }
         [TestMethod]
-        public virtual void IsTested() {
+        public virtual void IsTested()
+        {
             if (type == null) notTested(notSpecifiedMsg);
             members = publicDeclaredMembers;
             removeTestedMethods();
@@ -47,8 +51,10 @@ namespace Abc.Tests {
         private const string notTestedMsg = "<{0}> is not tested";
         private List<string> members { get; set; }
         private bool isTested => members.Count == 0;
-        private string testableClassName {
-            get {
+        private string testableClassName
+        {
+            get
+            {
                 var s = type.Name;
                 var index = s.IndexOf("`", StringComparison.Ordinal);
                 if (index > -1) s = s.Substring(0, index);
@@ -57,10 +63,11 @@ namespace Abc.Tests {
         }
         private List<string> publicDeclaredMembers
                 => GetClass.Members(type, PublicFlagsFor.Declared).Select(e => e.Name).ToList();
-
-        private void removeTestedMethods() {
+        private void removeTestedMethods()
+        {
             var tests = GetType().GetMembers().Select(e => e.Name).ToList();
-            for (var i = members.Count; i > 0; i--) {
+            for (var i = members.Count; i > 0; i--)
+            {
                 var m = members[i - 1] + "Test";
                 var isTested = tests.Find(o => o == m);
                 if (string.IsNullOrEmpty(isTested)) continue;
