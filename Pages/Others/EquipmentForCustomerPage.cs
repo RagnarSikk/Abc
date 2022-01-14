@@ -41,6 +41,7 @@ namespace Abc.Pages.Others {
         }
 
         public override string GetName(IHtmlHelper<EquipmentForCustomerPage> h, int i) => i switch {
+            3 => getName<int>(h, i),
             4 or 5 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
@@ -48,6 +49,7 @@ namespace Abc.Pages.Others {
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentForCustomerPage> h, int i) => i switch {
             1 => getRaw(h, PersonName(Item.PersonId)),
             2 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
+            3 => getValue<int>(h, i),
             4 or 5 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };

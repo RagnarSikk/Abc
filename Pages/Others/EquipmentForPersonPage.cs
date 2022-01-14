@@ -22,7 +22,6 @@ namespace Abc.Pages.Others {
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
         public IEnumerable<SelectListItem> PersonRoleTypes { get; }
-        public IEnumerable<SelectListItem> Amounts { get; }
 
         public EquipmentForPersonPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c, IPersonRoleTypeRepository d)
             : base(r, "Equipments For Person") {
@@ -46,6 +45,7 @@ namespace Abc.Pages.Others {
         }
 
         public override string GetName(IHtmlHelper<EquipmentForPersonPage> h, int i) => i switch {
+            4 => getName<int>(h, i),
             5 or 6 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
@@ -54,6 +54,7 @@ namespace Abc.Pages.Others {
             1 => getRaw(h, PersonName(Item.PersonId)),
             2 => getRaw(h, PersonRoleName(Item.PersonRoleTypeId)),
             3 => getRaw(h, EquipmentTypeName(Item.EquipmentId)),
+            4 => getValue<int>(h, i),
             5 or 6 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };

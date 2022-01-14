@@ -32,6 +32,7 @@ namespace Abc.Pages.Others {
             createColumn(x => Item.Id);
             createColumn(x => Item.PersonRoleTypeId);
             createColumn(x => Item.EquipmentTypeId);
+            createColumn(x => Item.Amount);
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
