@@ -10,7 +10,6 @@ namespace Abc.Domain.Others {
         public EquipmentForPerson(EquipmentForPersonData d) : base(d) { }
         public string PersonId => Data.PersonId ?? Unspecified;
         public string PersonRoleTypeId => Data.PersonRoleTypeId ?? Unspecified;
-
         public string EquipmentId => Data.EquipmentId ?? Unspecified;
 
         public Person Person => new GetFrom<IPersonRepository, Person>().ById(PersonId);
