@@ -28,7 +28,6 @@ namespace Abc.Tests.Domain.Others {
             equipment = obj as Equipment;
         }
 
-        [TestMethod] public void AmountTest() => isProperty(data.Amount);
         [TestMethod] public void PersonRoleTypeIdTest() => isProperty(data.PersonRoleTypeId);
         [TestMethod] public void EquipmentTypeIdTest() => isProperty(data.EquipmentTypeId);
 

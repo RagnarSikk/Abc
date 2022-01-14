@@ -75,14 +75,12 @@ namespace Abc.Infra {
             addItem(new EquipmentData() {
                 PersonRoleTypeId = "1",
                 EquipmentTypeId = "2",
-                Amount = 5
 
 
             }, db);
             addItem(new EquipmentData() {
                 PersonRoleTypeId = "2",
                 EquipmentTypeId = "3",
-                Amount = 10
 
             }, db);
         }

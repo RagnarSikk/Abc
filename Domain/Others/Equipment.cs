@@ -7,7 +7,6 @@ using Abc.Domain.People.Repositories;
 namespace Abc.Domain.Others {
     public sealed class Equipment : UniqueEntity<EquipmentData> {
         public Equipment(EquipmentData d) : base(d) { }
-        public int Amount => Data?.Amount ?? UnspecifiedInteger;
         public string PersonRoleTypeId => Data.PersonRoleTypeId ?? Unspecified;
         public string EquipmentTypeId => Data.EquipmentTypeId ?? Unspecified;
 

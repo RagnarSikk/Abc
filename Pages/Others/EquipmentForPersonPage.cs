@@ -22,6 +22,7 @@ namespace Abc.Pages.Others {
         public IEnumerable<SelectListItem> EquipmentTypes { get; }
         public IEnumerable<SelectListItem> Persons { get; }
         public IEnumerable<SelectListItem> PersonRoleTypes { get; }
+        public IEnumerable<SelectListItem> Amounts { get; }
 
         public EquipmentForPersonPage(IEquipmentForPersonRepository r, IEquipmentTypeRepository b, IPersonRepository c, IPersonRoleTypeRepository d)
             : base(r, "Equipments For Person") {

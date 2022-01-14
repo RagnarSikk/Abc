@@ -102,9 +102,6 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("Code")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Definition")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
 
@@ -123,9 +120,6 @@ namespace Abc.Soft.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
 
                     b.Property<string>("EquipmentTypeId")
                         .HasColumnType("nvarchar(max)");
@@ -148,6 +142,9 @@ namespace Abc.Soft.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
 
                     b.Property<string>("EquipmentId")
                         .HasColumnType("nvarchar(max)");

@@ -102,8 +102,7 @@ namespace Abc.Soft.Migrations
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
                     To = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Code = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Definition = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -115,7 +114,6 @@ namespace Abc.Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Amount = table.Column<int>(type: "int", nullable: false),
                     PersonRoleTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EquipmentTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -134,6 +132,7 @@ namespace Abc.Soft.Migrations
                     PersonId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PersonRoleTypeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EquipmentId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Amount = table.Column<int>(type: "int", nullable: false),
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
                     To = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },

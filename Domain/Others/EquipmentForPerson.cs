@@ -11,6 +11,7 @@ namespace Abc.Domain.Others {
         public string PersonId => Data.PersonId ?? Unspecified;
         public string PersonRoleTypeId => Data.PersonRoleTypeId ?? Unspecified;
         public string EquipmentId => Data.EquipmentId ?? Unspecified;
+        public int Amount => Data?.Amount ?? UnspecifiedInteger;
 
         public Person Person => new GetFrom<IPersonRepository, Person>().ById(PersonId);
         public PersonRoleType PersonRoleType => new GetFrom<IPersonRoleTypeRepository, PersonRoleType>().ById(PersonRoleTypeId);
