@@ -1,5 +1,6 @@
 ﻿using Abc.Data.Others;
 using Abc.Domain.Others;
+using Abc.Infra.Common;
 using Abc.Infra.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -16,7 +17,7 @@ namespace Abc.Tests.Infra.Common {
         [TestMethod]
         public override void IsInheritedTest() {
             var b = getBaseClass();
-            areEqual(typeof(object), b);
+            isTrue(b.Name.StartsWith(nameof(UniqueEntitiesRepository<BodyMetric, BodyMetricData>)));
         }
         [TestMethod]
         public void SqlQueryTest() {
