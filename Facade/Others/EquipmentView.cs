@@ -8,7 +8,7 @@ namespace Abc.Facade.Others {
     public sealed class EquipmentView : UniqueEntityView {
         [DisplayName("Equipment ??????")] public string PersonRoleTypeId { get; set; }
         [DisplayName("Equipment Type")] public string EquipmentTypeId { get; set; }
-        [DisplayName("Amount")] public string Amount { get; set; }
+        [DisplayName("Amount")] public int Amount { get; set; }
 
         [DataType(DataType.DateTime)]
         [DisplayName("Valid From")]
