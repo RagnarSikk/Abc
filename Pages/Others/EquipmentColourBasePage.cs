@@ -5,6 +5,7 @@ using Abc.Facade.Others;
 using Abc.Facade.Others.Factories;
 using Abc.Pages.Common;
 using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -36,6 +37,11 @@ namespace Abc.Pages.Others {
             3 or 4 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
-
+        public override IActionResult OnGetCreate(
+            string sortOrder, string searchString, int? pageIndex,
+            string fixedFilter, string fixedValue, int? switchOfCreate) {
+            Item = new EquipmentColourView(); 
+            return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
+        }
     }
 }

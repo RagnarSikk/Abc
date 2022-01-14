@@ -31,11 +31,9 @@ namespace Abc.Infra {
             }, db);
             
         }
-        private static void addEquipmentColours(TrainingDbContext db)
-        {
+        private static void addEquipmentColours(TrainingDbContext db) {
             if (db.EquipmentColours.Any()) return;
-            addItem(new EquipmentColourData()
-            {
+            addItem(new EquipmentColourData() {
                 Id = "2",
                 Code = "55",
                 Name = "White",
