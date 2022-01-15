@@ -8,10 +8,20 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
+using System.Collections.Generic;
 
 namespace Abc.Pages.Others {
     public sealed class EquipmentTypePage : ViewPage<EquipmentTypePage, IEquipmentTypeRepository, EquipmentType, EquipmentTypeView, EquipmentTypeData> {
-        public EquipmentTypePage(IEquipmentTypeRepository r) : base(r, "Equipment types") { }
+        public IEnumerable<SelectListItem> Brands { get; }
+        public EquipmentTypePage(IEquipmentTypeRepository r, IBrandRepository b)
+          : base(r, "EquipmentTypes")
+        {
+            Brands = newItemsList<Brand, BrandData>(b, null, x => x.Name);
+        }
+
+        
+       
+        public string BrandName(string id) => itemName(Brands, id);
 
         protected override void createTableColumns() {
             createColumn(x => Item.Id);
@@ -19,16 +29,20 @@ namespace Abc.Pages.Others {
             createColumn(x => Item.Code);
             createColumn(x => Item.Definition);
             createColumn(x => Item.AmountAvailable);
+            createColumn(x => Item.BrandId);
             createColumn(x => Item.From);
             createColumn(x => Item.To);
         }
         public override string GetName(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
-            5 or 6 => getName<DateTime?>(h, i),
+            4 => getName<int>(h, i),
+            6 or 7 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
-            5 or 6 => getValue<DateTime?>(h, i),
+            4 => getValue<int>(h, i),
+            5 => getRaw(h, BrandName(Item.BrandId)),
+            6 or 7 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
