@@ -50,7 +50,8 @@ namespace Abc.Infra {
                 Name = "Korvpallid",
                 AmountAvailable = 30,
                 Definition = "Korvpalli treeningute jaoks",
-                Code = "A1"
+                Code = "A1",
+                BrandId = "Adidas"
 
             }, db);
             addItem(new EquipmentTypeData() {
