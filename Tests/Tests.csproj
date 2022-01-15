@@ -34,7 +34,6 @@
   <ItemGroup>
     <Folder Include="Aids\" />
     <Folder Include="Core\" />
-    <Folder Include="Domain\Common\" />
     <Folder Include="Facade\Others\" />
     <Folder Include="Soft\" />
   </ItemGroup>

@@ -7,7 +7,6 @@ namespace Abc.Domain.People {
         public Person(PersonData d) : base(d) { }
         public string FirstMidName => Data?.FirstMidName ?? Unspecified;
         public string LastName => Data?.LastName ?? Unspecified;
-        public string FullName => FirstMidName + LastName;
         public string PhoneNumber => Data?.PhoneNumber ?? Unspecified;
         public string Email => Data?.Email ?? Unspecified;
         public string Gender => Data?.Gender ?? Unspecified;
