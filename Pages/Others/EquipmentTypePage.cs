@@ -35,12 +35,15 @@ namespace Abc.Pages.Others {
         }
         public override string GetName(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
             4 => getName<int>(h, i),
+            //5 => getName<int>(h, i),
             6 or 7 => getName<DateTime?>(h, i),
             _ => base.GetName(h, i)
         };
 
         public override IHtmlContent GetValue(IHtmlHelper<EquipmentTypePage> h, int i) => i switch {
-            5 or 6 => getValue<DateTime?>(h, i),
+            4 => getValue<int>(h, i),
+            5 => getRaw(h, BrandName(Item.BrandId)),
+            6 or 7 => getValue<DateTime?>(h, i),
             _ => base.GetValue(h, i)
         };
 
