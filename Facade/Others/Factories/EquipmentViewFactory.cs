@@ -3,7 +3,7 @@ using Abc.Domain.Others;
 using Abc.Facade.Common;
 
 namespace Abc.Facade.Others.Factories {
-    public class EquipmentViewFactory : AbstractViewFactory<EquipmentData, Equipment, EquipmentView> {
+    public sealed class EquipmentViewFactory : AbstractViewFactory<EquipmentData, Equipment, EquipmentView> {
         protected internal override Equipment toObject(EquipmentData d) => new Equipment(d);
     }
 }

@@ -3,7 +3,7 @@ using Abc.Domain.Others;
 using Abc.Facade.Common;
 
 namespace Abc.Facade.Others.Factories {
-    public class ServiceForPersonViewFactory : AbstractViewFactory<ServiceForPersonData, ServiceForPerson, ServiceForPersonView> {
+    public sealed class ServiceForPersonViewFactory : AbstractViewFactory<ServiceForPersonData, ServiceForPerson, ServiceForPersonView> {
         protected internal override ServiceForPerson toObject(ServiceForPersonData d) => new(d);
     }
 }

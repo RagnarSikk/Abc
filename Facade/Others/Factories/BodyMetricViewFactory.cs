@@ -3,7 +3,7 @@ using Abc.Domain.Others;
 using Abc.Facade.Common;
 
 namespace Abc.Facade.Others.Factories {
-    public class BodyMetricViewFactory : AbstractViewFactory<BodyMetricData, BodyMetric, BodyMetricView> {
+    public sealed class BodyMetricViewFactory : AbstractViewFactory<BodyMetricData, BodyMetric, BodyMetricView> {
         protected internal override BodyMetric toObject(BodyMetricData d) => new(d);
     }
 }
