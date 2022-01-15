@@ -15,9 +15,10 @@ namespace Abc.Tests.Infra.Common {
         protected override BodyMetric toObject(BodyMetricData d) => new(d);
 
         [TestMethod]
-        public override void IsInheritedTest() {
+        public override void IsInheritedTest()
+        {
             var b = getBaseClass();
-            isTrue(b.Name.StartsWith(nameof(UniqueEntitiesRepository<BodyMetric, BodyMetricData>)));
+            areEqual(typeof(object), b);
         }
         [TestMethod]
         public void SqlQueryTest() {

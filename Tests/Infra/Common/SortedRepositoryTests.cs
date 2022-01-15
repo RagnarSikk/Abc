@@ -16,9 +16,8 @@ namespace Abc.Tests.Infra.Common {
         [TestMethod]
         public override void IsInheritedTest() {
             var b = getBaseClass();
-            isTrue(b.Name.StartsWith(nameof(UniqueEntitiesRepository<BodyMetric, BodyMetricData>)));
+            isTrue(b.Name.StartsWith(nameof(BaseRepository<BodyMetric, BodyMetricData>)));
         }
-
         [TestMethod] public void SortOrderTest() => isProperty<string>();
         [TestMethod] public void DescendingStringTest() => isProperty("_desc");
 
