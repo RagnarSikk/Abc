@@ -14,7 +14,7 @@ namespace Abc.Tests.Infra.Common {
         [TestMethod]
         public override void IsInheritedTest() {
             var b = getBaseClass();
-            isTrue(b.Name.StartsWith(nameof(UniqueEntitiesRepository<BodyMetric, BodyMetricData>)));
+            isTrue(b.Name.StartsWith(nameof(FilteredRepository<BodyMetric, BodyMetricData>)));
         }
         [TestMethod] public void PageIndexTest() => isProperty<int>(false);
         [TestMethod] public void TotalPagesTest() => isProperty(repo.getTotalPages(repo.PageSize));
