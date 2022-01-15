@@ -8,7 +8,9 @@ namespace Abc.Domain.Others {
         public int AmountAvailable => Data?.AmountAvailable ?? UnspecifiedInteger;
         public string BrandId => Data?.BrandId ?? Unspecified;
         public Brand Brand => new GetFrom<IBrandRepository, Brand>().ById(BrandId);
-        
+        public string EquipmentColourId => Data?.EquipmentColourId ?? Unspecified;
+        public EquipmentColour EquipmentColour => new GetFrom<IEquipmentColourRepository, EquipmentColour>().ById(EquipmentColourId);
+
         //public override string ToString() => $"{Name} ({Brand?.Name ?? Unspecified})";
     }
 }

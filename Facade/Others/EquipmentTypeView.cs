@@ -6,5 +6,6 @@ namespace Abc.Facade.Others {
 
         [DisplayName("Amount Available")] public int AmountAvailable { get; set; }
         [DisplayName("Brand")] public string BrandId { get; set; }
+        [DisplayName("Equipment Colour")] public string EquipmentColourId { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Abc.Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220115154341_initial1")]
-    partial class initial1
+    [Migration("20220115213553_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -183,6 +183,9 @@ namespace Abc.Soft.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Definition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipmentColourId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("From")
