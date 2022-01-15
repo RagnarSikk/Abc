@@ -53,6 +53,8 @@ namespace Abc.Tests {
 
         internal static IBodyMetricRepository BodyMetric()
             => createMockRepo<MockBodyMetricRepo, BodyMetric, BodyMetricData>();
+        internal static IBrandRepository Brand()
+            => createMockRepo<MockBrandRepo, Brand, BrandData>();
         internal static IBodyMetricTypeRepository BodyMetricType()
             => createMockRepo<MockBodyMetricTypeRepo, BodyMetricType, BodyMetricTypeData>();
         internal static IEquipmentForPersonRepository EquipmentForPerson()

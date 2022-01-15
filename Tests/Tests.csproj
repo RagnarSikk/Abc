@@ -37,7 +37,6 @@
   <ItemGroup>
     <Folder Include="Aids\" />
     <Folder Include="Core\" />
-    <Folder Include="Pages\Others\" />
     <Folder Include="Soft\" />
   </ItemGroup>
 
