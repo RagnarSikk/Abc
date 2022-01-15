@@ -11,6 +11,9 @@ using System;
 
 namespace Abc.Tests {
     internal static class MockRepos {
+        public static IBrandRepository BrandRepository(string id, out BrandData d)
+           => createMockRepo<MockBrandRepo, Brand, BrandData>(
+               id, d => new Brand(d), out d);
         public static IBodyMetricRepository BodyMetricRepository(string id, out BodyMetricData d)
             => createMockRepo<MockBodyMetricRepo, BodyMetric, BodyMetricData>(
                 id, d => new BodyMetric(d), out d);
@@ -71,6 +74,9 @@ namespace Abc.Tests {
         internal static IPersonRoleTypeRepository personRoleType()
             => createMockRepo<MockPersonRoleType, PersonRoleType, PersonRoleTypeData>();
 
+
+
+        private class MockBrandRepo : MockRepo<Brand>, IBrandRepository { }
 
         private class MockBodyMetricRepo : MockRepo<BodyMetric>, IBodyMetricRepository { }
         private class MockBodyMetricTypeRepo : MockRepo<BodyMetricType>, IBodyMetricTypeRepository { }

@@ -29,7 +29,33 @@ namespace Abc.Infra {
 
 
             }, db);
-            
+            if (db.Brand.Any()) return;
+            addItem(new BrandData()
+            {
+                Id = "2",
+                Code = "A1",
+                Name = "Adidas",
+
+
+            }, db);
+            if (db.Brand.Any()) return;
+            addItem(new BrandData()
+            {
+                Id = "3",
+                Code = "A1",
+                Name = "Adidas",
+
+
+            }, db); if (db.Brand.Any()) return;
+            addItem(new BrandData()
+            {
+                Id = "4",
+                Code = "A1",
+                Name = "Adidas",
+
+
+            }, db);
+
         }
         private static void addEquipmentColours(TrainingDbContext db) {
             if (db.EquipmentColours.Any()) return;

@@ -6,5 +6,6 @@ namespace Abc.Tests.Data.Others {
     class EquipmentTypeDataTests : SealedTests<DefinedEntityData> {
         [TestMethod]
         public void AmountAvailableTest() => isProperty<int>(false);
+        public void BrandIdTest() => isProperty<string>(false);
     }
 }

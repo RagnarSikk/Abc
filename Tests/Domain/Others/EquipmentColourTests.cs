@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Domain.Others
 {
     [TestClass]
-    class EquipmentColourTest : SealedTests<UniqueEntity<EquipmentColourData>>
+    class EquipmentColourTests : SealedTests<UniqueEntity<EquipmentColourData>>
     {
        
     }
