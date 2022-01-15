@@ -17,7 +17,7 @@ namespace Abc.Tests.Infra.Common {
         [TestMethod]
         public override void IsInheritedTest() {
             var b = getBaseClass();
-            isTrue(b.Name.StartsWith(nameof(SortedRepository<BodyMetric, BodyMetricData>)));
+            isTrue(b.Name.StartsWith(nameof(UniqueEntitiesRepository<BodyMetric, BodyMetricData>)));
         }
         [TestMethod] public void SearchStringTest() => isProperty<string>();
         [TestMethod] public void CurrentFilterTest() => isProperty<string>();

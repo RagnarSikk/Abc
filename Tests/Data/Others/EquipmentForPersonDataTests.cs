@@ -8,5 +8,7 @@ namespace Abc.Tests.Data.Others {
         public void PersonIdTest() => isProperty<string>(false);
 
         public void EquipmentIdTest() => isProperty<string>(false);
+        public void PersonRoleTypeIdTest() => isProperty<string>(false);
+        public void AmountTest() => isProperty<int>(false);
     }
 }
