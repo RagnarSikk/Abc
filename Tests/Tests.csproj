@@ -13,10 +13,13 @@
   <ItemGroup>
     <Compile Remove="Facade\Customers\**" />
     <Compile Remove="Infra\Customers\**" />
+    <Compile Remove="Pages\NewFolder\**" />
     <EmbeddedResource Remove="Facade\Customers\**" />
     <EmbeddedResource Remove="Infra\Customers\**" />
+    <EmbeddedResource Remove="Pages\NewFolder\**" />
     <None Remove="Facade\Customers\**" />
     <None Remove="Infra\Customers\**" />
+    <None Remove="Pages\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>

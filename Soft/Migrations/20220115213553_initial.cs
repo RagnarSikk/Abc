@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Abc.Soft.Migrations
 {
-    public partial class initial1 : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -148,6 +148,7 @@ namespace Abc.Soft.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     AmountAvailable = table.Column<int>(type: "int", nullable: false),
                     BrandId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EquipmentColourId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     From = table.Column<DateTime>(type: "datetime2", nullable: true),
                     To = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),

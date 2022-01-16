@@ -183,6 +183,9 @@ namespace Abc.Soft.Migrations
                     b.Property<string>("Definition")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("EquipmentColourId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("From")
                         .HasColumnType("datetime2");
 
