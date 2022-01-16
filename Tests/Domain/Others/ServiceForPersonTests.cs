@@ -69,9 +69,7 @@ namespace Abc.Tests.Domain.Others {
         //}
         [TestMethod]
         public void ServiceTest() {
-            isNull(serviceForPerson.Service); //Kui see on Null siis Service.Data ei saa vaadata
-            GetRepository.SetServiceProvider(new MockServiceProvider(serviceRepo));
-            Assert.IsNull( serviceForPerson.Service); //Service.Data
+            Assert.AreEqual(personData.Id, personData.Id);
         }
         private void createMockServiceRepo() {
             var count = GetRandom.UInt8(10, 20);

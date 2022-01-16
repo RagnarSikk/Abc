@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Data.Others
 {
     [TestClass]
-    public class EquipmentColourDataTests : SealedTests<DefinedEntityData>
+    public class EquipmentColourDataTests : SealedTests<NamedEntityData>
     {
 
     }
