@@ -13,7 +13,7 @@ namespace Abc.Tests {
             c.WriteTo(writer, HtmlEncoder.Default);
             Value = writer.ToString();
         }
-        public void WriteTo(TextWriter writer, HtmlEncoder encoder) 
+        public void WriteTo(TextWriter writer, HtmlEncoder encoder)
             => throw new NotImplementedException();
     }
 }

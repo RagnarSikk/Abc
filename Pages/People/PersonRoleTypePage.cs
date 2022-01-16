@@ -4,11 +4,11 @@ using Abc.Domain.People.Repositories;
 using Abc.Facade.People;
 using Abc.Facade.People.Factories;
 using Abc.Pages.Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.People {
     [Authorize]

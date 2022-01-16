@@ -1,6 +1,5 @@
 ﻿using Abc.Data.Others;
 using Abc.Domain.Others;
-using Abc.Infra.Common;
 using Abc.Infra.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,8 +14,7 @@ namespace Abc.Tests.Infra.Common {
         protected override BodyMetric toObject(BodyMetricData d) => new(d);
 
         [TestMethod]
-        public override void IsInheritedTest()
-        {
+        public override void IsInheritedTest() {
             var b = getBaseClass();
             areEqual(typeof(object), b);
         }

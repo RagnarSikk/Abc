@@ -55,8 +55,8 @@ namespace Abc.Tests {
         public IHtmlContent Display(string expression, string templateName, string htmlFieldName, object additionalViewData) {
             throw new NotImplementedException();
         }
-        public IHtmlContent DisplayFor<TResult>(Expression<Func<TPage, TResult>> e, 
-            string templateName, string htmlFieldName, object additionalViewData) 
+        public IHtmlContent DisplayFor<TResult>(Expression<Func<TPage, TResult>> e,
+            string templateName, string htmlFieldName, object additionalViewData)
             => new MockHtmlContent(e?.ToString());
         public string DisplayName(string expression) {
             throw new NotImplementedException();

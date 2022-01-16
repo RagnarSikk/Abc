@@ -1,11 +1,9 @@
 ﻿using Abc.Data.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Data.Others
-{
+namespace Abc.Tests.Data.Others {
     [TestClass]
-    public class BrandDataTests : SealedTests<DefinedEntityData>
-    {
+    public class BrandDataTests : SealedTests<DefinedEntityData> {
 
     }
 }

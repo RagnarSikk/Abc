@@ -1,6 +1,6 @@
 ﻿using Abc.Domain.Others.Repositories;
-using System;
 using Microsoft.AspNetCore.Authorization;
+using System;
 
 namespace Abc.Pages.Others {
     [Authorize]

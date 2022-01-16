@@ -1,15 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Abc.Soft.Areas.Identity.Account {
     [AllowAnonymous]
-    public class ResetPasswordModel :PageModel {
+    public class ResetPasswordModel : PageModel {
         private readonly UserManager<IdentityUser> _userManager;
 
         public ResetPasswordModel(UserManager<IdentityUser> userManager) {
@@ -40,7 +40,8 @@ namespace Abc.Soft.Areas.Identity.Account {
         public IActionResult OnGet(string code = null) {
             if (code == null) {
                 return BadRequest("A code must be supplied for password reset.");
-            } else {
+            }
+            else {
                 Input = new InputModel {
                     Code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code))
                 };

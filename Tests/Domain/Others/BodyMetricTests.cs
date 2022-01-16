@@ -21,6 +21,6 @@ namespace Abc.Tests.Domain.Others {
         [TestMethod] public void BodyMetricTypeIdTest() => isProperty(data.BodyMetricTypeId);
         [TestMethod] public void ValueTest() => isProperty(data.Value);
         //[TestMethod] public void PersonTest() => isProperty(data.PersonId); //Todo xd nii vist ei saa jah
-    
+
     }
 }

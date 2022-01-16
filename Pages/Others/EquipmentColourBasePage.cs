@@ -4,12 +4,12 @@ using Abc.Domain.Others.Repositories;
 using Abc.Facade.Others;
 using Abc.Facade.Others.Factories;
 using Abc.Pages.Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.Others {
     [Authorize]
@@ -42,7 +42,7 @@ namespace Abc.Pages.Others {
         public override IActionResult OnGetCreate(
             string sortOrder, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue, int? switchOfCreate) {
-            Item = new EquipmentColourView(); 
+            Item = new EquipmentColourView();
             return base.OnGetCreate(sortOrder, searchString, pageIndex, fixedFilter, fixedValue, switchOfCreate);
         }
     }

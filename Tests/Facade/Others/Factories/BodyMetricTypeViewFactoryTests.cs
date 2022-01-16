@@ -6,8 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.Others.Factories {
     [TestClass]
-    public class BodyMetricTypeViewFactoryTests : FactoryBaseTests<BodyMetricTypeViewFactory, BodyMetricTypeData, BodyMetricType, BodyMetricTypeView>
-    {
+    public class BodyMetricTypeViewFactoryTests : FactoryBaseTests<BodyMetricTypeViewFactory, BodyMetricTypeData, BodyMetricType, BodyMetricTypeView> {
         protected override BodyMetricType createObject(BodyMetricTypeData d) => new(d);
     }
 }

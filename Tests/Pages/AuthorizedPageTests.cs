@@ -6,10 +6,11 @@ using System;
 using System.Linq;
 
 namespace Abc.Tests.Pages {
-    public abstract class AuthorizedPageTests<TPage, TBaseClass> 
-              : CommonPageTests<TPage, TBaseClass> 
-        where TPage: PageModel, IUnifiedPage<TPage> {
-        [TestMethod] public void IsAuthorizedTested() {
+    public abstract class AuthorizedPageTests<TPage, TBaseClass>
+              : CommonPageTests<TPage, TBaseClass>
+        where TPage : PageModel, IUnifiedPage<TPage> {
+        [TestMethod]
+        public void IsAuthorizedTested() {
             var t = objUnderTests.GetType();
             var list = t?.GetCustomAttributes(typeof(AuthorizeAttribute), true);
             var a = list?.Cast<AuthorizeAttribute>().Single();

@@ -5,11 +5,9 @@ using Abc.Domain.Others;
 using Abc.Domain.Others.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Common
-{
+namespace Abc.Tests.Domain.Common {
     [TestClass]
-    public class GetFromTests : SealedTests<object>
-    {
+    public class GetFromTests : SealedTests<object> {
         protected override object createObject() => new GetFrom<IEquipmentRepository, Equipment>();
 
         private string id;
@@ -18,8 +16,7 @@ namespace Abc.Tests.Domain.Common
         private EquipmentData equipmentData;
 
         [TestInitialize]
-        public override void TestInitialize()
-        {
+        public override void TestInitialize() {
             type = typeof(GetRepository);
             id = GetRandom.String();
             equipmentRepo = MockRepos.EquipmentRepository(id, out equipmentData);
@@ -28,8 +25,7 @@ namespace Abc.Tests.Domain.Common
             base.TestInitialize();
         }
         [TestMethod]
-        public void ByIdTest()
-        {
+        public void ByIdTest() {
             var o = new GetFrom<IEquipmentRepository, Equipment>().ById(id);
             areEqualProperties(equipmentData, o.Data);
         }

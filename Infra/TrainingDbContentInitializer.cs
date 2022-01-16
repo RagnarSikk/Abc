@@ -18,11 +18,9 @@ namespace Abc.Infra {
             addEquipmentColours(db);
         }
 
-        private static void addBrands(TrainingDbContext db)
-        {
+        private static void addBrands(TrainingDbContext db) {
             if (db.Brand.Any()) return;
-            addItem(new BrandData()
-            {
+            addItem(new BrandData() {
                 Id = "1",
                 Code = "2",
                 Name = "Nike",
@@ -30,8 +28,7 @@ namespace Abc.Infra {
 
             }, db);
             if (db.Brand.Any()) return;
-            addItem(new BrandData()
-            {
+            addItem(new BrandData() {
                 Id = "2",
                 Code = "A1",
                 Name = "Adidas",
@@ -39,16 +36,14 @@ namespace Abc.Infra {
 
             }, db);
             if (db.Brand.Any()) return;
-            addItem(new BrandData()
-            {
+            addItem(new BrandData() {
                 Id = "3",
                 Code = "A1",
                 Name = "Adidas",
 
 
             }, db); if (db.Brand.Any()) return;
-            addItem(new BrandData()
-            {
+            addItem(new BrandData() {
                 Id = "4",
                 Code = "A1",
                 Name = "Adidas",

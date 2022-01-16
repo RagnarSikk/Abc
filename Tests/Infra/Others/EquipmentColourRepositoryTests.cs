@@ -3,11 +3,9 @@ using Abc.Domain.Others;
 using Abc.Infra.Others;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Infra.Others
-{
+namespace Abc.Tests.Infra.Others {
     [TestClass]
-    public class EquipmentColourRepositoryTests : RepoTests<EquipmentColourRepository, EquipmentColour, EquipmentColourData>
-    {
+    public class EquipmentColourRepositoryTests : RepoTests<EquipmentColourRepository, EquipmentColour, EquipmentColourData> {
         protected override object createObject()
             => new EquipmentColourRepository(new InMemoryTrainingDbContext().TrainingDb);
         protected override EquipmentColour toObject(EquipmentColourData d) => new(d);

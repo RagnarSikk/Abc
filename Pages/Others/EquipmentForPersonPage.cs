@@ -7,13 +7,12 @@ using Abc.Domain.People.Repositories;
 using Abc.Facade.Others;
 using Abc.Facade.Others.Factories;
 using Abc.Pages.Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.Others {
     [Authorize]

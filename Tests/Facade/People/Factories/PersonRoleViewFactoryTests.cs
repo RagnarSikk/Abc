@@ -6,8 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.People.Factories {
     [TestClass]
-    public class PersonRoleViewFactoryTests : FactoryBaseTests<PersonRoleViewFactory, PersonRoleData, PersonRole, PersonRoleView>
-    {
+    public class PersonRoleViewFactoryTests : FactoryBaseTests<PersonRoleViewFactory, PersonRoleData, PersonRole, PersonRoleView> {
         protected override PersonRole createObject(PersonRoleData d) => new(d);
     }
 }

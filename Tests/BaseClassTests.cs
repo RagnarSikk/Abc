@@ -1,12 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Abc.Tests
-{
-    public abstract class BaseClassTests<TBaseClass> : BaseTests
-    {
-        protected object obj
-        {
+namespace Abc.Tests {
+    public abstract class BaseClassTests<TBaseClass> : BaseTests {
+        protected object obj {
             get => objUnderTests;
             set => objUnderTests = value;
         }
@@ -14,15 +11,13 @@ namespace Abc.Tests
         protected virtual Type getBaseClass() => type?.BaseType;
 
         [TestInitialize]
-        public virtual void TestInitialize()
-        {
+        public virtual void TestInitialize() {
             type = getTestableClassType();
             obj = createObject();
         }
         [TestMethod] public void CanCreateTest() => isNotNull(createObject());
         [TestMethod]
-        public virtual void IsInheritedTest()
-        {
+        public virtual void IsInheritedTest() {
             areEqual(typeof(TBaseClass), getBaseClass());
         }
     }

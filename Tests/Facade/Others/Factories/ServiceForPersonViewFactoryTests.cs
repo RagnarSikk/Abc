@@ -6,8 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests.Facade.Others.Factories {
     [TestClass]
-    public class ServiceForPersonViewFactoryTests : FactoryBaseTests<ServiceForPersonViewFactory, ServiceForPersonData, ServiceForPerson, ServiceForPersonView>
-    {
+    public class ServiceForPersonViewFactoryTests : FactoryBaseTests<ServiceForPersonViewFactory, ServiceForPersonData, ServiceForPerson, ServiceForPersonView> {
         protected override ServiceForPerson createObject(ServiceForPersonData d) => new(d);
     }
 }

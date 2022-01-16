@@ -1,19 +1,14 @@
 ﻿using Abc.Aids.Methods;
-using Abc.Data.Common;
 using System;
 
-namespace Abc.Domain.Common
-{
+namespace Abc.Domain.Common {
 
-    public abstract class ValueObject<TData> : BaseEntity where TData : class, new()
-    {
+    public abstract class ValueObject<TData> : BaseEntity where TData : class, new() {
 
         internal protected readonly TData data;
         protected internal ValueObject(TData d = null) => data = d ?? new TData();
-        public TData Data
-        {
-            get
-            {
+        public TData Data {
+            get {
                 if (data is null) return null;
                 var d = new TData();
                 Copy.Members(data, d);
@@ -23,18 +18,15 @@ namespace Abc.Domain.Common
         public bool IsUnspecified => isUnspecified();
         private bool isUnspecified()
             => data is null || arePropertiesEqual(data, new TData());
-        private static bool arePropertiesEqual(TData a, TData b)
-        {
-            foreach (var property in a.GetType().GetProperties())
-            {
+        private static bool arePropertiesEqual(TData a, TData b) {
+            foreach (var property in a.GetType().GetProperties()) {
                 var name = property.Name;
                 var p = b.GetType().GetProperty(name);
 
                 if (p is null) return false;
                 var expected = property.GetValue(a);
                 var actual = p.GetValue(b);
-                switch (expected)
-                {
+                switch (expected) {
                     case null when (actual is null):
                         continue;
                     case null:
@@ -49,10 +41,8 @@ namespace Abc.Domain.Common
 
             return true;
         }
-        private static bool isGuid(string s)
-        {
-            try
-            {
+        private static bool isGuid(string s) {
+            try {
                 var guid = new Guid(s);
                 return true;
             }

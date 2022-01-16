@@ -2,15 +2,12 @@
 using Abc.Domain.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests.Domain.Common
-{
+namespace Abc.Tests.Domain.Common {
     [TestClass]
-    public class NamedEntityTests : AbstractTests<UniqueEntity<TestData>>
-    {
+    public class NamedEntityTests : AbstractTests<UniqueEntity<TestData>> {
         private TestData data;
 
-        private class testClass : NamedEntity<TestData>
-        {
+        private class testClass : NamedEntity<TestData> {
             public testClass(TestData d) : base(d) { }
         }
         protected override object createObject() {

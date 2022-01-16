@@ -4,12 +4,12 @@ using Abc.Domain.Others.Repositories;
 using Abc.Facade.Others;
 using Abc.Facade.Others.Factories;
 using Abc.Pages.Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.Others {
     [Authorize]
@@ -17,14 +17,13 @@ namespace Abc.Pages.Others {
         public IEnumerable<SelectListItem> Brands { get; }
         public IEnumerable<SelectListItem> EquipmentColours { get; }
         public EquipmentTypePage(IEquipmentTypeRepository r, IBrandRepository b, IEquipmentColourRepository c)
-          : base(r, "EquipmentTypes")
-        {
+          : base(r, "EquipmentTypes") {
             Brands = newItemsList<Brand, BrandData>(b, null, x => x.Name);
             EquipmentColours = newItemsList<EquipmentColour, EquipmentColourData>(c, null, x => x.Name);
         }
 
-        
-       
+
+
         public string BrandName(string id) => itemName(Brands, id);
         public string EquipmentColourName(string id) => itemName(EquipmentColours, id);
 

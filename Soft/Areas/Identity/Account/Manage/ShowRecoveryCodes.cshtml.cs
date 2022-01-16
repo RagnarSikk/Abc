@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Abc.Soft.Areas.Identity.Account.Manage {
-    public class ShowRecoveryCodesModel :PageModel {
+    public class ShowRecoveryCodesModel : PageModel {
         [TempData]
         public string[] RecoveryCodes { get; set; }
 

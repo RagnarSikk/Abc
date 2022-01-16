@@ -4,12 +4,12 @@ using Abc.Domain.Others.Repositories;
 using Abc.Facade.Others;
 using Abc.Facade.Others.Factories;
 using Abc.Pages.Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.Others {
     [Authorize]
@@ -22,8 +22,8 @@ namespace Abc.Pages.Others {
         protected internal override Brand toObject(BrandView v) => new BrandViewFactory().Create(v);
 
         protected internal override BrandView toView(Brand o) => new BrandViewFactory().Create(o);
-        
-            protected override void createTableColumns() {
+
+        protected override void createTableColumns() {
             createColumn(x => Item.Id);
             createColumn(x => Item.Name);
             createColumn(x => Item.Code);

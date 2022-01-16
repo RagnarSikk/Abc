@@ -1,11 +1,10 @@
-﻿using System;
-using Abc.Aids.Random;
-using Abc.Domain.Common;
+﻿using Abc.Domain.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
-namespace Abc.Tests.Domain.Common
-{
-    [TestClass] public class BaseEntityTests : AbstractTests<object> {
+namespace Abc.Tests.Domain.Common {
+    [TestClass]
+    public class BaseEntityTests : AbstractTests<object> {
         private class testClass : BaseEntity { }
         protected override object createObject() => new testClass();
         [TestMethod] public void UnspecifiedTest() => isProperty(Aids.Constants.Word.Unspecified);

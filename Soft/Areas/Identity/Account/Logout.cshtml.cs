@@ -1,13 +1,13 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace Abc.Soft.Areas.Identity.Account {
     [AllowAnonymous]
-    public class LogoutModel :PageModel {
+    public class LogoutModel : PageModel {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
@@ -24,7 +24,8 @@ namespace Abc.Soft.Areas.Identity.Account {
             _logger.LogInformation("User logged out.");
             if (returnUrl != null) {
                 return LocalRedirect(returnUrl);
-            } else {
+            }
+            else {
                 return RedirectToPage();
             }
         }
