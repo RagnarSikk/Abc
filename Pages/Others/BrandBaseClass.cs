@@ -20,7 +20,8 @@ namespace Abc.Pages.Others {
         protected internal override Brand toObject(BrandView v) => new BrandViewFactory().Create(v);
 
         protected internal override BrandView toView(Brand o) => new BrandViewFactory().Create(o);
-        protected override void createTableColumns() {
+        
+            protected override void createTableColumns() {
             createColumn(x => Item.Id);
             createColumn(x => Item.Name);
             createColumn(x => Item.Code);

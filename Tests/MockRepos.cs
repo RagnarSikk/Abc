@@ -51,6 +51,8 @@ namespace Abc.Tests {
                 id, d => new PersonRoleType(d), out d);
 
 
+        internal static IBrandRepository Brand()
+            => createMockRepo<MockBrandRepo, Brand, BrandData>();
         internal static IBodyMetricRepository BodyMetric()
             => createMockRepo<MockBodyMetricRepo, BodyMetric, BodyMetricData>();
         internal static IBodyMetricTypeRepository BodyMetricType()

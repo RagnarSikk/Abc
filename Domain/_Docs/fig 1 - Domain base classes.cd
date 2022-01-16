@@ -10,7 +10,7 @@
   <Class Name="Abc.Domain.Common.DefinedEntity&lt;T&gt;" Collapsed="true">
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Common\DefinedEntity.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,7 +40,7 @@
   <Class Name="Abc.Domain.Common.NamedEntity&lt;T&gt;" Collapsed="true">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\NamedEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -55,7 +55,7 @@
   <Class Name="Abc.Domain.Common.ValueObject&lt;TData&gt;" Collapsed="true">
     <Position X="1" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACBAAAEAQAAABAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACBAAAAAQAAABAAAAAQAAAAAAA=</HashCode>
       <FileName>Common\ValueObject.cs</FileName>
     </TypeIdentifier>
   </Class>
