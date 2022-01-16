@@ -8,8 +8,10 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.People {
+    [Authorize]
     public class PersonRoleTypePage : ViewPage<PersonRoleTypePage, IPersonRoleTypeRepository, PersonRoleType, PersonRoleTypeView, PersonRoleTypeData> {
         public PersonRoleTypePage(IPersonRoleTypeRepository r) : base(r, "PersonRoleTypes") { }
         protected override void createTableColumns() {

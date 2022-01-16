@@ -13,10 +13,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.Others {
-
-     public sealed class EquipmentForPersonPage : ViewPage<EquipmentForPersonPage,
+    [Authorize]
+    public sealed class EquipmentForPersonPage : ViewPage<EquipmentForPersonPage,
         IEquipmentForPersonRepository, EquipmentForPerson, EquipmentForPersonView, EquipmentForPersonData> {
 
         public IEnumerable<SelectListItem> EquipmentTypes { get; }

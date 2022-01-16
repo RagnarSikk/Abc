@@ -12,8 +12,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.Others {
+    [Authorize]
     public sealed class ServicePage : ViewPage<ServicePage, IServiceRepository, Service, ServiceView, ServiceData> {
 
         public IEnumerable<SelectListItem> ServiceTypes { get; }

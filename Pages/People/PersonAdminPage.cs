@@ -10,8 +10,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Abc.Pages.People {
+    [Authorize]
     public abstract class PersonAdminPage<TPage>
         : ViewPage<TPage, IPersonRepository, Person, PersonView, PersonData>
         where TPage : PageModel {
