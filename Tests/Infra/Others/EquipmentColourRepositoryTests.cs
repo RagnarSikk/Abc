@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Infra.Others
 {
     [TestClass]
-    public class EquipmentColourTests : RepoTests<EquipmentColourRepository, EquipmentColour, EquipmentColourData>
+    public class EquipmentColourRepositoryTests : RepoTests<EquipmentColourRepository, EquipmentColour, EquipmentColourData>
     {
         protected override object createObject()
             => new EquipmentColourRepository(new InMemoryTrainingDbContext().TrainingDb);
